@@ -1,0 +1,622 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: Poblacion class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase Poblacion</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<a href="classPoblacion-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase que administra la información de los individuos de un algoritmo genético. 
+<p>
+Un objeto de la clase Poblacion contiene un arreglo de apuntadores a objetos de la clase <a class="el" href="classIndividuo.html">Individuo</a>. Además contiene los métodos necesarios para realizar las operaciones sobre la población en cada iteración del algoritmo genético 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona0">Poblacion</a> (<a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *pAG, int nIndividuos, bool crearAleatorios=true)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#Poblaciona0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona1">Poblacion</a> (const <a class="el" href="classPoblacion.html">Poblacion</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por copia de otra poblacion.  <a href="#Poblaciona1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona2">~Poblacion</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#Poblaciona2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classPoblacion.html">Poblacion</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona3">operator=</a> (const <a class="el" href="classPoblacion.html">Poblacion</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador de asignación a partir de otra población.  <a href="#Poblaciona3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona4">GetAG</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un apuntador al objeto de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> al que pertenece la población.  <a href="#Poblaciona4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona5">ordenar</a> (bool Maximizar=false)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ordena los miembros de la población segun su función de evaluación.  <a href="#Poblaciona5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona6">SetAG</a> (<a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *Ag)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia el algoritmo genetico al que pertenece la población.  <a href="#Poblaciona6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classIndividuo.html">Individuo</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona7">getIndividuo</a> (int pos) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve el individuo ubicado en una posición determinada de la población.  <a href="#Poblaciona7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona8">InsertarIndividuo</a> (<a class="el" href="classIndividuo.html">Individuo</a> *ind, int indice=-1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inserta un individuo en una posición determinada de la población.  <a href="#Poblaciona8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona9">remplazarIndividuo</a> (<a class="el" href="classIndividuo.html">Individuo</a> *pNuevoInd, int pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remplaza el individuo ubicado en una posición determinada de la población por otro individuo.  <a href="#Poblaciona9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona10">getTam</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el número de individuos presentes en la población.  <a href="#Poblaciona10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona11">setTam</a> (int nuevoTam, bool remplazar=false, bool crearAleatorios=false)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia el tamaño de la población.  <a href="#Poblaciona11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblaciona12">mutar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ordena a la población que pase por el proceso de mutación.  <a href="#Poblaciona12"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblacionp0">m_pAG</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al objeto de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> al que pertenece la poblacion.  <a href="#Poblacionp0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classIndividuo.html">Individuo</a> &gt; *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html#Poblacionp1">m_pGeneracion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="classArreglo.html">Arreglo</a> de objetos de la clase <a class="el" href="classIndividuo.html">Individuo</a> que conforman la población.  <a href="#Poblacionp1"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="Poblaciona0" doxytag="Poblacion::Poblacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classPoblacion.html">Poblacion</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAG</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nIndividuos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>crearAleatorios</em> = true</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona1" doxytag="Poblacion::Poblacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classPoblacion.html">Poblacion</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classPoblacion.html">Poblacion</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por copia de otra poblacion. 
+<p>
+Construye el nuevo objeto copiando idénticamente las propiedades de otro objeto de la clase Poblacion. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona2" doxytag="Poblacion::~Poblacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classPoblacion.html">Poblacion</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Elimina todos los objetos creados dinámicamente     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="Poblaciona4" doxytag="Poblacion::GetAG" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>* GetAG </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un apuntador al objeto de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> al que pertenece la población. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al objeto de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> al que pertenece la población </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona7" doxytag="Poblacion::getIndividuo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classIndividuo.html">Individuo</a>&amp; getIndividuo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Devuelve el individuo ubicado en una posición determinada de la población. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del individuo a obtener </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>referencia al individuo ubicado en la posición <em>pos</em>. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona10" doxytag="Poblacion::getTam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int getTam </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el número de individuos presentes en la población. 
+<p>
+return Tamaño de la población     </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona8" doxytag="Poblacion::InsertarIndividuo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int InsertarIndividuo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ind</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em> = -1</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Inserta un individuo en una posición determinada de la población. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>ind</em>&nbsp;</td><td>Apuntador al individuo a insertar </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición en la que será insertado el individuo. Si no se especifica, el individuo se ubicará en la ultima posición. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Posición en la que fué ubicado el individuo. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona12" doxytag="Poblacion::mutar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void mutar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ordena a la población que pase por el proceso de mutación. 
+<p>
+Hace que cada uno de los individuos presentes en población realice el proceso de mutación.     </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona3" doxytag="Poblacion::operator=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classPoblacion.html">Poblacion</a> &amp; operator= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classPoblacion.html">Poblacion</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Operador de asignación a partir de otra población. 
+<p>
+Copia idénticamente las propiedades de otro objeto de la clase Poblacion. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia a la poblacion </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona5" doxytag="Poblacion::ordenar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void ordenar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Maximizar</em> = false          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ordena los miembros de la población segun su función de evaluación. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Maximizar</em>&nbsp;</td><td>Si su valor es <em>true</em>, ordena a los individuos en forma descendente. De lo contrario los ordena de forma ascedente. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona9" doxytag="Poblacion::remplazarIndividuo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classIndividuo.html">Individuo</a>* remplazarIndividuo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pNuevoInd</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Remplaza el individuo ubicado en una posición determinada de la población por otro individuo. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pNuevoInd</em>&nbsp;</td><td>Apuntador al idividuo que remplazará al individuo ubicado en la posición especificada. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del individuo a remplazar. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al individuo reemplazado. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona6" doxytag="Poblacion::SetAG" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void SetAG </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Ag</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cambia el algoritmo genetico al que pertenece la población. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Ag</em>&nbsp;</td><td>Apuntador al objeto AlgoritmoGenético del que hará parte la poblacion. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblaciona11" doxytag="Poblacion::setTam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int setTam </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoTam</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>remplazar</em> = false, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>crearAleatorios</em> = false</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cambia el tamaño de la población. 
+<p>
+Si el nuevo tamaño es menor que el anterior, se eliminan los individuos restantes. Si es mayor, los nuevos individuos son creados aleatoriamente dependiendo del valor de <em>crearAleatorios</em> <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoTam</em>&nbsp;</td><td>Nuevo tamaño del arreglo. </td></tr>
+    <tr><td valign=top><em>crearAleatorios</em>&nbsp;</td><td>Si su valor es <em>true</em> se crean individuos aleatorios. Si es <em>false</em> se crean individuos con valores iniciales preestablecidos </td></tr>
+    <tr><td valign=top><em>remplazar</em>&nbsp;</td><td>Si su valor es <em>true</em>, los individuos existentes en la población son reemplazados por nuevos individuos. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Tamaño asignado o -1 en caso de error. </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="Poblacionp0" doxytag="Poblacion::m_pAG" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>* <a class="el" href="classPoblacion.html#Poblacionp0">m_pAG</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al objeto de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> al que pertenece la poblacion. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Poblacionp1" doxytag="Poblacion::m_pGeneracion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a>&lt;<a class="el" href="classIndividuo.html">Individuo</a>&gt;* <a class="el" href="classPoblacion.html#Poblacionp1">m_pGeneracion</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="classArreglo.html">Arreglo</a> de objetos de la clase <a class="el" href="classIndividuo.html">Individuo</a> que conforman la población. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a><li><a class="el" href="genetico_8cpp.html">genetico.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:50 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

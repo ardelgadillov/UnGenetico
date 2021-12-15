@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: genbool.h File Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia del Archivo genbool.h</h1>
+<p>
+<code>#include "<a class="el" href="genetico_8h.html">genetico.h</a>"</code><br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html">GenBool</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classGen.html">Gen</a> especializada en un gen de tipo booleano. </em> <a href="classGenBool.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacionBoolUniforme.html">OperadorMutacionBoolUniforme</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> que efectúa una mutación uniforme sobre un gen de tipo booleano. </em> <a href="classOperadorMutacionBoolUniforme.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceBoolDiscreto.html">OperadorCruceBoolDiscreto</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorCruce.html">OperadorCruce</a> que define el cruce discreto entre dos genes de tipo booleano. </em> <a href="classOperadorCruceBoolDiscreto.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td colspan=2><br><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genbool_8h.html#a0">ADICIONAR_GENBOOL</a>(pIndividuo, pos, var, valInicial)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que adiciona un gen de tipo booleano al individuo.  <a href="#a0"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación de las definiciones</h2>
+<a class="anchor" name="a0" doxytag="genbool.h::ADICIONAR_GENBOOL" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_GENBOOL</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">pIndividuo,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>pos,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>var,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valInicial&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que adiciona un gen de tipo booleano al individuo. 
+<p>
+Se debe utilizar solamente en la función <em>codificacion()</em> de la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. Tiene el propósito particular de insertar un objeto <a class="el" href="classGenBool.html">GenBool</a> en una posición fija del individuo apuntado por <em>pIndividuo</em>. Este objeto estará asociado con una de las variables del sistema a optimizar perteneciente a la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> de la cual se establece su valor inicial. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pIndividuo</em>&nbsp;</td><td>Apuntador al individuo donde se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición en la que se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>var</em>&nbsp;</td><td>Nombre de la variable del sistema a optimizar asociada con el gen adicionado. </td></tr>
+    <tr><td valign=top><em>valInicial</em>&nbsp;</td><td>Valor inicial que toma el gen. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

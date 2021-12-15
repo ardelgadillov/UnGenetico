@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: genarreglo.h File Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia del Archivo genarreglo.h</h1>
+<p>
+<code>#include "<a class="el" href="genbool_8h.html">genbool.h</a>"</code><br>
+<code>#include "<a class="el" href="genentero_8h.html">genentero.h</a>"</code><br>
+<code>#include "<a class="el" href="genreal_8h.html">genreal.h</a>"</code><br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html">GenArreglo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classGen.html">Gen</a>, especializada en un gen de tipo arreglo de tamaño variable. </em> <a href="classGenArreglo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> empleada en genes de tipo arreglo. G puede ser <a class="el" href="classGenBool.html">GenBool</a>, <a class="el" href="classGenEntero.html">GenEntero</a> o <a class="el" href="classGenReal.html">GenReal</a>. T puede ser bool, long o double. </em> <a href="classOperadorMutacionArreglo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorCruce.html">OperadorCruce</a> usada en genes de tipo arreglo. G puede ser <a class="el" href="classGenBool.html">GenBool</a>, <a class="el" href="classGenEntero.html">GenEntero</a> o <a class="el" href="classGenReal.html">GenReal</a>. T puede ser bool, long o double. </em> <a href="classOperadorCruceArreglo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td colspan=2><br><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a0">ADICIONAR_GENARREGLO_BOOL</a>(pIndividuo, pos, var, tamMin, tamMax)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que adiciona un objeto GenArregloBool a un individuo.  <a href="#a0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a1">ADICIONAR_GENARREGLO_ENTERO</a>(pIndividuo, pos, var, tamMin, tamMax, valMin, valMax, valInicial)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que adiciona un objeto GenArregloEntero a un individuo.  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a2">ADICIONAR_GENARREGLO_REAL</a>(pIndividuo, pos, var, tamMin, tamMax, valMin, valMax, valInicial)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que adiciona un objeto GenArregloReal a un individuo.  <a href="#a2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Tipos definidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classArreglo.html">Arreglo</a>&lt; bool &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a3">ArregloBool</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un arreglo de datos de tipo booleano <em></em>(bool).  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classArreglo.html">Arreglo</a>&lt; long &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a4">ArregloEntero</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un arreglo de datos de tipo entero <em></em>(long).  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classArreglo.html">Arreglo</a>&lt; double &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a5">ArregloReal</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un arreglo de datos de tipo real <em></em>(double).  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; <a class="el" href="classGenBool.html">GenBool</a>,<br>
+ bool &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a6">GenArregloBool</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un gen de tipo arreglo con datos de tipo booleano <em></em>(bool).  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; <a class="el" href="classGenEntero.html">GenEntero</a>,<br>
+ long &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a7">GenArregloEntero</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un gen de tipo arreglo con datos de tipo entero <em></em>(long).  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; <a class="el" href="classGenReal.html">GenReal</a>,<br>
+ double &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a8">GenArregloReal</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un gen de tipo arreglo con datos de tipo real <em></em>(double).  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a>&lt;<br>
+ <a class="el" href="classGenBool.html">GenBool</a>, bool &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a9">OperadorMutacionArregloBool</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un operador de mutación para genes de tipo arreglo con datos de tipo booleano <em></em>(bool).  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a>&lt;<br>
+ <a class="el" href="classGenEntero.html">GenEntero</a>, long &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a10">OperadorMutacionArregloEntero</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un operador de mutación para genes de tipo arreglo con datos de tipo entero <em></em>(long).  <a href="#a10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a>&lt;<br>
+ <a class="el" href="classGenReal.html">GenReal</a>, double &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a11">OperadorMutacionArregloReal</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un operador de mutación para genes de tipo arreglo con datos de tipo real <em></em>(double).  <a href="#a11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a>&lt;<br>
+ <a class="el" href="classGenBool.html">GenBool</a>, bool &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a12">OperadorCruceArregloBool</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un operador de cruce para genes de tipo arreglo con datos de tipo booleano <em></em>(bool).  <a href="#a12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a>&lt;<br>
+ <a class="el" href="classGenEntero.html">GenEntero</a>, long &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a13">OperadorCruceArregloEntero</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un operador de cruce para genes de tipo arreglo con datos de tipo entero <em></em>(long).  <a href="#a13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a>&lt;<br>
+ <a class="el" href="classGenReal.html">GenReal</a>, double &gt;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genarreglo_8h.html#a14">OperadorCruceArregloReal</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define un operador de cruce para genes de tipo arreglo con datos de tipo real <em></em>(double).  <a href="#a14"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación de las definiciones</h2>
+<a class="anchor" name="a0" doxytag="genarreglo.h::ADICIONAR_GENARREGLO_BOOL" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_GENARREGLO_BOOL</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">pIndividuo,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>pos,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>var,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>tamMin,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>tamMax&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que adiciona un objeto GenArregloBool a un individuo. 
+<p>
+Se debe utilizar solamente en la función codificacion() de la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. Su propósito particular es insertar un objeto GenArregloBool en una posición determinada del individuo apuntado por <em>pIndividuo</em>. Este objeto estará asociado con una de las variables del sistema a optimizar, perteneciente a la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>, para la cual se establecen el tamaño mínimo y tamaño máximo.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pIndividuo</em>&nbsp;</td><td>Apuntador al individuo donde se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición en la que se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>var</em>&nbsp;</td><td>Nombre de la variable del sistema a optimizar asociada con el gen adicionado. Debe ser de tipo ArregloBool, </td></tr>
+    <tr><td valign=top><em>tamMin</em>&nbsp;</td><td>Tamaño mínimo que puede tomar el gen. </td></tr>
+    <tr><td valign=top><em>tamMax</em>&nbsp;</td><td>Tamaño máximo que puede tomar el gen. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="genarreglo.h::ADICIONAR_GENARREGLO_ENTERO" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_GENARREGLO_ENTERO</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">pIndividuo,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>pos,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>var,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>tamMin,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>tamMax,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valMin,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valMax,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valInicial&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que adiciona un objeto GenArregloEntero a un individuo. 
+<p>
+Se debe utilizar solamente en la función codificacion() de la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. Su propósito particular es insertar un objeto GenArregloEntero en una posición determinada del individuo apuntado por <em>pIndividuo</em>. Este objeto estará asociado con una de las variables del sistema a optimizar, perteneciente a la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>, para la cual se establecen el tamaño mínimo, tamaño máximo y los valores mínimo, máximo e inicial.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pIndividuo</em>&nbsp;</td><td>Apuntador al individuo donde se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición en la que se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>var</em>&nbsp;</td><td>Nombre de la variable del sistema a optimizar asociada con el gen adicionado. Debe ser de tipo ArregloEntero, </td></tr>
+    <tr><td valign=top><em>tamMin</em>&nbsp;</td><td>Tamaño mínimo que puede tomar el gen. </td></tr>
+    <tr><td valign=top><em>tamMax</em>&nbsp;</td><td>Tamaño máximo que puede tomar el gen. </td></tr>
+    <tr><td valign=top><em>valMin</em>&nbsp;</td><td>Valor mínimo que puede tomar cada gen del arreglo. </td></tr>
+    <tr><td valign=top><em>valMax</em>&nbsp;</td><td>Valor máximo que puede tomar cada gen del arreglo. </td></tr>
+    <tr><td valign=top><em>valInicial</em>&nbsp;</td><td>Valor inicial que toma cada gen del arreglo. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="genarreglo.h::ADICIONAR_GENARREGLO_REAL" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_GENARREGLO_REAL</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">pIndividuo,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>pos,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>var,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>tamMin,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>tamMax,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valMin,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valMax,         <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>valInicial&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que adiciona un objeto GenArregloReal a un individuo. 
+<p>
+Se debe utilizar solamente en la función <em>codificacion()</em> de la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. Su propósito particular es insertar un objeto GenArregloReal en una posición determinada del individuo apuntado por <em>pIndividuo</em>. Este objeto estará asociado con una de las variables del sistema a optimizar, perteneciente a la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>, para la cual se establecen el tamaño mínimo, tamaño máximo y los valores mínimo, máximo e inicial.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pIndividuo</em>&nbsp;</td><td>Apuntador al individuo donde se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición en la que se adiciona el gen. </td></tr>
+    <tr><td valign=top><em>var</em>&nbsp;</td><td>Nombre de la variable del sistema a optimizar asociada con el gen adicionado. Debe ser de tipo ArregloReal, </td></tr>
+    <tr><td valign=top><em>tamMin</em>&nbsp;</td><td>Tamaño mínimo que puede tomar el gen. </td></tr>
+    <tr><td valign=top><em>tamMax</em>&nbsp;</td><td>Tamaño máximo que puede tomar el gen. </td></tr>
+    <tr><td valign=top><em>valMin</em>&nbsp;</td><td>Valor mínimo que puede tomar cada gen del arreglo. </td></tr>
+    <tr><td valign=top><em>valMax</em>&nbsp;</td><td>Valor máximo que puede tomar cada gen del arreglo. </td></tr>
+    <tr><td valign=top><em>valInicial</em>&nbsp;</td><td>Valor inicial que toma cada gen del arreglo. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los tipos definidos</h2>
+<a class="anchor" name="a3" doxytag="genarreglo.h::ArregloBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classArreglo.html">Arreglo</a>&lt;bool&gt; <a class="el" href="classArreglo.html">ArregloBool</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un arreglo de datos de tipo booleano <em></em>(bool). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="genarreglo.h::ArregloEntero" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classArreglo.html">Arreglo</a>&lt;long&gt; <a class="el" href="classArreglo.html">ArregloEntero</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un arreglo de datos de tipo entero <em></em>(long). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="genarreglo.h::ArregloReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classArreglo.html">Arreglo</a>&lt;double&gt; <a class="el" href="classArreglo.html">ArregloReal</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un arreglo de datos de tipo real <em></em>(double). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a6" doxytag="genarreglo.h::GenArregloBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt;<a class="el" href="classGenBool.html">GenBool</a>,bool&gt; <a class="el" href="classGenArreglo.html">GenArregloBool</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un gen de tipo arreglo con datos de tipo booleano <em></em>(bool). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7" doxytag="genarreglo.h::GenArregloEntero" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt;<a class="el" href="classGenEntero.html">GenEntero</a>,long&gt; <a class="el" href="classGenArreglo.html">GenArregloEntero</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un gen de tipo arreglo con datos de tipo entero <em></em>(long). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a8" doxytag="genarreglo.h::GenArregloReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt;<a class="el" href="classGenReal.html">GenReal</a>,double&gt; <a class="el" href="classGenArreglo.html">GenArregloReal</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un gen de tipo arreglo con datos de tipo real <em></em>(double). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a12" doxytag="genarreglo.h::OperadorCruceArregloBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a>&lt;<a class="el" href="classGenBool.html">GenBool</a>,bool&gt; <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArregloBool</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un operador de cruce para genes de tipo arreglo con datos de tipo booleano <em></em>(bool). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a13" doxytag="genarreglo.h::OperadorCruceArregloEntero" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a>&lt;<a class="el" href="classGenEntero.html">GenEntero</a>,long&gt; <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArregloEntero</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un operador de cruce para genes de tipo arreglo con datos de tipo entero <em></em>(long). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a14" doxytag="genarreglo.h::OperadorCruceArregloReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArreglo</a>&lt;<a class="el" href="classGenReal.html">GenReal</a>,double&gt; <a class="el" href="classOperadorCruceArreglo.html">OperadorCruceArregloReal</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un operador de cruce para genes de tipo arreglo con datos de tipo real <em></em>(double). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="genarreglo.h::OperadorMutacionArregloBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a>&lt;<a class="el" href="classGenBool.html">GenBool</a>,bool&gt; <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArregloBool</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un operador de mutación para genes de tipo arreglo con datos de tipo booleano <em></em>(bool). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a10" doxytag="genarreglo.h::OperadorMutacionArregloEntero" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a>&lt;<a class="el" href="classGenEntero.html">GenEntero</a>,long&gt; <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArregloEntero</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un operador de mutación para genes de tipo arreglo con datos de tipo entero <em></em>(long). 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a11" doxytag="genarreglo.h::OperadorMutacionArregloReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> typedef <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArreglo</a>&lt;<a class="el" href="classGenReal.html">GenReal</a>,double&gt; <a class="el" href="classOperadorMutacionArreglo.html">OperadorMutacionArregloReal</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Define un operador de mutación para genes de tipo arreglo con datos de tipo real <em></em>(double). 
+<p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

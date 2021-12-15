@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorMutacionRealUniforme class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorMutacionRealUniforme</h1><code>#include &lt;genreal.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorMutacionRealUniforme
+<p><center><img src="classOperadorMutacionRealUniforme.png" usemap="#OperadorMutacionRealUniforme_map" border="0" alt=""></center>
+<map name="OperadorMutacionRealUniforme_map">
+<area href="classOperadorMutacion.html" alt="OperadorMutacion" shape="rect" coords="0,0,194,24">
+</map>
+<a href="classOperadorMutacionRealUniforme-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> que define una mutación uniforme sobre un gen de tipo real. 
+<p>
+El nuevo valor del gen es un número real aleatorio restringido al rango definido por los límites establecidos en el gen. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacionRealUniforme.html#OperadorMutacionRealUniformea0">OperadorMutacionRealUniforme</a> (double ProbabilidadMutacion=0.1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor.  <a href="#OperadorMutacionRealUniformea0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacionRealUniforme.html#OperadorMutacionRealUniformea1">~OperadorMutacionRealUniforme</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorMutacionRealUniformea1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacionRealUniforme.html#OperadorMutacionRealUniformea2">mutarGen</a> (<a class="el" href="classGen.html">Gen</a> *pGen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta una mutación uniforme sobre un objeto de la clase <a class="el" href="classGenReal.html">GenReal</a>.  <a href="#OperadorMutacionRealUniformea2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacion.html#OperadorMutacionRealUniformea3">mutar</a> (<a class="el" href="classGen.html">Gen</a> *pGen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decide si debe realizarse el proceso de mutación sobre un gen.  <a href="#OperadorMutacionRealUniformea3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacion.html#OperadorMutacionRealUniformea4">ObtenerProbabilidadMutacion</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna la probabilidad de mutación del gen sobre el que opera.  <a href="#OperadorMutacionRealUniformea4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacion.html#OperadorMutacionRealUniformea5">AsignarProbabilidadMutacion</a> (double Probabilidad)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna un nueva probababilidad de mutación al gen sobre el que opera.  <a href="#OperadorMutacionRealUniformea5"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacion.html#OperadorMutacionRealUniformep0">m_ProbabilidadMutacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Almacena la probabilidad de mutación del gen sobre el que opera.  <a href="#OperadorMutacionRealUniformep0"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorMutacionRealUniformea0" doxytag="OperadorMutacionRealUniforme::OperadorMutacionRealUniforme" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorMutacionRealUniforme.html">OperadorMutacionRealUniforme</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ProbabilidadMutacion</em> = 0.1          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor. 
+<p>
+Inicializa el valor de la probabilidad de mutación. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>ProbabilidadMutacion</em>&nbsp;</td><td>Establece el valor inicial para la probabilidad de mutación propia del operador. Por defecto es 0.1. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorMutacionRealUniformea1" doxytag="OperadorMutacionRealUniforme::~OperadorMutacionRealUniforme" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classOperadorMutacionRealUniforme.html">OperadorMutacionRealUniforme</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorMutacionRealUniformea5" doxytag="OperadorMutacionRealUniforme::AsignarProbabilidadMutacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual double AsignarProbabilidadMutacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Probabilidad</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual, inherited]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna un nueva probababilidad de mutación al gen sobre el que opera. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Probabilidad</em>&nbsp;</td><td>Probabilidad de mutación a asignar al gen. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Probabilidad de mutación asignada al gen. </dd></dl>
+
+<p>
+Reimplementado en <a class="el" href="classOperadorMutacionArreglo.html#OperadorMutacionArregloa2">OperadorMutacionArreglo</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorMutacionRealUniformea3" doxytag="OperadorMutacionRealUniforme::mutar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void mutar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pGen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual, inherited]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Decide si debe realizarse el proceso de mutación sobre un gen. 
+<p>
+La selección de los genes que deben mutar se realiza aleatoriamente teniendo en cuenta la probabilidad de mutación de cada gen. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pGen</em>&nbsp;</td><td>Apuntador al objeto derivado de <a class="el" href="classGen.html">Gen</a> sobre el que se toma la decisión. </td></tr>
+  </table>
+</dl>
+
+<p>
+Reimplementado en <a class="el" href="classOperadorMutacionArreglo.html#OperadorMutacionArregloa3">OperadorMutacionArreglo</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorMutacionRealUniformea2" doxytag="OperadorMutacionRealUniforme::mutarGen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void mutarGen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pGen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ejecuta una mutación uniforme sobre un objeto de la clase <a class="el" href="classGenReal.html">GenReal</a>. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pGen</em>&nbsp;</td><td>Apuntador al objeto de la clase <a class="el" href="classGenReal.html">GenReal</a> que será sometido a mutación. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classOperadorMutacion.html#OperadorMutaciond0">OperadorMutacion</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorMutacionRealUniformea4" doxytag="OperadorMutacionRealUniforme::ObtenerProbabilidadMutacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double ObtenerProbabilidadMutacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, inherited]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna la probabilidad de mutación del gen sobre el que opera. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Probabilidad de mutación del gen </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="OperadorMutacionRealUniformep0" doxytag="OperadorMutacionRealUniforme::m_ProbabilidadMutacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classOperadorMutacion.html#OperadorMutacionRealUniformep0">m_ProbabilidadMutacion</a><code> [protected, inherited]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Almacena la probabilidad de mutación del gen sobre el que opera. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genreal_8h.html">genreal.h</a><li><a class="el" href="genreal_8cpp.html">genreal.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:46 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 > 
+</a>1.3.6 </small></address>
+</body>
+</html>

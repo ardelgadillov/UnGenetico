@@ -1,0 +1,656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: genetico.h File Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia del Archivo genetico.h</h1>
+<p>
+<code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;iostream.h&gt;</code><br>
+<code>#include &lt;math.h&gt;</code><br>
+<code>#include &lt;float.h&gt;</code><br>
+<code>#include &lt;time.h&gt;</code><br>
+<code>#include "<a class="el" href="arreglos_8h.html">arreglos.h</a>"</code><br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html">Gen</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que sirve de base a clases que definen genes de distintos tipos. </em> <a href="classGen.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classIndividuo.html">Individuo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase que administra la información genética de un individuo. </em> <a href="classIndividuo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classPoblacion.html">Poblacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase que administra la información de los individuos de un algoritmo genético. </em> <a href="classPoblacion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que administra el proceso de un algoritmo genético. </em> <a href="classAlgoritmoGenetico.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que define el proceso de adaptación del algoritmo genético. </em> <a href="classOperadorAdaptacion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorMutacion.html">OperadorMutacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que administra el proceso de mutación en el algoritmo genético. </em> <a href="classOperadorMutacion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruce.html">OperadorCruce</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que administra el proceso de cruce entre los individuos del algoritmo genético. </em> <a href="classOperadorCruce.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que administra la asignación de la probabilidad de supervivencia a los individuos de la población. </em> <a href="classOperadorProbabilidad.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorSeleccion.html">OperadorSeleccion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que administra el proceso de selección de individuos en la población. </em> <a href="classOperadorSeleccion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejas.html">OperadorParejas</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que administra la asignación de parejas para cada individuo de la población. </em> <a href="classOperadorParejas.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que define la estrategia general de reproducción del algoritmo. </em> <a href="classOperadorReproduccion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacion.html">OperadorFinalizacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase abstracta que define la estrategia de finalización del algoritmo genético. </em> <a href="classOperadorFinalizacion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionElitismo.html">OperadorAdaptacionElitismo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a> encargada de efectuar el proceso de elitismo para el algoritmo. </em> <a href="classOperadorAdaptacionElitismo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionProbMutacion.html">OperadorAdaptacionProbMutacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a> que define la estrategia de adaptación para la probabilidad de mutación de los genes de cada individuo de la población. </em> <a href="classOperadorAdaptacionProbMutacion.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionNumIndividuos.html">OperadorAdaptacionNumIndividuos</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a> que hace una variación del número de individuos del algoritmo genético. </em> <a href="classOperadorAdaptacionNumIndividuos.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidadProporcional.html">OperadorProbabilidadProporcional</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a> que define el proceso de asignación de probabilidad de supervivencia proporcional a cada individuo de la población. </em> <a href="classOperadorProbabilidadProporcional.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidadLineal.html">OperadorProbabilidadLineal</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a> que define el proceso de asignación de probabilidad de supervivencia lineal. </em> <a href="classOperadorProbabilidadLineal.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidadHomogenea.html">OperadorProbabilidadHomogenea</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a> que define el proceso de asignación de probabilidad de supervivencia homogénea. </em> <a href="classOperadorProbabilidadHomogenea.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorSeleccionEstocasticaRemplazo.html">OperadorSeleccionEstocasticaRemplazo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorSeleccion.html">OperadorSeleccion</a> que define el proceso de selección estocástica con reemplazo de los individuos. </em> <a href="classOperadorSeleccionEstocasticaRemplazo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejasAleatorias.html">OperadorParejasAleatorias</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de <a class="el" href="classOperadorParejas.html">OperadorParejas</a> que define la asignación de parejas aleatorias para los individuos de la población. </em> <a href="classOperadorParejasAleatorias.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejasAdyacentes.html">OperadorParejasAdyacentes</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorParejas.html">OperadorParejas</a> que define la asignación de parejas adyacentes para los individuos de la población. </em> <a href="classOperadorParejasAdyacentes.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejasExtremos.html">OperadorParejasExtremos</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorParejas.html">OperadorParejas</a> que define la asignación de parejas extremas para los individuos de la población. </em> <a href="classOperadorParejasExtremos.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorReproduccionCruceSimple.html">OperadorReproduccionCruceSimple</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a> que define el cruce simple entre dos individuos de la población. </em> <a href="classOperadorReproduccionCruceSimple.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorReproduccionDosPadresDosHijos.html">OperadorReproduccionDosPadresDosHijos</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a> que define la estrategia de reproducción dos padres dos hijos. </em> <a href="classOperadorReproduccionDosPadresDosHijos.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorReproduccionMejorPadreMejorHijo.html">OperadorReproduccionMejorPadreMejorHijo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a> que define la estrategia de reproducción mejor padre mejor hijo. </em> <a href="classOperadorReproduccionMejorPadreMejorHijo.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorReproduccionMejoresEntrePadresEHijos.html">OperadorReproduccionMejoresEntrePadresEHijos</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a> que define la estrategia de reproducción mejores entre padres e hijos. </em> <a href="classOperadorReproduccionMejoresEntrePadresEHijos.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOnline.html">OperadorFinalizacionOnline</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorFinalizacion.html">OperadorFinalizacion</a> que define la finalización del algoritmo basándose en su medida online. </em> <a href="classOperadorFinalizacionOnline.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>class &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html">OperadorFinalizacionOffline</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase derivada de la clase <a class="el" href="classOperadorFinalizacion.html">OperadorFinalizacion</a> que define la finalización del algoritmo basándose en su medida online. </em> <a href="classOperadorFinalizacionOffline.html#_details">Más...</a><em><br><br></td></tr>
+<tr><td colspan=2><br><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a1">DECLARAR_ALGORITMO</a>(nombreAlgoritmo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que crea una nueva clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>.  <a href="#a1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a2">FIN_DECLARAR_ALGORITMO</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que termina la creación de una clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>.  <a href="#a2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a3">DEFINIR_OPERADOR_PROBABILIDAD</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define el operador de probabilidad que se empleará en el algoritmo genético.  <a href="#a3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a4">DEFINIR_OPERADOR_SELECCION</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define el operador de seleccción que se empleará en el algoritmo genético.  <a href="#a4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a5">DEFINIR_OPERADOR_PAREJAS</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define el operador de parejas que se empleará en el algoritmo genético.  <a href="#a5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a6">DEFINIR_OPERADOR_REPRODUCCION</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define el operador de reproducción que se empleará en el algoritmo genético.  <a href="#a6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a7">ADICIONAR_OPERADOR_ADAPTACION</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define los operadores de adaptación que se emplearán en el algoritmo genético.  <a href="#a7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a8">ADICIONAR_OPERADOR_FINALIZACION</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define los operadores de finalización que se emplearán en el algoritmo genético.  <a href="#a8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a9">ADICIONAR_OPERADOR_MUTACION</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define el operador de mutación que usará el algoritmo genético para un gen en particular.  <a href="#a9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a10">ADICIONAR_OPERADOR_CRUCE</a>(tipoOperador)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Macro que define el operador de cruce que usará el algoritmo genético para un gen en particular.  <a href="#a10"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Enumeraciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a18">CriteriosDeAdaptacion</a> { <a class="el" href="genetico_8h.html#a18a11">ADAPTACION_PROBMUTACION_OFFLINE</a> =  1, 
+<a class="el" href="genetico_8h.html#a18a12">ADAPTACION_PROBMUTACION_EXPONENCIAL</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constantes utilizadas por los operadores de adaptación.  <a href="#a18">Más...</a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a19">EstadosIndividuo</a> { <br>
+&nbsp;&nbsp;<a class="el" href="genetico_8h.html#a19a13">ESTADO_CODIFICAR</a> =  1, 
+<a class="el" href="genetico_8h.html#a19a14">ESTADO_DECODIFICAR</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="genetico_8h.html#a19a15">ESTADO_CREAR</a>
+<br>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constantes utilizadas en la definicion de la codificación del individuo.  <a href="#a19">Más...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a16">redondear</a> (double)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>template&lt;class T&gt; T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="genetico_8h.html#a17">restringir</a> (T valor, T min, T max)</td></tr>
+
+</table>
+<hr><h2>Documentación de las definiciones</h2>
+<a class="anchor" name="a7" doxytag="genetico.h::ADICIONAR_OPERADOR_ADAPTACION" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_OPERADOR_ADAPTACION</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define los operadores de adaptación que se emplearán en el algoritmo genético. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a10" doxytag="genetico.h::ADICIONAR_OPERADOR_CRUCE" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_OPERADOR_CRUCE</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define el operador de cruce que usará el algoritmo genético para un gen en particular. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a8" doxytag="genetico.h::ADICIONAR_OPERADOR_FINALIZACION" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_OPERADOR_FINALIZACION</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define los operadores de finalización que se emplearán en el algoritmo genético. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9" doxytag="genetico.h::ADICIONAR_OPERADOR_MUTACION" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define ADICIONAR_OPERADOR_MUTACION</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define el operador de mutación que usará el algoritmo genético para un gen en particular. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a1" doxytag="genetico.h::DECLARAR_ALGORITMO" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define DECLARAR_ALGORITMO</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">nombreAlgoritmo&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que crea una nueva clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. 
+<p>
+Declara e implementa el constructor por defecto de esta clase, también declara implicitamente las funciones de caracter obligatorio, las cuales deben ser implementadas en el proyecto de optiización, usando la forma: <pre><div>
+tipoRetornado nombreAlgoritmo::nombreFuncion(parametros)
+{
+	//cuerpo de la función
+}
+</pre></div> Por ejemplo: <pre><div>
+double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa3">nombreAlgoritmo::objetivo()</a>
+{
+	double FO;
+	//instrucciones correspondientes a la funcion objetivo
+	return FO;
+}
+</pre></div> Pueden declararse e implementarse adicionalmente otros constructores, métodos y variables. Tambien puede adicionarse un destructor, en caso de necesitar destruir apuntadores a objetos creados dinámicamente.     </td>
+  </tr>
+</table>
+<a class="anchor" name="a5" doxytag="genetico.h::DEFINIR_OPERADOR_PAREJAS" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define DEFINIR_OPERADOR_PAREJAS</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define el operador de parejas que se empleará en el algoritmo genético. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a3" doxytag="genetico.h::DEFINIR_OPERADOR_PROBABILIDAD" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define DEFINIR_OPERADOR_PROBABILIDAD</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define el operador de probabilidad que se empleará en el algoritmo genético. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a6" doxytag="genetico.h::DEFINIR_OPERADOR_REPRODUCCION" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define DEFINIR_OPERADOR_REPRODUCCION</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define el operador de reproducción que se empleará en el algoritmo genético. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a4" doxytag="genetico.h::DEFINIR_OPERADOR_SELECCION" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define DEFINIR_OPERADOR_SELECCION</td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">tipoOperador&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que define el operador de seleccción que se empleará en el algoritmo genético. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>tipoOperador</em>&nbsp;</td><td>Especifica el tipo de operador a utilizar junto con sus parámetros iniciales. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2" doxytag="genetico.h::FIN_DECLARAR_ALGORITMO" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define FIN_DECLARAR_ALGORITMO
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Macro que termina la creación de una clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las enumeraciones</h2>
+<a class="anchor" name="a18" doxytag="genetico.h::CriteriosDeAdaptacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> enum <a class="el" href="genetico_8h.html#a18">CriteriosDeAdaptacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constantes utilizadas por los operadores de adaptación. 
+<p>
+<dl compact><dt><b>Valores de la enumeración: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="a18a11" doxytag="ADAPTACION_PROBMUTACION_OFFLINE" ></a>ADAPTACION_PROBMUTACION_OFFLINE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="a18a12" doxytag="ADAPTACION_PROBMUTACION_EXPONENCIAL" ></a>ADAPTACION_PROBMUTACION_EXPONENCIAL</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a19" doxytag="genetico.h::EstadosIndividuo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> enum <a class="el" href="genetico_8h.html#a19">EstadosIndividuo</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constantes utilizadas en la definicion de la codificación del individuo. 
+<p>
+Se utilizan en la función <em>codificacion()</em> de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> <dl compact><dt><b>Valores de la enumeración: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="a19a13" doxytag="ESTADO_CODIFICAR" ></a>ESTADO_CODIFICAR</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="a19a14" doxytag="ESTADO_DECODIFICAR" ></a>ESTADO_DECODIFICAR</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="a19a15" doxytag="ESTADO_CREAR" ></a>ESTADO_CREAR</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="a16" doxytag="genetico.h::redondear" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0" height="35">
+  <tr>
+    <td class="mdRow" height="31">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long redondear </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>x</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el entero mas cercano a <em>x</em> <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>x</em>&nbsp;</td><td>Número del que se desea encontar su valor entero más cercano </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Número entero más cercano a <em>x</em> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a17" doxytag="genetico.h::restringir" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T restringir </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>valor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>max</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Comprueba si <em>valor</em> se encuentra dentro de un rango determinado y lo restringe a los límites. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>valor</em>&nbsp;</td><td>Valor a restringir </td></tr>
+    <tr><td valign=top><em>min</em>&nbsp;</td><td>Límite inferior del rango </td></tr>
+    <tr><td valign=top><em>max</em>&nbsp;</td><td>Límite superior del rango </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor ubicado dentro de los limites. Si valor &lt; min retorna min. Si valor &gt; max retorna max </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

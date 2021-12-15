@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorAdaptacionNumIndividuos class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorAdaptacionNumIndividuos</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorAdaptacionNumIndividuos
+<p><center>
+<img src="classOperadorAdaptacionNumIndividuos.png" usemap="#OperadorAdaptacionNumIndividuos_map" border="0" alt="" width="213" height="80"></center>
+<map name="OperadorAdaptacionNumIndividuos_map">
+<area href="classOperadorAdaptacion.html" alt="OperadorAdaptacion" shape="rect" coords="0,0,213,24">
+</map>
+<a href="classOperadorAdaptacionNumIndividuos-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a> que hace una variación del número de individuos del algoritmo genético. 
+<p>
+La primera generación del algoritmo contiene un número máximo de individuos establecido, este número disminuye linealmente hasta alcanzar un número mínimo de individuos predefinido. Este límite se alcanza cuando se llega a la última generación establecida para el algoritmo. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosa0">OperadorAdaptacionNumIndividuos</a> (<a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *pAG, int NumIndivInicio=0, int NumIndivFin=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor.  <a href="#OperadorAdaptacionNumIndividuosa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosa1">~OperadorAdaptacionNumIndividuos</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorAdaptacionNumIndividuosa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosa2">adaptacion</a> (<a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *pAG)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método para efectuar el proceso de adaptación de número de individuos.  <a href="#OperadorAdaptacionNumIndividuosa2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosp0">m_nIndivInicio</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica el número inicial de individuos en la población.  <a href="#OperadorAdaptacionNumIndividuosp0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosp1">m_nIndivFin</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica el número final de individuos en la población.  <a href="#OperadorAdaptacionNumIndividuosp1"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorAdaptacionNumIndividuosa0" doxytag="OperadorAdaptacionNumIndividuos::OperadorAdaptacionNumIndividuos" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorAdaptacionNumIndividuos.html">OperadorAdaptacionNumIndividuos</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAG</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>NumIndivInicio</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>NumIndivFin</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor. 
+<p>
+Inicializa los tamaños inicial y final de la población para el algoritmo <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pAG</em>&nbsp;</td><td>Apuntador al algoritmo genético sobre el que opera. </td></tr>
+    <tr><td valign=top><em>NumIndivInicio</em>&nbsp;</td><td>Número inicial de individuos en la población, debe ser positivo. Por defecto es igual al número de individuos del algoritmo genético. </td></tr>
+    <tr><td valign=top><em>NumIndivFin</em>&nbsp;</td><td>Número final de individuos en la población, Por defecto es igual a la cuarta parte del número incial de individuos del algoritmo genético. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorAdaptacionNumIndividuosa1" doxytag="OperadorAdaptacionNumIndividuos::~OperadorAdaptacionNumIndividuos" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classOperadorAdaptacionNumIndividuos.html">OperadorAdaptacionNumIndividuos</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorAdaptacionNumIndividuosa2" doxytag="OperadorAdaptacionNumIndividuos::adaptacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void adaptacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pAG</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método para efectuar el proceso de adaptación de número de individuos. 
+<p>
+
+<p>
+Implementa <a class="el" href="classOperadorAdaptacion.html#OperadorAdaptaciona2">OperadorAdaptacion</a>.    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="OperadorAdaptacionNumIndividuosp1" doxytag="OperadorAdaptacionNumIndividuos::m_nIndivFin" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosp1">m_nIndivFin</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica el número final de individuos en la población. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorAdaptacionNumIndividuosp0" doxytag="OperadorAdaptacionNumIndividuos::m_nIndivInicio" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classOperadorAdaptacionNumIndividuos.html#OperadorAdaptacionNumIndividuosp0">m_nIndivInicio</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica el número inicial de individuos en la población. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a><li><a class="el" href="genetico_8cpp.html">genetico.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:38 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

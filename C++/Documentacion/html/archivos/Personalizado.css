@@ -1,0 +1,167 @@
+H1 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif; color:#006600 
+}
+H2 {
+	font-family: Geneva, Arial, Helvetica, sans-serif; color:#5A8787
+}
+CAPTION { font-weight: bold }
+DIV.qindex {
+	width: 100%;
+	border: 2px solid #33CC33;
+	text-align: center;
+	margin: 2px;
+	padding: 2px
+}
+A.qindex {
+       text-decoration: none;
+       font-weight: bold;
+       color: #006600;
+       padding: 2px
+}
+a:visited.qindex {
+       text-decoration: none;
+       font-weight: bold;
+       color: #0000CC;
+}
+a:hover.qindex {
+	text-decoration: none;
+	background-color: #F2FFF2;
+	padding: 2px
+}
+A.qindexHL {
+	text-decoration: none;
+	font-weight: bold;
+	color: #CC9900;
+	padding-left:6px; padding-right:6px; padding-top:2; padding-bottom:2
+           }
+a:hover.qindexHL {
+	text-decoration: none;
+	color: #CC6600;
+	font-weight:bold; padding-left:6px; padding-right:6px; padding-top:2px; padding-bottom:2px
+}
+a:visited.qindexHL { text-decoration: none; color: #CC3300; font-weight:bold }
+A.el { text-decoration: none; font-weight: bold; color:#005959 }
+A.elRef { font-weight: bold; color:#003366 }
+A.code { text-decoration: none; font-weight: normal; color: #003366}
+A.codeRef { font-weight: normal; color: #003366}
+A:hover { text-decoration: none; background-color: #F2FFF2 }
+DL.el { margin-left: -1cm }
+PRE.fragment {
+	border: 1px solid #667299;
+	background-color: #FBFBFB;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-left: 2px;
+	margin-right: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+DIV.fragment {
+	border: 1px solid #667299;
+	background-color: #FBFBFB;
+	padding: 6px
+}
+DIV.ah { background-color: #999966; font-weight: bold; color: #FFFFFF; margin-bottom: 3px; margin-top: 3px; font-size:14pt  }
+TD.md { font-weight: bold }
+TD.mdname1 { font-weight: bold;  }
+TD.mdname { font-weight: bold; width: 600px }
+DIV.groupHeader { margin-left: 16px; margin-top: 12px; margin-bottom: 6px; font-weight: bold }
+DIV.groupText { margin-left: 16px; font-style: italic; font-size: smaller }
+BODY {
+	background-position: 0% 0%; margin-right: 20px;
+	margin-left: 20px; background-repeat:repeat; background-attachment:scroll; text-align:justify
+}
+TD.indexkey {
+	margin:2px 0px; font-weight: bold;
+	padding-right  : 10px;
+	padding-top    : 2px;
+	padding-left   : 10px;
+	padding-bottom : 2px;
+	border: 1px solid #00CC99;
+}
+TD.indexvalue {
+	margin:2px 0px; font-style: italic;
+	padding-right  : 10px;
+	padding-top    : 2px;
+	padding-left   : 10px;
+	padding-bottom : 2px;
+	border: 1px solid #00CC99;
+}
+
+TR.memlist {
+   border:1px solid #E8F8FF; background-color: #E8F8FF 
+}
+P.formulaDsp { text-align: center; }
+IMG.formulaDsp { }
+IMG.formulaInl { vertical-align: middle; }
+SPAN.keyword       { color: #008000 }
+SPAN.keywordtype   { color: #604020 }
+SPAN.keywordflow   { color: #e08000 }
+SPAN.comment       { color: #800000 }
+SPAN.preprocessor  { color: #806020 }
+SPAN.stringliteral { color: #002080 }
+SPAN.charliteral   { color: #008080 }
+.mdTable {
+	border: 1px solid #00CC99;
+	padding-left:4; padding-right:4; padding-top:1; padding-bottom:1 
+}
+.mdRow {
+	padding: 8px 10px;
+}
+.mdescLeft {
+	font-size: smaller;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 8px;
+	margin: 0px
+}
+.mdescRight {
+	font-size: smaller;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	padding-left: 4px;
+	margin: 0px;
+	padding-bottom: 0px;
+	padding-right: 8px
+}
+.memItemLeft {
+	border-top:1px solid #C0C0C0; margin:4px; border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-color: #C0C0C0;
+	border-bottom-color: #C0C0C0;
+	border-left-color: #C0C0C0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px; padding-left:0px; padding-right:0px; padding-top:8px; padding-bottom:0px
+}
+.memItemRight {
+	border-top:1px solid #C0C0C0; margin:4px; border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-color: #C0C0C0;
+	border-bottom-color: #C0C0C0;
+	border-left-color: #C0C0C0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px; padding-left:0px; padding-right:0px; padding-top:8px; padding-bottom:0px
+}
+.search     { color: #003399;
+              font-weight: bold;
+}
+FORM.search {
+              margin-bottom: 0px;
+              margin-top: 0px;
+}
+INPUT.search { font-size: 75%;
+               font-weight: normal;
+               
+}
+TD.tiny      { font-size: 75%;
+}
+a {
+	color: #003366;
+}
+a:visited {
+	color: #003366;
+}

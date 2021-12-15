@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: Creación básica usando entorno gráfico</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1><a class="anchor" name="grafica">Creación básica usando entorno gráfico</a></h1><div align="justify"></div><p>
+<div align="justify"></div><h2><a class="anchor" name="creg">
+Creación del proyecto usando entorno gráfico</a></h2>
+<div align="justify"> <table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#000000" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%" style="border-style: none; border-width: medium"><div align="left"> <a href="creacion.html#crec"><small>Creación del proyecto en consola</small></a> </div>  </td><td width="50%" style="border-style: none; border-width: medium"><div align="right"> <a href="grafica.html#cregraf"><small>Creación del proyecto usando entorno gráfico</small></a> </div>  </td></tr>
+</table>
+</div><p>
+<div align="justify">Las optimizaciones implementadas en <em>UNGenético 2.0</em> se ejecutan dentro de un proyecto propio de un compilador de lenguaje C++ de libre escogencia. Para incluir <em>UNGenético 2.0</em>, en la carpeta del proyecto deben copiarse todos los <a href="files.html">archivos</a> de la librería, tanto los encabezados como los fuente (extensiones <em></em>.h y <em></em>.cpp); en caso contrario, debe especificarse en el proyecto la ruta donde se encuentran dichos archivos. El proyecto solamente debe contener un archivo fuente de C++ (extensión <em></em>.cpp) donde se especificarán todas las características del sistema a optimizar, su nombre es de libre escogencia.</div><p>
+<div align="justify">Para crear una aplicación gráfica es necesario crear un proyecto que incluya la librería <em>wxWindows</em>, estos proyectos cambian su forma de creación y configuración en cada compilador donde se implemente, por lo tanto es recomendable consultar la documentación de esta librería en su <a href="http://www.wxwindows.org">sitio oficial</a> para crear este tipo de proyectos.</div><p>
+<div align="justify">En el archivo principal del proyecto, debe realizarse la definición de la constante USAR_VENTANA, con el fin de utilizar la interfaz gráfica diseñada para <em>UNGenético 2.0</em>. Adicionalmente, es necesario incluir el archivo <a class="el" href="UNGenetico_8h.html">UNGenetico.h</a> encargado de enlazar los demás archivos de la librería. El siguiente fragmento muestra cómo debe iniciar el archivo principal para el <a href="creacion.html#eje">sistema propuesto</a> usando entorno gráfico.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+#define USAR_VENTANA
+#include "UNGenetico.h"
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ <em><a class="anchor" name="mosgraf"></a>Método mostrarIndividuo(Individuo &amp; Ind) usando entorno gráfico</em><br>
+</div><p>
+<div align="justify"><table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#000000" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%" style="border-style: none; border-width: medium"><div align="left"> <a href="creacion.html#mos"><small>Método mostrarIndividuo(Individuo &amp; Ind) en consola</small></a> </div>  </td><td width="50%" style="border-style: none; border-width: medium"><div align="right"> <a href="grafica.html#mosgraf"><small>Método mostrarIndividuo(Individuo &amp; Ind) usando entorno gráfico</small></a> </div>  </td></tr>
+</table>
+</div><p>
+<div align="justify">Este método se emplea para visualizar el valor de cada gen presente en el individuo apuntado por <em>Ind</em> junto con su función objetivo.</div><p>
+<div align="justify">Para la utilización de la interfaz gráfica, los valores de las variables y la función objetivo deben ser almacenados en una cadena de caracteres de tipo <em>wxstring</em> propia de la librería <em>wxWindows</em>, que ne este caso se ha llamado <em>Cad</em>. Gracias a la función <em>AppendText(Cad)</em>, esta cadena se agregará a un objeto de control de texto apuntado por <em>m_TextCtrl</em> que pertenece a la ventana donde se muestra el proceso del algoritmo. Este procedimiento puede observarse en el siguiente fragmento.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+void MiAlgoritmoGenetico::mostrarIndividuo(Individuo &amp; Ind)
+{
+	codificacion(&amp;Ind, ESTADO_DECODIFICAR);<br>
+
+	wxString Cad;
+	Cad.Empty();
+	Cad &lt;&lt;"\nFuncion Objetivo:\t" &lt;&lt; Ind.objetivo();
+	Cad &lt;&lt; "\nx: ";
+	int tam = tam.getSize();
+	for(int i=0; i&lt;l; i++)
+	{
+		Cad &lt;&lt; x[i];
+	}
+	Cad &lt;&lt; "\ny: " &lt;&lt; y;
+	Cad &lt;&lt; "\nz: " &lt;&lt; z;
+	m_pFrame-&gt;m_pTextCtrl-&gt;AppendText(Cad);
+}
+</pre></div></div></div><p>
+<div align="justify">En la primera línea de esta función, en la instrucción <em>Ind.objetivo(true)</em>, el parámetro <em>true</em> indica que deben actualizarse las variables del sistema, puesto que se van a imprimir. Si no se utilizara esta instrucción, o no se quisiera acceder a la función objetivo, sería necesario extraer los valores presentes dentro de cada gen con ayuda del método <em>codificacion(&amp;Ind, ESTADO_DECODIFICAR)</em> quien ejecuta la decodifcación, es decir, transfiere la información presente en los genes del individuo a las variables del sistema.</div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h2><a class="anchor" name="prigraf">
+Definición del procedimiento principal usando entorno gráfico</a></h2>
+<div align="justify"></div><p>
+<div align="justify"><table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#000000" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%" style="border-style: none; border-width: medium"><div align="left"> <a href="creacion.html#pri"><small>Definición del procedimiento principal en consola</small></a> </div>  </td><td width="50%" style="border-style: none; border-width: medium"><div align="right"> <a href="grafica.html#prigraf"><small>Definición del procedimiento principal usando entorno gráfico</small></a> </div>  </td></tr>
+</table>
+</div><p>
+<div align="justify">Con el fin de crear una ventana para la aplicación del proyecto de optimización, se debe utilizar la macro DECLARAR_APLICACION(<em>NombreAplicacion</em>) la cual define a una clase derivada de la clase <em>wxApp</em> propia de la librería <em>wxWindows</em>. Con ésta única instrucción, implícitamente se está declarando la clase para la aplicación, el apuntador a la ventana principal que se utilizará y el método <em>OnInit()</em>, el cual debe implementarse posteriormente y es quien recibe el control del progrma una vez se ha creado la aplicación.</div><p>
+<div align="justify">El método <em>OnInit()</em> es equivalente a la función principal de la aplicación, dentro de éste es necesario realizar varias actividades, entre ellas:</div><p>
+<div align="justify"><ul>
+<li>
+A través del apuntador <em>m_pframe</em> que pertenece a la clase de la aplicación, se debe asignar espacio en memoria para un objeto de la clase <em><a class="el" href="classAGFrame.html">AGFrame</a></em> que corresponde a la ventana principal; en la misma instrucción se asignan su título, coordenadas y tamaño.<p>
+</li>
+<li>
+Se require invocar a los métodos <em>SetTopWindow()</em> y <em>Show()</em> para que la ventana de aplicación sea visible.<p>
+</li>
+<li>
+Se debe crear una instancia de la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> que ha sido definida. Para este ejemplo se ha creado un objeto de la clase <em>MiAlgoritmoGenetico</em> llamado <em>MiAg</em>. La instrucción debe recibir el parámetro <em>m_pframe</em> para ejecutar el algoritmo genético dentro de la ventana principal.<p>
+</li>
+<li>
+El algoritmo genético puede ejecutarse en un sólo paso o mediante un ciclo que recorra cada una de sus generaciones. La primera opción es la más sencilla y se implementa al invocar el método <em>optimizar()</em> de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. La optimización paso a paso debe iniciar invocando al método <em>iniciarOptimizacion()</em> y continúa con un ciclo que repite la ejecución del método <em>iterarOptimizacion()</em> hasta que la función <em>finalizar()</em> retorne <em>true</em>.<p>
+</li>
+<li>
+Cuando el algoritmo es ejecutado paso a paso, es posible visualizar el mejor individuo presente en cada generación. Para esto se utiliza el método <em>mostrarIndividuo(Individuo &amp; Ind)</em> creado para este ejemplo. En este caso el método recibirá como parámetro una referencia al mejor individuo de cada generación del algoritmo.<p>
+</li>
+<li>
+Si se requiere, se puede invocar la función <em>mostrarMedidas()</em> para obtener los valores de las medidas propias del algoritmo cuando éste termine su ejecución.<p>
+</li>
+<li>
+La macro EJECUTAR_EVENTOS ejecuta los eventos pendientes de la aplicación, debe usarse en medio de procesos largos para dar una orden de ejecución a las tareas y evitar bloqueos.<p>
+</li>
+<li>
+El método <em>OnInit()</em> debe retornar el booleano <em>true</em> para evitar inconvenientes en la aplicación. </li>
+</ul>
+</div><p>
+<div align="justify">El siguiente fragmento muestra la implementación de las tareas descritas anteriormente para una aplicación denominada <em>AGApp</em>.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+<a class="el" href="ventana_8h.html#a0">DECLARAR_APLICACION(AGApp)</a><br>
+
+bool AGApp::OnInit()
+{
+	m_pFrame = new <a class="el" href="classAGFrame.html">AGFrame</a>("UNGenético 2.0", 50, 50, 700, 500);
+	SetTopWindow(m_pFrame);
+	m_pFrame-&gt;Show(true);<br>
+
+	MiAlgoritmoGenetico MiAg(m_pFrame);<br>
+
+	MiAg.iniciarOptimizacion();
+	int i=0;
+	do
+	{
+		MiAg.iterarOptimizacion();
+		wxString Cad;
+		Cad.Empty();
+		Cad &lt;&lt; "\n\nGENERACION "&lt;&lt; i;
+		m_pFrame-&gt;m_pTextCtrl-&gt;AppendText(Cad);
+		MiAg.mostrarIndividuo(*MiAg.m_pMejorEnEstaGeneracion);
+		i++;
+		EJECUTAR_EVENTOS
+	}while(!MiAg.finalizar());<br>
+
+	MiAg.mostrarMedidas();
+	return true;
+}
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"></div> <hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:50 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 > 
+</a>1.3.6 </small></address>
+</body>
+</html>

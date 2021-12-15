@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorCruceRealBLX class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorCruceRealBLX</h1><code>#include &lt;genreal.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorCruceRealBLX
+<p><center>
+<img src="classOperadorCruceRealBLX.png" usemap="#OperadorCruceRealBLX_map" border="0" alt="" width="151" height="80"></center>
+<map name="OperadorCruceRealBLX_map">
+<area href="classOperadorCruce.html" alt="OperadorCruce" shape="rect" coords="0,0,151,24">
+</map>
+<a href="classOperadorCruceRealBLX-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classOperadorCruce.html">OperadorCruce</a> que define un cruce BLX - 
+<img class="formulaInl" alt="$\alpha$" src="form_15.png" width="12" height="10"> entre dos genes de tipo real. 
+<p>
+Crea <em>numHijos</em> genes cuyos valores corresponden a números reales aleatorios del intervalo 
+<img class="formulaInl" alt="$[c_{min} - I \alpha , c_{max} + I \alpha]$" src="form_16.png" width="134" height="16"> donde 
+<img class="formulaInl" alt="$c_{min}=min[pMejor,pPeor]$" src="form_17.png" width="166" height="16">, 
+<img class="formulaInl" alt="$c_{max}=max[pMejor,pPeor]$" src="form_18.png" width="170" height="16"> e 
+<img class="formulaInl" alt="$I=c_{max}-c_{min}$" src="form_19.png" width="98" height="14">. Los valores resultantes se agregan al arreglo de genes <em>pHijos</em> 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXa0">OperadorCruceRealBLX</a> (double Alfa=0.3)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor.  <a href="#OperadorCruceRealBLXa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXa1">setAlfa</a> (double Alfa)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia el valor del parámetro <em>Alfa</em> comprobando los límites.  <a href="#OperadorCruceRealBLXa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXa2">getAlfa</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor del parámetro <em>Alfa</em>.  <a href="#OperadorCruceRealBLXa2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXa3">~OperadorCruceRealBLX</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorCruceRealBLXa3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXa4">cruzarGenes</a> (const <a class="el" href="classGen.html">Gen</a> *pMejor, const <a class="el" href="classGen.html">Gen</a> *pPeor, <a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classGen.html">Gen</a> &gt; *pHijos, int numHijos, int indice=-1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta el cruce BLX - 
+  <img class="formulaInl" alt="$\alpha$" src="form_15.png" width="12" height="10"> sobre genes reales.  <a href="#OperadorCruceRealBLXa4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXr0">m_Alfa</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Establece la amplitud del intervalo de definición.  <a href="#OperadorCruceRealBLXr0"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorCruceRealBLXa0" doxytag="OperadorCruceRealBLX::OperadorCruceRealBLX" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorCruceRealBLX.html">OperadorCruceRealBLX</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Alfa</em> = 0.3          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor. 
+<p>
+Inicializa el valor de <em>Alfa</em> <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Alfa</em>&nbsp;</td><td>Establece la amplitud del intervalo de definición. Por defecto es igual a 0.3. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorCruceRealBLXa3" doxytag="OperadorCruceRealBLX::~OperadorCruceRealBLX" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classOperadorCruceRealBLX.html">OperadorCruceRealBLX</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorCruceRealBLXa4" doxytag="OperadorCruceRealBLX::cruzarGenes" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void cruzarGenes </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMejor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pPeor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classGen.html">Gen</a> &gt; *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pHijos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>numHijos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>indice</em> = -1</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ejecuta el cruce BLX - 
+<img class="formulaInl" alt="$\alpha$" src="form_15.png" width="12" height="10"> sobre genes reales. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMejor</em>&nbsp;</td><td><a class="el" href="classGen.html">Gen</a> del individuo padre con mejor función de evaluación. </td></tr>
+    <tr><td valign=top><em>pPeor</em>&nbsp;</td><td><a class="el" href="classGen.html">Gen</a> del individuo padre con peor función de evaluación. </td></tr>
+    <tr><td valign=top><em>pHijos</em>&nbsp;</td><td><a class="el" href="classArreglo.html">Arreglo</a> de genes al cual se adicionan los genes hijos. </td></tr>
+    <tr><td valign=top><em>numHijos</em>&nbsp;</td><td>Numero de genes hijos a crear en el cruce. </td></tr>
+    <tr><td valign=top><em>indice</em>&nbsp;</td><td>Es ignorado. Existe por compatibilidad. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classOperadorCruce.html#OperadorCrucea2">OperadorCruce</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorCruceRealBLXa2" doxytag="OperadorCruceRealBLX::getAlfa" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double getAlfa </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor del parámetro <em>Alfa</em>. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Parámetro <em>Alfa</em> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorCruceRealBLXa1" doxytag="OperadorCruceRealBLX::setAlfa" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void setAlfa </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Alfa</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cambia el valor del parámetro <em>Alfa</em> comprobando los límites. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Alfa</em>&nbsp;</td><td>Valor a asignar al parámetro <em>Alfa</em> </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="OperadorCruceRealBLXr0" doxytag="OperadorCruceRealBLX::m_Alfa" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXr0">m_Alfa</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Establece la amplitud del intervalo de definición. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genreal_8h.html">genreal.h</a><li><a class="el" href="genreal_8cpp.html">genreal.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:42 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

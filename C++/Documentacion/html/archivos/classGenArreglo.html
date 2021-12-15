@@ -1,0 +1,1121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético:  TemplateGenArreglo class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase GenArreglo</h1><code>#include &lt;genarreglo.h&gt;</code>
+<p>
+<p>Diagrama de herencias de GenArreglo
+<p><center>
+<img src="classGenArreglo.png" usemap="#GenArreglo_map" border="0" alt="" width="78" height="80"></center>
+<map name="GenArreglo_map">
+<area href="classGen.html" alt="Gen" shape="rect" coords="0,0,78,24">
+</map>
+<a href="classGenArreglo-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+<h3>template&lt;class G, class T&gt;<br>
+ class GenArreglo&lt; G, T &gt;</h3>
+
+Clase derivada de la clase <a class="el" href="classGen.html">Gen</a>, especializada en un gen de tipo arreglo de tamaño variable. 
+<p>
+Se utiliza para representar y almacenar la información genética de variables cuya codificación se realiza con un arreglo de datos que pueden se enteros, reales o booleanos. G puede ser <a class="el" href="classGenBool.html">GenBool</a>, <a class="el" href="classGenEntero.html">GenEntero</a> o <a class="el" href="classGenReal.html">GenReal</a>. T puede ser bool, long o double. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa0">GenArreglo</a> (const <a class="el" href="classGenArreglo.html">GenArreglo</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por copia.  <a href="#GenArregloa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa1">GenArreglo</a> (int TamanoMinimo=1, int TamanoMaximo=10, T ValorMinimo=0, T ValorMaximo=1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#GenArregloa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa2">GenArreglo</a> (int TamanoMinimo, int TamanoMaximo, T ValorMinimo, T ValorMaximo, T ValorInicial)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor con ValorInicial.  <a href="#GenArregloa2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classGen.html">Gen</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa3">crearCopia</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una copia exacta del gen.  <a href="#GenArregloa3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa4">copiar</a> (const <a class="el" href="classGen.html">Gen</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna nuevos valores al gen copiando las propiedades de otro gen.  <a href="#GenArregloa4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa5">operator=</a> (const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador de asignación a partir de otro objeto GenArreglo&lt;G,T&gt;.  <a href="#GenArregloa5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa6">operator=</a> (const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador de asignación a partir de un objeto Arreglo&lt;T&gt;.  <a href="#GenArregloa6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa7">convertArreglo</a> (<a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;destino) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convierte el objeto GenArreglo&lt;G,T&gt; en un objeto Arreglo&lt;T&gt;.  <a href="#GenArregloa7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa8">~GenArreglo</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#GenArregloa8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa9">setTam</a> (int nuevoTam, bool crearAleatorios=false)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia el tamaño del arreglo.  <a href="#GenArregloa9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa10">generarAleatorio</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Genera un arreglo de genes de tamaño y valores aleatorios.  <a href="#GenArregloa10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa11">operadorMutacionDefecto</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un objeto correspondiente al operador de mutación establecido por defecto para genes de tipo arreglo.  <a href="#GenArregloa11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorCruce.html">OperadorCruce</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa12">operadorCruceDefecto</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un objeto correspondiente al operador de cruce establecido por defecto para genes de tipo arreglo.  <a href="#GenArregloa12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>G &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa13">getGen</a> (int pos) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el apuntador al gen indicado por <em>pos</em> en el arreglo de genes.  <a href="#GenArregloa13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa14">getVal</a> (int pos) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor actual del gen en la posición <em>pos</em> del arreglo de genes.  <a href="#GenArregloa14"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa15">setVal</a> (int pos, T valor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna un nuevo valor al gen ubicado en la posición <em>pos</em>.  <a href="#GenArregloa15"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classGenEntero.html">GenEntero</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa16">getGenItems</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el <a class="el" href="classGenEntero.html">GenEntero</a> que almacena el tamaño del arreglo variable.  <a href="#GenArregloa16"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa17">getTam</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el tamaño actual del arreglo de genes.  <a href="#GenArregloa17"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa18">getMinTam</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el tamaño mínimo del arreglo variable.  <a href="#GenArregloa18"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa19">getMaxTam</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el tamaño máximo del arreglo variable.  <a href="#GenArregloa19"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa20">getMinVal</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor mínimo válido para los datos almacenados en el arreglo de genes.  <a href="#GenArregloa20"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArregloa21">getMaxVal</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor máximo válido para los datos almacenados en el arreglo de genes.  <a href="#GenArregloa21"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Métodos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>G *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglob0">crearGen</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea un nuevo objeto del tipo de genes contenidos en el arreglo y retorna su apuntador.  <a href="#GenArreglob0"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classGenEntero.html">GenEntero</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglop0">m_pGenItems</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al <a class="el" href="classGenEntero.html">GenEntero</a> que almacena el tamaño actual del arreglo.  <a href="#GenArreglop0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classArreglo.html">Arreglo</a>&lt; G &gt; *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglop1">m_pArregloGen</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="classArreglo.html">Arreglo</a> que contiene la informacion genética, con genes del tipo especificado por <em>G</em>.  <a href="#GenArreglop1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglop2">m_valMin</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mínimo valor válido para los datos contenidos en el arreglo.  <a href="#GenArreglop2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglop3">m_valMax</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Máximo valor válido para los datos contenidos en el arreglo.  <a href="#GenArreglop3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglop4">m_valInicial</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Valor inicial para los datos contenidos en el arreglo.  <a href="#GenArreglop4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenArreglo.html#GenArreglop5">m_usarValInicial</a></td></tr>
+
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="GenArregloa0" doxytag="GenArreglo::GenArreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenArreglo.html">GenArreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por copia. 
+<p>
+Construye el nuevo objeto copiando idénticamente las propiedades de otro objeto de la clase GenArreglo. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa1" doxytag="GenArreglo::GenArreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenArreglo.html">GenArreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>TamanoMinimo</em> = 1, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>TamanoMaximo</em> = 10, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorMinimo</em> = 0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorMaximo</em> = 1</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Inicializa todos los miembros de la clase con valores válidos. Asigna a cada gen su valor por defecto. El tamaño inicial del arreglo es el promedio de los límites de tamaño establecidos. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>TamanoMinimo</em>&nbsp;</td><td>Tamaño mínimo que puede tomar el arreglo, Por defecto es 1. </td></tr>
+    <tr><td valign=top><em>TamanoMaximo</em>&nbsp;</td><td>Tamaño máximo que puede tomar el arreglo, Por defecto es 10. </td></tr>
+    <tr><td valign=top><em>ValorMinimo</em>&nbsp;</td><td>Valor mínimo que puede tomar cada gen, Por defecto es 0. </td></tr>
+    <tr><td valign=top><em>ValorMaximo</em>&nbsp;</td><td>Valor máximo que puede tomar cada gen, Por defecto es 1. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa2" doxytag="GenArreglo::GenArreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenArreglo.html">GenArreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>TamanoMinimo</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>TamanoMaximo</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorMinimo</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorMaximo</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorInicial</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor con ValorInicial. 
+<p>
+Inicializa todos los miembros de la clase con valores válidos. Da a cada gen el valor inicial especificado, restringiéndolo a los valores límites. El tamaño inicial del arreglo es el promedio de los límites de tamaño establecidos. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>TamanoMinimo</em>&nbsp;</td><td>Tamaño mínimo que puede tomar el arreglo, </td></tr>
+    <tr><td valign=top><em>TamanoMaximo</em>&nbsp;</td><td>Tamaño máximo que puede tomar el arreglo, </td></tr>
+    <tr><td valign=top><em>ValorMinimo</em>&nbsp;</td><td>Valor mínimo que puede tomar cada gen, </td></tr>
+    <tr><td valign=top><em>ValorMaximo</em>&nbsp;</td><td>Valor máximo que puede tomar cada gen, </td></tr>
+    <tr><td valign=top><em>ValorInicial</em>&nbsp;</td><td>Valor que se asigna a cada gen, </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa8" doxytag="GenArreglo::~GenArreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classGenArreglo.html">GenArreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Destruye todos los objetos contenidos en el arreglo     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="GenArregloa7" doxytag="GenArreglo::convertArreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void convertArreglo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>destino</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Convierte el objeto GenArreglo&lt;G,T&gt; en un objeto Arreglo&lt;T&gt;. 
+<p>
+El arreglo destino toma el mismo tamaño del GenArreglo. Los valores del arreglo destino toman los mismos valores de los genes contenidos en el GenArreglo, en sus respectivas posiciones. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>destino</em>&nbsp;</td><td>Referencia al arreglo destino </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa4" doxytag="GenArreglo::copiar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void copiar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna nuevos valores al gen copiando las propiedades de otro gen. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena6">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa3" doxytag="GenArreglo::crearCopia" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGen.html">Gen</a>* crearCopia </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Crea una copia exacta del gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador a un nuevo objeto GenArreglo&lt;G,T&gt; idéntico al actual. </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena5">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArreglob0" doxytag="GenArreglo::crearGen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> G * crearGen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Crea un nuevo objeto del tipo de genes contenidos en el arreglo y retorna su apuntador. 
+<p>
+Si el objeto GenArreglo fue creado utilizando un velor inicial establecido, el nuevo gen se crea usando este mismo valor. De lo contrario se crea con el valor por defecto del tipo G. <dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador a un objeto del tipo de genes del arreglo, </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa10" doxytag="GenArreglo::generarAleatorio" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void generarAleatorio </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Genera un arreglo de genes de tamaño y valores aleatorios. 
+<p>
+Asigna al gen un nuevo tamaño y valores aleatorios dentro de sus respectivos rangos. 
+<p>
+Implementa <a class="el" href="classGen.html#Gena2">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa13" doxytag="GenArreglo::getGen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> G&amp; getGen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el apuntador al gen indicado por <em>pos</em> en el arreglo de genes. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición dentro del arreglo de genes </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al <a class="el" href="classGen.html">Gen</a> en la posición <em>pos</em> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa16" doxytag="GenArreglo::getGenItems" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classGenEntero.html">GenEntero</a>* getGenItems </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el <a class="el" href="classGenEntero.html">GenEntero</a> que almacena el tamaño del arreglo variable. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa19" doxytag="GenArreglo::getMaxTam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int getMaxTam </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el tamaño máximo del arreglo variable. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa21" doxytag="GenArreglo::getMaxVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T getMaxVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor máximo válido para los datos almacenados en el arreglo de genes. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa18" doxytag="GenArreglo::getMinTam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int getMinTam </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el tamaño mínimo del arreglo variable. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa20" doxytag="GenArreglo::getMinVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T getMinVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor mínimo válido para los datos almacenados en el arreglo de genes. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa17" doxytag="GenArreglo::getTam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int getTam </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el tamaño actual del arreglo de genes. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa14" doxytag="GenArreglo::getVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T getVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor actual del gen en la posición <em>pos</em> del arreglo de genes. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición dentro del arreglo de genes </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor actual del gen en la posición <em>pos</em> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa12" doxytag="GenArreglo::operadorCruceDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorCruce.html">OperadorCruce</a> * operadorCruceDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un objeto correspondiente al operador de cruce establecido por defecto para genes de tipo arreglo. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al nuevo objeto de la clase OperadorCruceArreglo&lt;G,T&gt; </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena4">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa11" doxytag="GenArreglo::operadorMutacionDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> * operadorMutacionDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un objeto correspondiente al operador de mutación establecido por defecto para genes de tipo arreglo. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al nuevo objeto de la clase OperadorMutacionArreglo&lt;G,T&gt; </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena3">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa6" doxytag="GenArreglo::operator=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp; operator= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Operador de asignación a partir de un objeto Arreglo&lt;T&gt;. 
+<p>
+Asigna nuevos valores al gen copiando los valores de un arreglo de datos de tipo T <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td><a class="el" href="classArreglo.html">Arreglo</a> del que se toman los valores </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al objeto actual. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa5" doxytag="GenArreglo::operator=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp; operator= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGenArreglo.html">GenArreglo</a>&lt; G, T &gt; &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Operador de asignación a partir de otro objeto GenArreglo&lt;G,T&gt;. 
+<p>
+Asigna nuevos valores al gen copiando las propiedades de otro gen del mismo tipo <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al objeto actual. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa9" doxytag="GenArreglo::setTam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int setTam </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoTam</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>crearAleatorios</em> = false</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cambia el tamaño del arreglo. 
+<p>
+Si el nuevo tamaño es menor que el anterior, se eliminan los genes restantes. Si es mayor, los nuevos genes son creados aleatoriamente dependiendo del valor de <em>crearAleatorios</em> <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoTam</em>&nbsp;</td><td>Nuevo tamaño del arreglo. </td></tr>
+    <tr><td valign=top><em>crearAleatorios</em>&nbsp;</td><td>Si su valor es true se crean genes aleatorios. Si es false se crean genes con valores iniciales preestablecidos </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Nuevo tamaño del arreglo. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArregloa15" doxytag="GenArreglo::setVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool setVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>T&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>valor</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna un nuevo valor al gen ubicado en la posición <em>pos</em>. 
+<p>
+Si <em>pos</em> no es una posición válida en al arreglo, no se asigna el valor especificado. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición dentro del arreglo de genes </td></tr>
+    <tr><td valign=top><em>valor</em>&nbsp;</td><td>Valor a asignar al gen en la posición <em>pos</em> </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>true si el valor especificado fue asignado, false en caso contrario. </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="GenArreglop1" doxytag="GenArreglo::m_pArregloGen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a>&lt;G&gt;* <a class="el" href="classGenArreglo.html#GenArreglop1">m_pArregloGen</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="classArreglo.html">Arreglo</a> que contiene la informacion genética, con genes del tipo especificado por <em>G</em>. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArreglop0" doxytag="GenArreglo::m_pGenItems" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenEntero.html">GenEntero</a>* <a class="el" href="classGenArreglo.html#GenArreglop0">m_pGenItems</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al <a class="el" href="classGenEntero.html">GenEntero</a> que almacena el tamaño actual del arreglo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArreglop5" doxytag="GenArreglo::m_usarValInicial" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classGenArreglo.html#GenArreglop5">m_usarValInicial</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe usar el valor inicial de cada gen al crearlo     </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArreglop4" doxytag="GenArreglo::m_valInicial" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T <a class="el" href="classGenArreglo.html#GenArreglop4">m_valInicial</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Valor inicial para los datos contenidos en el arreglo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArreglop3" doxytag="GenArreglo::m_valMax" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T <a class="el" href="classGenArreglo.html#GenArreglop3">m_valMax</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Máximo valor válido para los datos contenidos en el arreglo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenArreglop2" doxytag="GenArreglo::m_valMin" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T <a class="el" href="classGenArreglo.html#GenArreglop2">m_valMin</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Mínimo valor válido para los datos contenidos en el arreglo. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="genarreglo_8h.html">genarreglo.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:37 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

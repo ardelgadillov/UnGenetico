@@ -1,0 +1,697 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: GenReal class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase GenReal</h1><code>#include &lt;genreal.h&gt;</code>
+<p>
+<p>Diagrama de herencias de GenReal
+<p><center>
+<img src="classGenReal.png" usemap="#GenReal_map" border="0" alt="" width="60" height="80"></center>
+<map name="GenReal_map">
+<area href="classGen.html" alt="Gen" shape="rect" coords="0,0,60,24">
+</map>
+<a href="classGenReal-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classGen.html">Gen</a> especializada en un gen de tipo real. 
+<p>
+Se utiliza para representar y almacenar la información genética de variables cuya codificación se realiza con números reales. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala0">GenReal</a> (const <a class="el" href="classGenReal.html">GenReal</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por copia.  <a href="#GenReala0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala1">GenReal</a> (double Min=0.0, double Max=1.0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#GenReala1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala2">GenReal</a> (double Min, double Max, double ValorInicial)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor con valor inicial.  <a href="#GenReala2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classGen.html">Gen</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala3">crearCopia</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una copia exacta del gen.  <a href="#GenReala3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala4">copiar</a> (const <a class="el" href="classGen.html">Gen</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna nuevos valores al gen copiando las propiedades de otro gen.  <a href="#GenReala4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classGenReal.html">GenReal</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala5">operator=</a> (const double &amp;nuevoValor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador de asignación a partir de un dato real.  <a href="#GenReala5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala6">operator const double</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Conversión implícita a double.  <a href="#GenReala6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala7">~GenReal</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#GenReala7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala8">setVal</a> (double nuevoValor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajusta el valor actual del dato almacenado por el gen. Retorna el valor asignado.  <a href="#GenReala8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala9">getVal</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor actual del dato almacenado en el gen.  <a href="#GenReala9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala10">getMax</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor máximo que puede tomar el gen.  <a href="#GenReala10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala11">getMin</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor mínimo que puede tomar el gen.  <a href="#GenReala11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala12">generarAleatorio</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Genera un valor aleatorio para el dato almacenado en el gen.  <a href="#GenReala12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala13">operadorMutacionDefecto</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un objeto correspondiente al operador de mutación establecido por defecto para genes enteros.  <a href="#GenReala13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorCruce.html">OperadorCruce</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenReala14">operadorCruceDefecto</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un objeto correspondiente al operador de cruce establecido por defecto para genes enteros.  <a href="#GenReala14"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenRealp0">m_Valor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Almacena la Información del gen.  <a href="#GenRealp0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenRealp1">m_Minimo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mínimo valor que puede tomar el gen. Solo puede modificarse en el constructor.  <a href="#GenRealp1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenReal.html#GenRealp2">m_Maximo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Máximo valor que puede tomar el gen. Solo puede modificarse en el constructor.  <a href="#GenRealp2"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="GenReala0" doxytag="GenReal::GenReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenReal.html">GenReal</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGenReal.html">GenReal</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por copia. 
+<p>
+Construye el nuevo objeto copiando idénticamente las propiedades de otro objeto de la clase GenReal. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala1" doxytag="GenReal::GenReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenReal.html">GenReal</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Min</em> = 0.0, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Max</em> = 1.0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Inicializa todos los miembros de la clase. Da al gen un valor por defecto promediando los valores <em>Min</em> y <em>Max</em>. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Min</em>&nbsp;</td><td>Valor mínimo que puede tomar el gen, Por defecto es 0.0. </td></tr>
+    <tr><td valign=top><em>Max</em>&nbsp;</td><td>Valor máximo que puede tomar el gen, Por defecto es 1.0. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala2" doxytag="GenReal::GenReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenReal.html">GenReal</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Min</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Max</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorInicial</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor con valor inicial. 
+<p>
+Inicializa todos los miembros de la clase con valores suministrados por el usuario. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Min</em>&nbsp;</td><td>Valor mínimo que puede tomar el gen, </td></tr>
+    <tr><td valign=top><em>Max</em>&nbsp;</td><td>Valor máximo que puede tomar el gen, Si es menor que <em>Min</em>, se hace igual a <em>Min</em>. </td></tr>
+    <tr><td valign=top><em>ValorInicial</em>&nbsp;</td><td>Valor inicial del gen. Se restrige al rango <em>[Min, Max]</em> </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala7" doxytag="GenReal::~GenReal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classGenReal.html">GenReal</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="GenReala4" doxytag="GenReal::copiar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void copiar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna nuevos valores al gen copiando las propiedades de otro gen. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena6">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala3" doxytag="GenReal::crearCopia" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGen.html">Gen</a>* crearCopia </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Crea una copia exacta del gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador a un nuevo objeto GenReal idéntico al actual. </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena5">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala12" doxytag="GenReal::generarAleatorio" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void generarAleatorio </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Genera un valor aleatorio para el dato almacenado en el gen. 
+<p>
+Asigna al gen un nuevo valor real aleatorio en el rango establecido 
+<p>
+Implementa <a class="el" href="classGen.html#Gena2">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala10" doxytag="GenReal::getMax" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double getMax </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor máximo que puede tomar el gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor máximo permitido para el gen. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala11" doxytag="GenReal::getMin" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double getMin </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor mínimo que puede tomar el gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor mínimo permitido para el gen. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala9" doxytag="GenReal::getVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double getVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor actual del dato almacenado en el gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor actual del gen </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala14" doxytag="GenReal::operadorCruceDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorCruce.html">OperadorCruce</a> * operadorCruceDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un objeto correspondiente al operador de cruce establecido por defecto para genes enteros. 
+<p>
+Crea un nuevo objeto de la clase <a class="el" href="classOperadorCruceRealBLX.html">OperadorCruceRealBLX</a>, correspondiente al operador de cruce establecido por defecto para genes reales. <dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al nuevo objeto de la clase <a class="el" href="classOperadorCruceRealBLX.html">OperadorCruceRealBLX</a> </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena4">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala13" doxytag="GenReal::operadorMutacionDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> * operadorMutacionDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un objeto correspondiente al operador de mutación establecido por defecto para genes enteros. 
+<p>
+Crea un nuevo objeto de la clase <a class="el" href="classOperadorMutacionRealUniforme.html">OperadorMutacionRealUniforme</a>, correspondiente al operador de mutación establecido por defecto para genes reales. <dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al nuevo objeto de la clase <a class="el" href="classOperadorMutacionRealUniforme.html">OperadorMutacionRealUniforme</a> </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena3">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala6" doxytag="GenReal::operator const double" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> operator const double </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Conversión implícita a double. 
+<p>
+Convierte un objeto GenReal en un dato de tipo double utilizando su valor actual. Permite hacer operaciones del estilo 
+<img class="formulaInl" alt="$(double)gen1+(double)gen2$" src="form_50.png" width="168" height="16">. <dl compact><dt><b>Devuelve:</b></dt><dd>Valor actual del gen. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala5" doxytag="GenReal::operator=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classGenReal.html">GenReal</a>&amp; operator= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const double &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoValor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Operador de asignación a partir de un dato real. 
+<p>
+Asigna al gen el valor de un dato de tipo real. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoValor</em>&nbsp;</td><td>Número real que se asigna al gen </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al gen. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenReala8" doxytag="GenReal::setVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double setVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoValor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ajusta el valor actual del dato almacenado por el gen. Retorna el valor asignado. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoValor</em>&nbsp;</td><td>Valor a asignar al gen. Es restringido al rango [m_Minimo, m_Maximo]. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor asignado. </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="GenRealp2" doxytag="GenReal::m_Maximo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classGenReal.html#GenRealp2">m_Maximo</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Máximo valor que puede tomar el gen. Solo puede modificarse en el constructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenRealp1" doxytag="GenReal::m_Minimo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classGenReal.html#GenRealp1">m_Minimo</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Mínimo valor que puede tomar el gen. Solo puede modificarse en el constructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenRealp0" doxytag="GenReal::m_Valor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classGenReal.html#GenRealp0">m_Valor</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Almacena la Información del gen. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genreal_8h.html">genreal.h</a><li><a class="el" href="genreal_8cpp.html">genreal.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:37 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

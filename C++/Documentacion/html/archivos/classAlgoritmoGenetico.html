@@ -1,0 +1,1913 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: AlgoritmoGenetico class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase AlgoritmoGenetico</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<a href="classAlgoritmoGenetico-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase abstracta que administra el proceso de un algoritmo genético. 
+<p>
+Un objeto de la clase AlgoritmoGenetico contiene una población, los operadores genéticos y todas las características necesarias para llevar a cabo el algoritmo genético y permitir la interacción entre éste y el usuario. Para utilizarla deben definirse las funciones puramente virtuales <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa1">codificacion()</a></em> y <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa7">objetivo()</a></em>. Para realizar todo el proceso del algoritmo genético en un solo paso debe invocarse la función <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa8">optimizar()</a></em>. Pueden cambiarse los parámetros y operadores por defecto sobrecargando las funciones <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod1">inicializarParametros()</a></em> y <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod0">definirOperadores()</a></em> 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Valores propios de cada iteración</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_0">m_Desviacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Desviación estándar de las funciones objetivo de los individuos presentes en la generación actual.  <a href="#AlgoritmoGeneticoz7_0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_1">m_Generacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Número de generación actual.  <a href="#AlgoritmoGeneticoz7_1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_2">m_GeneracionDelMejorEnLaHistoria</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Número de generación en la que apareció el mejor individuo de la historia del algoritmo.  <a href="#AlgoritmoGeneticoz7_2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_3">m_Media</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Promedio aritmético de las funciones objetivo de los individuos de la generación actual.  <a href="#AlgoritmoGeneticoz7_3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_4">m_MedidaOffLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Promedio aritmético acumulado de las funciones objetivo de los mejores individuos de cada generación en la historia del algoritmo.  <a href="#AlgoritmoGeneticoz7_4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_5">m_MedidaOffLineAnterior</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Medida OffLine de la generación anterior.  <a href="#AlgoritmoGeneticoz7_5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_6">m_MedidaOnLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Promedio aritmético acumulado de las funciones objetivo de todos los individuos que han existido en la historia del algoritmo.  <a href="#AlgoritmoGeneticoz7_6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_7">m_MedidaOnLineAnterior</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Medida OnLine de la generación anterior.  <a href="#AlgoritmoGeneticoz7_7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_8">m_TamanoPoblacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Número de individuos de la generación actual.  <a href="#AlgoritmoGeneticoz7_8"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Parámetros del algoritmo</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz3_0">m_GeneracionMaxima</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Número máximo de generaciones.  <a href="#AlgoritmoGeneticoz3_0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz3_1">m_IntervaloSalvar</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Intervalo de iteraciones en que deben salvarse y/o mostrarse los valores intermedios.  <a href="#AlgoritmoGeneticoz3_1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>char&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz3_2">m_NombreArchivo</a> [400]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nombre del archivo en que se guardan los valores intermedios de las iteraciones.  <a href="#AlgoritmoGeneticoz3_2"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Indicadores</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_0">m_IndicadorArchivo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si deben salvarse los resultados intermedios de las iteraciones del algoritmo genético.  <a href="#AlgoritmoGeneticoz5_0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_1">m_IndicadorInicializarPoblacionAleatoria</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si al inicializar la poblacion se crean individuos aleatorios o con los valores iniciales especificados.  <a href="#AlgoritmoGeneticoz5_1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_2">m_IndicadorMaximizar</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si debe maximizarse o minimizarse la función objetivo.  <a href="#AlgoritmoGeneticoz5_2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_3">m_IndicadorMostrar</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si deben mostrarse en pantalla los resultados intermedios de las iteraciones del algoritmo genético.  <a href="#AlgoritmoGeneticoz5_3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_4">m_IndicadorMostrarDesviacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la desviación estándar de las funciones objetivo de la generación actual.  <a href="#AlgoritmoGeneticoz5_4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_5">m_IndicadorMostrarGeneracionMejorHistorico</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la generación en que apareció el mejor individuo en la historia.  <a href="#AlgoritmoGeneticoz5_5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_6">m_IndicadorMostrarMedia</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar el promedio de las funciones objetivo de la generación actual.  <a href="#AlgoritmoGeneticoz5_6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_7">m_IndicadorMostrarMejorEnGeneracion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la función objetivo del mejor individuo de la generación actual.  <a href="#AlgoritmoGeneticoz5_7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_8">m_IndicadorMostrarMejorEnHistoria</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la función objetivo del mejor individuo en la historia.  <a href="#AlgoritmoGeneticoz5_8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_9">m_IndicadorMostrarOffLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la medida OffLine para la generación actual.  <a href="#AlgoritmoGeneticoz5_9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_10">m_IndicadorMostrarOnLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la medida OnLine para la generación actual.  <a href="#AlgoritmoGeneticoz5_10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_11">m_IndicadorMostrarPeorEnGeneracion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se debe salvar y/o mostrar la función objetivo del peor individuo de la generación actual.  <a href="#AlgoritmoGeneticoz5_11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_12">m_IndicadorUsarAdaptacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si se va a utilizar alguna estrategia de adaptación en el algoritmo genético.  <a href="#AlgoritmoGeneticoz5_12"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Apuntadores</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classOperadorCruce.html">OperadorCruce</a> &gt; *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_0">m_pListaOperadorCruce</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="classArreglo.html">Arreglo</a> de operadores de cruce.  <a href="#AlgoritmoGeneticoz1_0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> &gt; *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_1">m_pListaOperadorMutacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="classArreglo.html">Arreglo</a> de operadores de mutación.  <a href="#AlgoritmoGeneticoz1_1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_2">m_pMejorEnEstaGeneracion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al mejor individuo de la generación actual.  <a href="#AlgoritmoGeneticoz1_2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_3">m_pMejorEnLaHistoria</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al mejor individuo de la historia del algoritmo.  <a href="#AlgoritmoGeneticoz1_3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_4">m_pModelo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al <a class="el" href="classIndividuo.html">Individuo</a> que se emplea como modelo para producir copias de él.  <a href="#AlgoritmoGeneticoz1_4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_5">m_pPeorEnEstaGeneracion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al peor individuo de la generación actual.  <a href="#AlgoritmoGeneticoz1_5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classPoblacion.html">Poblacion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_6">m_pPoblacionActual</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador a la poblacion del algoritmo genético.  <a href="#AlgoritmoGeneticoz1_6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a> &gt; *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_7">m_pListaOperadorAdaptacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="classArreglo.html">Arreglo</a> de operadores de adaptación del algoritmo.  <a href="#AlgoritmoGeneticoz1_7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classOperadorFinalizacion.html">OperadorFinalizacion</a> &gt; *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_8">m_pListaOperadorFinalizacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="classArreglo.html">Arreglo</a> de operadores de finalizacion.  <a href="#AlgoritmoGeneticoz1_8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorParejas.html">OperadorParejas</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_9">m_pOpParejas</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al operador de asignación de parejas de cruce.  <a href="#AlgoritmoGeneticoz1_9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_10">m_pOpProbabilidad</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al operador de asignación de probabilidad de supervivencia.  <a href="#AlgoritmoGeneticoz1_10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_11">m_pOpReproduccion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al operador de reproducción.  <a href="#AlgoritmoGeneticoz1_11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorSeleccion.html">OperadorSeleccion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_12">m_pOpSeleccion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al operador de selección de individuos.  <a href="#AlgoritmoGeneticoz1_12"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa0">AlgoritmoGenetico</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#AlgoritmoGeneticoa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa1">codificacion</a> (<a class="el" href="classIndividuo.html">Individuo</a> *pInd,int estado)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">En esta función deben definirse los tres estados de codificación de un individuo.  <a href="#AlgoritmoGeneticoa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa2">finalizar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si el algoritmo debe finalizar.  <a href="#AlgoritmoGeneticoa2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa3">finalizarOptimizacion</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Finaliza el algoritmo genético.  <a href="#AlgoritmoGeneticoa3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa4">iniciarOptimizacion</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Prepara el algoritmo genético para su ejecución.  <a href="#AlgoritmoGeneticoa4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Efectúa la siguiente iteración del algoritmo.  <a href="#AlgoritmoGeneticoa5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa6">mostrarMedidas</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Presenta en pantalla los resultados intermedios del algoritmo genético.  <a href="#AlgoritmoGeneticoa6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa7">objetivo</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">En esta función debe definirse la forma de calcular la función de evaluación.  <a href="#AlgoritmoGeneticoa7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa8">optimizar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta todo el proceso de optimización.  <a href="#AlgoritmoGeneticoa8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa9">salvar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Almacena en el archivo de salida los resultados intermedios del algoritmo genético.  <a href="#AlgoritmoGeneticoa9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa10">~AlgoritmoGenetico</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#AlgoritmoGeneticoa10"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Métodos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob0">actualizarMedidas</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcula los valores intermedios de las medidas de desempeño del algoritmo genético.  <a href="#AlgoritmoGeneticob0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob1">adaptacion</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Efectúa la adaptación de parámetros del algoritmo.  <a href="#AlgoritmoGeneticob1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob2">asignarParejas</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Efectúa la asignación de parejas de individuos para el cruce.  <a href="#AlgoritmoGeneticob2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob3">asignarProbabilidad</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Efectúa la asignación de probabilidad de supervivencia a los individuos de la población.  <a href="#AlgoritmoGeneticob3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob4">crearOperadores</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea los operadores a utilizar por el algoritmo.  <a href="#AlgoritmoGeneticob4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob5">inicializarApuntadores</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicializa los apuntadores en posiciones nulas.  <a href="#AlgoritmoGeneticob5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob6">inicializarVariables</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicializa las variables y parámetros del algoritmo.  <a href="#AlgoritmoGeneticob6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob7">mutar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Efectúa la mutación de la población actual.  <a href="#AlgoritmoGeneticob7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob8">reproducir</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta la estrategia general de reproducción.  <a href="#AlgoritmoGeneticob8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob9">seleccionar</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Efectúa la selección de los individuos que sobreviven para la nueva generación.  <a href="#AlgoritmoGeneticob9"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Métodos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod0">definirOperadores</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Esta función puede sobregargarse para definir operadores diferentes a los establecidos por defecto.  <a href="#AlgoritmoGeneticod0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod1">inicializarParametros</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Esta función puede sobregargarse para cambiar los valores por defecto del algoritmo.  <a href="#AlgoritmoGeneticod1"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="AlgoritmoGeneticoa0" doxytag="AlgoritmoGenetico::AlgoritmoGenetico" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Inicializa todos los apuntadores de la clase en posiciones nulas     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa10" doxytag="AlgoritmoGenetico::~AlgoritmoGenetico" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual ~<a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Destruye todos los objetos creados. Es virtual para poder definirse en las clases derivadas.     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="AlgoritmoGeneticob0" doxytag="AlgoritmoGenetico::actualizarMedidas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void actualizarMedidas </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Calcula los valores intermedios de las medidas de desempeño del algoritmo genético. 
+<p>
+Es invocada por <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a>. Actualiza los siguientes miembros:<ul>
+<li>m_Media</li><li>m_MedidaOnLine</li><li>m_MedidaOffLine</li><li>m_Desviacion</li><li>m_pMejorEnEstaGeneracion</li><li>m_pPeorEnEstaGeneracion</li><li>m_pMejorEnLaHistoria</li><li>m_GeneracionDelMejorEnLaHistoria</li><li>m_MedidaOffLineAnterior</li><li>m_MedidaOnLineAnterior </li></ul>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob1" doxytag="AlgoritmoGenetico::adaptacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void adaptacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Efectúa la adaptación de parámetros del algoritmo. 
+<p>
+Sólo se realiza adaptación del algoritmo si <em>m_IndicadorUsarAdaptacion = true</em>. Se realiza invocando la función <em>adaptacion</em> de los operadores de adaptación del algoritmo en el mismo orden en que se adicionaron en la función <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod0">definirOperadores()</a></em>. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob2" doxytag="AlgoritmoGenetico::asignarParejas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void asignarParejas </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Efectúa la asignación de parejas de individuos para el cruce. 
+<p>
+Invoca la función <em>asignarParejas</em> del operador de asignación de parejas del algoritmo. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob3" doxytag="AlgoritmoGenetico::asignarProbabilidad" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void asignarProbabilidad </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Efectúa la asignación de probabilidad de supervivencia a los individuos de la población. 
+<p>
+Invoca la función <em>asignarProbabilidad</em> del operador de probabilidad del algoritmo. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa1" doxytag="AlgoritmoGenetico::codificacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void codificacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classIndividuo.html">Individuo</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pInd</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>estado</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+En esta función deben definirse los tres estados de codificación de un individuo. 
+<p>
+Debe sobrecargarse en las clases derivadas. Esta función es invocada definiendo el estado en que se encuentra el individuo. Cada individuo invoca esta función cuando es necesario realizar su decodificación. También es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa4">iniciarOptimizacion()</a></em> para la creación del individuo modelo. El usuario solamente debe invocarla cuando requiere hacer actualización explícita de las variables del sistema o de la información genética de algún individuo. Existen tres estados: creación, codificación y decodificación, que se determinan mediante el parámetro <em>estado</em>, el cual puede tomar los siguientes valores: ESTADO_CREACION, ESTADO_CODIFICACION, y ESTADO_DECODIFICACION. <ul>
+<li>
+ESTADO_CREACION: En el momento de su construcción, se define la forma que adoptará el individuo, determinada por la constitución del genoma, es decir, el número y tipos de genes que contendrá. </li>
+<li>
+ESTADO_CODIFICACION: Define la forma en que se traducen las variables del modelo en información genética del individuo. Estas variables deben estar definidas en la clase derivada. </li>
+<li>
+ESTADO_DECODIFICACION: Define la forma en que se traduce la información genética del individuo en las variables del modelo. Estas variables deben estar definidas en la clase derivada. </li>
+</ul>
+En la implementación de esta función, pueden utilizarse las MACROS que facilitan la adición de genes al individuo, y que proveen los tres estados en una sola instrucción. (Ver <a href="globals_defs.html">Definiciones</a> ). <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pInd</em>&nbsp;</td><td>Apuntador al individuo en proceso de codificación. </td></tr>
+    <tr><td valign=top><em>estado</em>&nbsp;</td><td>Estado en que se encuentra el individuo. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob4" doxytag="AlgoritmoGenetico::crearOperadores" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void crearOperadores </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Crea los operadores a utilizar por el algoritmo. 
+<p>
+Realiza las siguientes acciones:<ul>
+<li>Crea los arreglos contenedores de los Operadores de mutacion, cruce, adaptación y finalización.</li><li>Invoca la función <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod0">definirOperadores()</a></em> la cual puede ser definida para utilizar operadores diferentes a los definidos por defecto.</li><li>Verifica si fueron creados los operadores correctamente, en caso contrario crea los operadores por defecto.</li></ul>
+<p>
+Los operadores por defecto se pueden ver en <a href="tablas.html#oprdef">Operadores por defecto de UNGenético 2.0</a>. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa4">iniciarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticod0" doxytag="AlgoritmoGenetico::definirOperadores" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void definirOperadores </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, private, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Esta función puede sobregargarse para definir operadores diferentes a los establecidos por defecto. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa2" doxytag="AlgoritmoGenetico::finalizar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool finalizar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si el algoritmo debe finalizar. 
+<p>
+Invoca los operadores de finalización del algoritmo genético en el mismo orden en que se adicionaron. Si alguno indica que el algoritmo debe finalizar, retorna true. También retorna true siempre que se alcance el número máximo de iteraciones especificado por <em>m_GeneracionMaxima</em>. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa8">optimizar()</a></em>. <dl compact><dt><b>Devuelve:</b></dt><dd><em>true</em> si el algoritmo debe finalizar. <em>false</em> en caso contrario. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa3" doxytag="AlgoritmoGenetico::finalizarOptimizacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void finalizarOptimizacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Finaliza el algoritmo genético. 
+<p>
+Elimina todos los objetos creados en el algoritmo. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa4">iniciarOptimizacion()</a></em> y por el destructor de la clase.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob5" doxytag="AlgoritmoGenetico::inicializarApuntadores" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void inicializarApuntadores </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Inicializa los apuntadores en posiciones nulas. 
+<p>
+Es invocada por los constructores de la clase y por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob6">inicializarVariables()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticod1" doxytag="AlgoritmoGenetico::inicializarParametros" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void inicializarParametros </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, private, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Esta función puede sobregargarse para cambiar los valores por defecto del algoritmo. 
+<p>
+Es invocada por <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob6">inicializarVariables()</a>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob6" doxytag="AlgoritmoGenetico::inicializarVariables" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void inicializarVariables </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Inicializa las variables y parámetros del algoritmo. 
+<p>
+Inicializa los apuntadores en posiciones nulas, inicializa las variables propias de cada iteración y establece los parámetros por defecto. Invoca la función <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticod1">inicializarParametros()</a></em> en la cual usted puede cambiar los parámetros por defecto. Ver parámetros establecidos por defecto en <a href="tablas.html#tabalg">Valores por defecto de la clase AlgoritmoGenetico</a>. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa4">iniciarOptimizacion()</a></em>.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa4" doxytag="AlgoritmoGenetico::iniciarOptimizacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void iniciarOptimizacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Prepara el algoritmo genético para su ejecución. 
+<p>
+Inicializa todas las variables y parámetros, crea el individuo modelo y los operadores a utilizar en el algoritmo. Si el algoritmo está en mitad de proceso, éste es finalizado y preparado para comenzar de nuevo. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa8">optimizar()</a></em>.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa5" doxytag="AlgoritmoGenetico::iterarOptimizacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void iterarOptimizacion </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Efectúa la siguiente iteración del algoritmo. 
+<p>
+Si es la primera iteración genera una nueva población del tamaño definido por <em>m_TamanoPoblacion</em>. Una iteración contiene las siguientes instrucciones:<ul>
+<li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob3">asignarProbabilidad()</a>;</li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob9">seleccionar()</a>;</li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob2">asignarParejas()</a>;</li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob8">reproducir()</a>;</li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob7">mutar()</a>;</li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob1">adaptacion()</a>;</li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticob0">actualizarMedidas()</a>;</li></ul>
+<p>
+Salva las medidas en archivo y las muestra en pantalla, dependiendo de los valores de m_IndicadorArchivo, m_IndicadorMostrar y m_IntervaloSalvar, invocando las funciones<ul>
+<li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa9">salvar()</a></li><li><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa6">mostrarMedidas()</a></li></ul>
+<p>
+Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa8">optimizar()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa6" doxytag="AlgoritmoGenetico::mostrarMedidas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void mostrarMedidas </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Presenta en pantalla los resultados intermedios del algoritmo genético. 
+<p>
+Esta función es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em> solamente si <em>m_IndicadorMostrar = true</em>. Los resultados que se muestran dependen de los indicadores especificados. Se muestran en el siguiente orden.<p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FFFFFF" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%"><em><b>Valor Mostrado</b></em> </td><td width="50%"><em><b>Depende de</b></em>  </td></tr>
+<tr>
+<td width="50%">Generación </td><td width="50%">Siempre es mostrado  </td></tr>
+<tr>
+<td width="50%">Función objetivo del mejor en la historia </td><td width="50%">m_IndicadorMostrarMejorEnHistoria  </td></tr>
+<tr>
+<td width="50%">Generación del Mejor en la historia </td><td width="50%">m_IndicadorMostrarGeneracionMejorHistorico  </td></tr>
+<tr>
+<td width="50%">Mejor Función Objetivo en la Generación Actual </td><td width="50%">m_IndicadorMostrarMejorEnGeneracion  </td></tr>
+<tr>
+<td width="50%">Peor Función Objetivo en la Generación Actual </td><td width="50%">m_IndicadorMostrarPeorEnGeneracion  </td></tr>
+<tr>
+<td width="50%">Media Aritmética de la Función Objetivo </td><td width="50%">m_IndicadorMostrarMedia  </td></tr>
+<tr>
+<td width="50%">Desviación Estándar de la Función Objetivo </td><td width="50%">m_IndicadorMostrarDesviacion  </td></tr>
+<tr>
+<td width="50%">Medida OnLine Actual </td><td width="50%">m_IndicadorMostrarOnLine  </td></tr>
+<tr>
+<td width="50%">Medida OffLine Actual </td><td width="50%">m_IndicadorMostrarOffLine  </td></tr>
+</table>
+<p>
+Cada valor es mostrado si su respectivo indicador tiene valor <em>true</em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob7" doxytag="AlgoritmoGenetico::mutar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void mutar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Efectúa la mutación de la población actual. 
+<p>
+Invoca la función <em>mutar</em> de la población actual. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa7" doxytag="AlgoritmoGenetico::objetivo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual double objetivo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+En esta función debe definirse la forma de calcular la función de evaluación. 
+<p>
+Debe sobrecargarse en las clases derivadas. La función objetivo se calcula haciendo uso de las variables del modelo, definidas en la clase derivada. El usuario no debe invocar esta función explícitamente. Esta función es invocada internamente por cada individuo para calcular su función objetivo despues de haber invocado la función <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa1">codificacion()</a></em> la cual actualiza las variables del sistema. <dl compact><dt><b>Devuelve:</b></dt><dd>Valor de la función de evaluación para las variables actuales del sistema. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa8" doxytag="AlgoritmoGenetico::optimizar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void optimizar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ejecuta todo el proceso de optimización. 
+<p>
+El proceso completo de optimización se realiza comenzando por la inicialización y ejecutando iteraciones del algoritmo hasta que se llegue al final lo cual es indicado por el criterio de finalización especificado para el algoritmo. El proceso completo de optimización comprende las siguientes instrucciones: <pre><div>
+<a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa4">iniciarOptimizacion()</a>;
+do
+{
+	<a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a>;
+}while(!finalizar());
+</pre></div>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob8" doxytag="AlgoritmoGenetico::reproducir" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void reproducir </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ejecuta la estrategia general de reproducción. 
+<p>
+Invoca la función <em>reproducir</em> del operador de reproducción del algoritmo. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoa9" doxytag="AlgoritmoGenetico::salvar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void salvar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Almacena en el archivo de salida los resultados intermedios del algoritmo genético. 
+<p>
+Esta función es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em> solamente si <em>m_IndicadorArchivo = true</em>. El archivo de salida es el especificado por <em>m_NombreArchivo</em>. Los resultados salvados dependen de los indicadores especificados. Se guardan en el siguiente orden.<p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FFFFFF" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%"><em><b>Valor Guardado</b></em> </td><td width="50%"><em><b>Depende de</b></em>  </td></tr>
+<tr>
+<td width="50%">Generación </td><td width="50%">Siempre es mostrado  </td></tr>
+<tr>
+<td width="50%">Función objetivo del mejor en la historia </td><td width="50%">m_IndicadorMostrarMejorEnHistoria  </td></tr>
+<tr>
+<td width="50%">Generación del Mejor en la historia </td><td width="50%">m_IndicadorMostrarGeneracionMejorHistorico  </td></tr>
+<tr>
+<td width="50%">Mejor Función Objetivo en la Generación Actual </td><td width="50%">m_IndicadorMostrarMejorEnGeneracion  </td></tr>
+<tr>
+<td width="50%">Peor Función Objetivo en la Generación Actual </td><td width="50%">m_IndicadorMostrarPeorEnGeneracion  </td></tr>
+<tr>
+<td width="50%">Media Aritmética de la Función Objetivo </td><td width="50%">m_IndicadorMostrarMedia  </td></tr>
+<tr>
+<td width="50%">Desviación Estándar de la Función Objetivo </td><td width="50%">m_IndicadorMostrarDesviacion  </td></tr>
+<tr>
+<td width="50%">Medida OnLine Actual </td><td width="50%">m_IndicadorMostrarOnLine  </td></tr>
+<tr>
+<td width="50%">Medida OffLine Actual </td><td width="50%">m_IndicadorMostrarOffLine  </td></tr>
+</table>
+<p>
+Cada valor es guardado si su respectivo indicador tiene valor <em>true</em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticob9" doxytag="AlgoritmoGenetico::seleccionar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void seleccionar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Efectúa la selección de los individuos que sobreviven para la nueva generación. 
+<p>
+Invoca la función <em>seleccionar</em> del operador de selección del algoritmo. Es invocada por <em><a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoa5">iterarOptimizacion()</a></em>     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="AlgoritmoGeneticoz7_0" doxytag="AlgoritmoGenetico::m_Desviacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_0">m_Desviacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Desviación estándar de las funciones objetivo de los individuos presentes en la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_1" doxytag="AlgoritmoGenetico::m_Generacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_1">m_Generacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Número de generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_2" doxytag="AlgoritmoGenetico::m_GeneracionDelMejorEnLaHistoria" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_2">m_GeneracionDelMejorEnLaHistoria</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Número de generación en la que apareció el mejor individuo de la historia del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz3_0" doxytag="AlgoritmoGenetico::m_GeneracionMaxima" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz3_0">m_GeneracionMaxima</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Número máximo de generaciones. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_0" doxytag="AlgoritmoGenetico::m_IndicadorArchivo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_0">m_IndicadorArchivo</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si deben salvarse los resultados intermedios de las iteraciones del algoritmo genético. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_1" doxytag="AlgoritmoGenetico::m_IndicadorInicializarPoblacionAleatoria" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_1">m_IndicadorInicializarPoblacionAleatoria</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si al inicializar la poblacion se crean individuos aleatorios o con los valores iniciales especificados. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_2" doxytag="AlgoritmoGenetico::m_IndicadorMaximizar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_2">m_IndicadorMaximizar</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si debe maximizarse o minimizarse la función objetivo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_3" doxytag="AlgoritmoGenetico::m_IndicadorMostrar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_3">m_IndicadorMostrar</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si deben mostrarse en pantalla los resultados intermedios de las iteraciones del algoritmo genético. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_4" doxytag="AlgoritmoGenetico::m_IndicadorMostrarDesviacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_4">m_IndicadorMostrarDesviacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la desviación estándar de las funciones objetivo de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_5" doxytag="AlgoritmoGenetico::m_IndicadorMostrarGeneracionMejorHistorico" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_5">m_IndicadorMostrarGeneracionMejorHistorico</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la generación en que apareció el mejor individuo en la historia. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_6" doxytag="AlgoritmoGenetico::m_IndicadorMostrarMedia" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_6">m_IndicadorMostrarMedia</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar el promedio de las funciones objetivo de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_7" doxytag="AlgoritmoGenetico::m_IndicadorMostrarMejorEnGeneracion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_7">m_IndicadorMostrarMejorEnGeneracion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la función objetivo del mejor individuo de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_8" doxytag="AlgoritmoGenetico::m_IndicadorMostrarMejorEnHistoria" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_8">m_IndicadorMostrarMejorEnHistoria</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la función objetivo del mejor individuo en la historia. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_9" doxytag="AlgoritmoGenetico::m_IndicadorMostrarOffLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_9">m_IndicadorMostrarOffLine</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la medida OffLine para la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_10" doxytag="AlgoritmoGenetico::m_IndicadorMostrarOnLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_10">m_IndicadorMostrarOnLine</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la medida OnLine para la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_11" doxytag="AlgoritmoGenetico::m_IndicadorMostrarPeorEnGeneracion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_11">m_IndicadorMostrarPeorEnGeneracion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se debe salvar y/o mostrar la función objetivo del peor individuo de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz5_12" doxytag="AlgoritmoGenetico::m_IndicadorUsarAdaptacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz5_12">m_IndicadorUsarAdaptacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Indica si se va a utilizar alguna estrategia de adaptación en el algoritmo genético. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz3_1" doxytag="AlgoritmoGenetico::m_IntervaloSalvar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz3_1">m_IntervaloSalvar</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Intervalo de iteraciones en que deben salvarse y/o mostrarse los valores intermedios. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_3" doxytag="AlgoritmoGenetico::m_Media" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_3">m_Media</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Promedio aritmético de las funciones objetivo de los individuos de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_4" doxytag="AlgoritmoGenetico::m_MedidaOffLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_4">m_MedidaOffLine</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Promedio aritmético acumulado de las funciones objetivo de los mejores individuos de cada generación en la historia del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_5" doxytag="AlgoritmoGenetico::m_MedidaOffLineAnterior" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_5">m_MedidaOffLineAnterior</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Medida OffLine de la generación anterior. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_6" doxytag="AlgoritmoGenetico::m_MedidaOnLine" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_6">m_MedidaOnLine</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Promedio aritmético acumulado de las funciones objetivo de todos los individuos que han existido en la historia del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_7" doxytag="AlgoritmoGenetico::m_MedidaOnLineAnterior" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_7">m_MedidaOnLineAnterior</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Medida OnLine de la generación anterior. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz3_2" doxytag="AlgoritmoGenetico::m_NombreArchivo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> char <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz3_2">m_NombreArchivo</a>[400]
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Nombre del archivo en que se guardan los valores intermedios de las iteraciones. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_7" doxytag="AlgoritmoGenetico::m_pListaOperadorAdaptacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a>&lt;<a class="el" href="classOperadorAdaptacion.html">OperadorAdaptacion</a>&gt;* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_7">m_pListaOperadorAdaptacion</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="classArreglo.html">Arreglo</a> de operadores de adaptación del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_0" doxytag="AlgoritmoGenetico::m_pListaOperadorCruce" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a>&lt;<a class="el" href="classOperadorCruce.html">OperadorCruce</a>&gt;* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_0">m_pListaOperadorCruce</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="classArreglo.html">Arreglo</a> de operadores de cruce. 
+<p>
+El tipo del operador en cada posición del arreglo debe coincidir con el tipo de gen en la misma posición del genoma del individuo modelo     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_8" doxytag="AlgoritmoGenetico::m_pListaOperadorFinalizacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a>&lt;<a class="el" href="classOperadorFinalizacion.html">OperadorFinalizacion</a>&gt;* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_8">m_pListaOperadorFinalizacion</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="classArreglo.html">Arreglo</a> de operadores de finalizacion. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_1" doxytag="AlgoritmoGenetico::m_pListaOperadorMutacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a>&lt;<a class="el" href="classOperadorMutacion.html">OperadorMutacion</a>&gt;* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_1">m_pListaOperadorMutacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<a class="el" href="classArreglo.html">Arreglo</a> de operadores de mutación. 
+<p>
+El tipo del operador en cada posición del arreglo debe coincidir con el tipo de gen en la misma posición del genoma del individuo modelo     </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_2" doxytag="AlgoritmoGenetico::m_pMejorEnEstaGeneracion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classIndividuo.html">Individuo</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_2">m_pMejorEnEstaGeneracion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al mejor individuo de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_3" doxytag="AlgoritmoGenetico::m_pMejorEnLaHistoria" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classIndividuo.html">Individuo</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_3">m_pMejorEnLaHistoria</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al mejor individuo de la historia del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_4" doxytag="AlgoritmoGenetico::m_pModelo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classIndividuo.html">Individuo</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_4">m_pModelo</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al <a class="el" href="classIndividuo.html">Individuo</a> que se emplea como modelo para producir copias de él. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_9" doxytag="AlgoritmoGenetico::m_pOpParejas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorParejas.html">OperadorParejas</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_9">m_pOpParejas</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al operador de asignación de parejas de cruce. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_10" doxytag="AlgoritmoGenetico::m_pOpProbabilidad" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_10">m_pOpProbabilidad</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al operador de asignación de probabilidad de supervivencia. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_11" doxytag="AlgoritmoGenetico::m_pOpReproduccion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorReproduccion.html">OperadorReproduccion</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_11">m_pOpReproduccion</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al operador de reproducción. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_12" doxytag="AlgoritmoGenetico::m_pOpSeleccion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorSeleccion.html">OperadorSeleccion</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_12">m_pOpSeleccion</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al operador de selección de individuos. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_5" doxytag="AlgoritmoGenetico::m_pPeorEnEstaGeneracion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classIndividuo.html">Individuo</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_5">m_pPeorEnEstaGeneracion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al peor individuo de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz1_6" doxytag="AlgoritmoGenetico::m_pPoblacionActual" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classPoblacion.html">Poblacion</a>* <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz1_6">m_pPoblacionActual</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador a la poblacion del algoritmo genético. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AlgoritmoGeneticoz7_8" doxytag="AlgoritmoGenetico::m_TamanoPoblacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classAlgoritmoGenetico.html#AlgoritmoGeneticoz7_8">m_TamanoPoblacion</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Número de individuos de la generación actual. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a><li><a class="el" href="genetico_8cpp.html">genetico.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Mon Apr 12 16:26:08 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorFinalizacionOffline class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorFinalizacionOffline</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorFinalizacionOffline
+<p><center>
+<img src="classOperadorFinalizacionOffline.png" usemap="#OperadorFinalizacionOffline_map" border="0" alt="" width="173" height="80"></center>
+<map name="OperadorFinalizacionOffline_map">
+<area href="classOperadorFinalizacion.html" alt="OperadorFinalizacion" shape="rect" coords="0,0,173,24">
+</map>
+<a href="classOperadorFinalizacionOffline-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classOperadorFinalizacion.html">OperadorFinalizacion</a> que define la finalización del algoritmo basándose en su medida online. 
+<p>
+Ordena la interrupción del algoritmo genético cuando éste no presenta una variación significativa en su medida offline después de un número determinado de generaciones. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOfflinea0">OperadorFinalizacionOffline</a> (double FactorVariacion=0.0005, int MaxCont=30)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor.  <a href="#OperadorFinalizacionOfflinea0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOfflinea1">setParams</a> (double FactorVariacion, int MaxCont)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia el valor de los parámetros <em>FactorVariacion</em> y <em>maxCont</em>.  <a href="#OperadorFinalizacionOfflinea1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOfflinea2">getParams</a> (double &amp;FactorVariacion, int &amp;MaxCont) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suministra información sobre los valores de los parámetros <em>FactorVariacion</em> y <em>MaxCont</em>.  <a href="#OperadorFinalizacionOfflinea2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOfflinea3">~OperadorFinalizacionOffline</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorFinalizacionOfflinea3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOfflinea4">finalizar</a> (const <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> &amp;AG)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Especifica cuándo debe darse la orden de interrupción del algoritmo genético.  <a href="#OperadorFinalizacionOfflinea4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOffliner0">m_factorVariacion</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determina el factor de variación para la medida offline.  <a href="#OperadorFinalizacionOffliner0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOffliner1">m_maxCont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determina el número máximo de generaciones que pueden pasar sin interrumpir el algoritmo cuando la medida offline no varía en un factor mayor a <em>m_factorVariacion</em>.  <a href="#OperadorFinalizacionOffliner1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOffliner2">m_contador</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Almacena el número de generaciones que se han ejecutado sin que la medida offline varíe en un factor mayor a <em>m_factorVariacion</em>.  <a href="#OperadorFinalizacionOffliner2"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorFinalizacionOfflinea0" doxytag="OperadorFinalizacionOffline::OperadorFinalizacionOffline" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorFinalizacionOffline.html">OperadorFinalizacionOffline</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>FactorVariacion</em> = 0.0005, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>MaxCont</em> = 30</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor. 
+<p>
+Inicializa los valores de los parámetros <em>FactorVariacion</em> y <em>MaxCont</em> <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>FactorVariacion</em>&nbsp;</td><td>Determina el factor de variación para la medida offline. Por defecto es igual a 0.005. </td></tr>
+    <tr><td valign=top><em>MaxCont</em>&nbsp;</td><td>Determina el número máximo de generaciones que pueden pasar sin interrumpir el algoritmo cuando la medida offline no varía en un factor mayor a <em>FactorVariacion</em>. Por defecto es igual a 30. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorFinalizacionOfflinea3" doxytag="OperadorFinalizacionOffline::~OperadorFinalizacionOffline" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classOperadorFinalizacionOffline.html">OperadorFinalizacionOffline</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorFinalizacionOfflinea4" doxytag="OperadorFinalizacionOffline::finalizar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool finalizar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>AG</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Especifica cuándo debe darse la orden de interrupción del algoritmo genético. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd><em>true</em> si el algoritmo debe finalizar, o <em>false</em> en caso contrario. </dd></dl>
+
+<p>
+Implementa <a class="el" href="classOperadorFinalizacion.html#OperadorFinalizaciona2">OperadorFinalizacion</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorFinalizacionOfflinea2" doxytag="OperadorFinalizacionOffline::getParams" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void getParams </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>FactorVariacion</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>MaxCont</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Suministra información sobre los valores de los parámetros <em>FactorVariacion</em> y <em>MaxCont</em>. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>FactorVariacion</em>&nbsp;</td><td>Determina el factor de variación para la medida offline. </td></tr>
+    <tr><td valign=top><em>MaxCont</em>&nbsp;</td><td>Determina el número máximo de generaciones que pueden pasar sin interrumpir el algoritmo cuando la medida offline no varía en un factor mayor a <em>FactorVariacion</em>. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorFinalizacionOfflinea1" doxytag="OperadorFinalizacionOffline::setParams" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void setParams </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">double&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>FactorVariacion</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>MaxCont</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cambia el valor de los parámetros <em>FactorVariacion</em> y <em>maxCont</em>. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>FactorVariacion</em>&nbsp;</td><td>Valor a asignar al parámetro <em>FactorVariacion</em>. </td></tr>
+    <tr><td valign=top><em>MaxCont</em>&nbsp;</td><td>Valor a asignar al parámetro MaxCont. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="OperadorFinalizacionOffliner2" doxytag="OperadorFinalizacionOffline::m_contador" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOffliner2">m_contador</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Almacena el número de generaciones que se han ejecutado sin que la medida offline varíe en un factor mayor a <em>m_factorVariacion</em>. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorFinalizacionOffliner0" doxytag="OperadorFinalizacionOffline::m_factorVariacion" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOffliner0">m_factorVariacion</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Determina el factor de variación para la medida offline. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorFinalizacionOffliner1" doxytag="OperadorFinalizacionOffline::m_maxCont" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classOperadorFinalizacionOffline.html#OperadorFinalizacionOffliner1">m_maxCont</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Determina el número máximo de generaciones que pueden pasar sin interrumpir el algoritmo cuando la medida offline no varía en un factor mayor a <em>m_factorVariacion</em>. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:44 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

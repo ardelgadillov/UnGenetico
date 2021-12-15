@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>ungenetico module &mdash; documentation 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="genint module" href="genint.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ungenetico</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="genint.html">genint module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ungenetico module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">ungenetico</a> &raquo;</li>
+        
+      <li>ungenetico module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/ungenetico.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ungenetico">
+<span id="ungenetico-module"></span><h1>ungenetico module<a class="headerlink" href="#module-ungenetico" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ungenetico.Gene">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ungenetico.</span></span><span class="sig-name descname"><span class="pre">Gene</span></span><a class="headerlink" href="#ungenetico.Gene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract class that stores the genetic information</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Gene.name">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#ungenetico.Gene.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variable name associated with the gen</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Gene.value">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#ungenetico.Gene.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value of the gen</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Gene.min_val">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">min_val</span></span><a class="headerlink" href="#ungenetico.Gene.min_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum value of gen</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Gene.max_val">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_val</span></span><a class="headerlink" href="#ungenetico.Gene.max_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum value of gen</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Gene.mutation_operator">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mutation_operator</span></span><a class="headerlink" href="#ungenetico.Gene.mutation_operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutation operator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Gene.mutate">
+<span class="sig-name descname"><span class="pre">mutate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Gene.mutate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutate gen using the mutation operator</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ungenetico.Individual">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ungenetico.</span></span><span class="sig-name descname"><span class="pre">Individual</span></span><a class="headerlink" href="#ungenetico.Individual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that represents an individual of the Genetic Algorithm</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Individual.genome">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">genome</span></span><a class="headerlink" href="#ungenetico.Individual.genome" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of genes</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Individual.objective">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">objective</span></span><a class="headerlink" href="#ungenetico.Individual.objective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value of the objective function for the individual</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Individual.probability">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">probability</span></span><a class="headerlink" href="#ungenetico.Individual.probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value of the survival probability for the individual</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Individual.mutate">
+<span class="sig-name descname"><span class="pre">mutate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Individual.mutate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutate the genes in genome</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ungenetico.Population">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ungenetico.</span></span><span class="sig-name descname"><span class="pre">Population</span></span><a class="headerlink" href="#ungenetico.Population" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class Population stores a set of Individuals</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.Population.generation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">generation</span></span><a class="headerlink" href="#ungenetico.Population.generation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Population.get_individual">
+<span class="sig-name descname"><span class="pre">get_individual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Population.get_individual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Population.append_individual">
+<span class="sig-name descname"><span class="pre">append_individual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ungenetico.Individual" title="ungenetico.Individual"><span class="pre">ungenetico.Individual</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Population.append_individual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Population.replace_individual">
+<span class="sig-name descname"><span class="pre">replace_individual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ungenetico.Individual" title="ungenetico.Individual"><span class="pre">ungenetico.Individual</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Population.replace_individual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Population.new_generation">
+<span class="sig-name descname"><span class="pre">new_generation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Population.new_generation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Population.evaluate_objective_function">
+<span class="sig-name descname"><span class="pre">evaluate_objective_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Population.evaluate_objective_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.Population.mutate">
+<span class="sig-name descname"><span class="pre">mutate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.Population.mutate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ungenetico.GeneticAlgorithm">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ungenetico.</span></span><span class="sig-name descname"><span class="pre">GeneticAlgorithm</span></span><a class="headerlink" href="#ungenetico.GeneticAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.GeneticAlgorithm.add_gen">
+<span class="sig-name descname"><span class="pre">add_gen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gen</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ungenetico.Gene" title="ungenetico.Gene"><span class="pre">ungenetico.Gene</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.GeneticAlgorithm.add_gen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.GeneticAlgorithm.create_population">
+<span class="sig-name descname"><span class="pre">create_population</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.GeneticAlgorithm.create_population" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.GeneticAlgorithm.mutate">
+<span class="sig-name descname"><span class="pre">mutate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.GeneticAlgorithm.mutate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.GeneticAlgorithm.evaluate_objective_function">
+<span class="sig-name descname"><span class="pre">evaluate_objective_function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.GeneticAlgorithm.evaluate_objective_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ungenetico.GeneticAlgorithm.objective_function">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">objective_function</span></span><a class="headerlink" href="#ungenetico.GeneticAlgorithm.objective_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ungenetico.MutationOperator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ungenetico.</span></span><span class="sig-name descname"><span class="pre">MutationOperator</span></span><a class="headerlink" href="#ungenetico.MutationOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ungenetico.MutationOperator.mutate">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">mutate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gen</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ungenetico.Gene" title="ungenetico.Gene"><span class="pre">ungenetico.Gene</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ungenetico.MutationOperator.mutate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="genint.html" class="btn btn-neutral float-left" title="genint module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Andres Delgadillo.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

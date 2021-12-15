@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorCruceRealLineal class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorCruceRealLineal</h1><code>#include &lt;genreal.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorCruceRealLineal
+<p><center>
+<img src="classOperadorCruceRealLineal.png" usemap="#OperadorCruceRealLineal_map" border="0" alt="" width="161" height="80"></center>
+<map name="OperadorCruceRealLineal_map">
+<area href="classOperadorCruce.html" alt="OperadorCruce" shape="rect" coords="0,0,161,24">
+</map>
+<a href="classOperadorCruceRealLineal-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classOperadorCruce.html">OperadorCruce</a> que define un cruce lineal entre dos genes de tipo real. 
+<p>
+Crea <em>numHijos</em> valores que corresponden a números reales que se obtienen así: <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ h_1= \frac{1}{2} pMejor + \frac{1}{2} pPeor \]" src="form_20.png" width="152" height="30">
+<p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ h_2= \frac{3}{2} pMejor - \frac{1}{2} pPeor \]" src="form_21.png" width="152" height="30">
+<p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ h_3= - \frac{1}{2} pMejor + \frac{3}{2} pPeor \]" src="form_22.png" width="163" height="30">
+<p>
+ La selección de los valores que se almacenan en los genes depende del valor de la variable <em>numHijos</em>. Los valores resultantes se agregan al arreglo de genes <em>pHijos</em> 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealLineal.html#OperadorCruceRealLineala0">OperadorCruceRealLineal</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor.  <a href="#OperadorCruceRealLineala0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealLineal.html#OperadorCruceRealLineala1">~OperadorCruceRealLineal</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorCruceRealLineala1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruceRealLineal.html#OperadorCruceRealLineala2">cruzarGenes</a> (const <a class="el" href="classGen.html">Gen</a> *madre, const <a class="el" href="classGen.html">Gen</a> *padre, <a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classGen.html">Gen</a> &gt; *hijos, int numHijos, int indice=-1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta un cruce lineal sobre genes reales.  <a href="#OperadorCruceRealLineala2"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorCruceRealLineala0" doxytag="OperadorCruceRealLineal::OperadorCruceRealLineal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorCruceRealLineal.html">OperadorCruceRealLineal</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorCruceRealLineala1" doxytag="OperadorCruceRealLineal::~OperadorCruceRealLineal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classOperadorCruceRealLineal.html">OperadorCruceRealLineal</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorCruceRealLineala2" doxytag="OperadorCruceRealLineal::cruzarGenes" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+<tr>
+          <td class="md" nowrap valign="top"> void cruzarGenes </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMejor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pPeor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classGen.html">Gen</a> &gt; *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pHijos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>numHijos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>indice</em> = -1</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ejecuta un cruce lineal sobre genes reales. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMejor</em>&nbsp;</td><td><a class="el" href="classGen.html">Gen</a> del individuo padre con mejor función de evaluación. </td></tr>
+    <tr><td valign=top><em>pPeor</em>&nbsp;</td><td><a class="el" href="classGen.html">Gen</a> del individuo padre con peor función de evaluación. </td></tr>
+    <tr><td valign=top><em>pHijos</em>&nbsp;</td><td><a class="el" href="classArreglo.html">Arreglo</a> de genes al cual se adicionan los genes hijos. </td></tr>
+    <tr><td valign=top><em>numHijos</em>&nbsp;</td><td>Numero de genes hijos a crear en el cruce. </td></tr>
+    <tr><td valign=top><em>indice</em>&nbsp;</td><td>Es ignorado. Existe por compatibilidad. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classOperadorCruce.html#OperadorCrucea2">OperadorCruce</a>.    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genreal_8h.html">genreal.h</a><li><a class="el" href="genreal_8cpp.html">genreal.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:43 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

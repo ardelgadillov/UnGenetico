@@ -1,0 +1,1034 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: AGFrame class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase AGFrame</h1><code>#include &lt;ventana.h&gt;</code>
+<p>
+<a href="classAGFrame-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de <em>wxFrame</em> de la librería <em>wxWindows</em> que contiene las ventanas de la clase <em><a class="el" href="classAGVentana.html">AGVentana</a></em>. 
+<p>
+Un objeto de está clase contiene una barra de menú, donde el usuario puede seleccionar varias funciones como guardar los archivos creados, crear gráficas, cambiar los colores de las gráficas, detener y restablecer la visualización de la ejecución del algoritmo e información de la aplicación. También contiene ventanas adicionales en las que aparecen el proceso del algoritmo y las gráficas con las medidas de desempeño del mismo. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramea0">AGFrame</a> (const wxChar *title, int xpos, int ypos, int width, int height)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor de la clase AGFrame.  <a href="#AGFramea0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramea1">~AGFrame</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor de la clase AGFrame.  <a href="#AGFramea1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxWindow *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramea2">ObtenerPagina</a> (int ID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que retorna la página identificada por <em>ID</em>.  <a href="#AGFramea2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramea3">AgregarPagina</a> (<a class="el" href="classAGVentana.html">AGVentana</a> *p_pagina, wxString nombre)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que inserta una nueva página en el control <em>m_notebook</em>.  <a href="#AGFramea3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramea4">SetPagina</a> (int ID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que fija la página identificada por <em>ID</em>.  <a href="#AGFramea4"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxTextCtrl *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFrameo0">m_pTextCtrl</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al control de texto donde se muestran los datos seleccionados para cada iteración del algoritmo.  <a href="#AGFrameo0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxNotebook *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFrameo1">m_pNotebook</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al objeto <em>wxNoteBook</em> que contiene las páginas que muestran las gráficas creadas.  <a href="#AGFrameo1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classAGVentana.html">AGVentana</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFrameo2">m_pPagina</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al objeto derivado de <a class="el" href="classAGVentana.html">AGVentana</a> que contiene las gráficas creadas de la ejecución del algoritmo genético.  <a href="#AGFrameo2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxString&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFrameo3">m_NomArch</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cadena de caracteres correspondiente al nombre del archivo de donde se extraen los valores que serán graficados.  <a href="#AGFrameo3"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Tipos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramey9">menus</a> { <br>
+&nbsp;&nbsp;<a class="el" href="classAGFrame.html#AGFramey9AGFramey0">MENU_FILE_SAVE</a> = 1000, 
+<a class="el" href="classAGFrame.html#AGFramey9AGFramey1">MENU_FILE_QUIT</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classAGFrame.html#AGFramey9AGFramey2">MENU_INFO_ABOUT</a>, 
+<a class="el" href="classAGFrame.html#AGFramey9AGFramey3">MENU_GRAFICA_FONDO</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classAGFrame.html#AGFramey9AGFramey4">MENU_GRAFICA_GRILLA</a>, 
+<a class="el" href="classAGFrame.html#AGFramey9AGFramey5">MENU_GRAFICA_LINEA</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classAGFrame.html#AGFramey9AGFramey6">MENU_GRAFICA_GRAFICAR</a>, 
+<a class="el" href="classAGFrame.html#AGFramey9AGFramey7">MENU_CONGELAR</a>, 
+<br>
+&nbsp;&nbsp;<a class="el" href="classAGFrame.html#AGFramey9AGFramey8">NOTEBOOK</a>
+<br>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cada valor identifica a un menu de AGFrame.  <a href="#AGFramey9">Más...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Métodos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed0">OnMenuFondo</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que cambia el color de fondo de la gráfica.  <a href="#AGFramed0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed1">OnMenuGrilla</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que cambia el color de los ejes de la gráfica.  <a href="#AGFramed1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed2">OnMenuLinea</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que cambia el color de la línea de la gráfica.  <a href="#AGFramed2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed3">OnMenuGrafica</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que crea las gráficas en cada página.  <a href="#AGFramed3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed4">OnMenuFileSave</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que guarda una gráfica.  <a href="#AGFramed4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed5">OnMenuFileQuit</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que salva una gráfica.  <a href="#AGFramed5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed6">OnMenuInfoAbout</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que muestra un cuadro de información de la aplicación.  <a href="#AGFramed6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed7">OnClose</a> (wxCloseEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que destruye la aplicación.  <a href="#AGFramed7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed8">OnCongelar</a> (wxCloseEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evento que detiene la presentación de la información en el control de texto sin detener la ejecución del algoritmo.  <a href="#AGFramed8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramed9">SelColor</a> (wxColour &amp;color)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que abre el cuadro de dialogo de selección de colores.  <a href="#AGFramed9"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxNotebookSizer *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer0">m_pSizerNB</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Objeto que ajusta el tamaño del objeto notebook.  <a href="#AGFramer0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxBoxSizer *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer1">m_pSizerFrame</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Objeto que ajusta el tamaño del frame.  <a href="#AGFramer1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxPanel *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer2">m_pPanel</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador a la ventana que contiene al objeto notebook.  <a href="#AGFramer2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer3">m_congelar</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que indica si se encuentra detenida o no la actualización de información en el control de texto.  <a href="#AGFramer3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxMenuBar *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer4">m_pMenuBar</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador a la barra de menus que se encuentra en el borde superior de la ventana.  <a href="#AGFramer4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxMenu *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer5">m_pFileMenu</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al menu Archivo.  <a href="#AGFramer5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxMenu *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer6">m_pInfoMenu</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al menu Información.  <a href="#AGFramer6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxMenu *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer7">m_pMenuGrafica</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al menu Gráfica.  <a href="#AGFramer7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxMenu *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGFrame.html#AGFramer8">m_pCongelarMenu</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al menu Congelar.  <a href="#AGFramer8"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación de las enumeraciones miembro de la clase</h2>
+<a class="anchor" name="AGFramey9" doxytag="AGFrame::menus" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> enum <a class="el" href="classAGFrame.html#AGFramey9">menus</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cada valor identifica a un menu de AGFrame. 
+<p>
+<dl compact><dt><b>Valores de la enumeración: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey0" doxytag="MENU_FILE_SAVE" ></a>MENU_FILE_SAVE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey1" doxytag="MENU_FILE_QUIT" ></a>MENU_FILE_QUIT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey2" doxytag="MENU_INFO_ABOUT" ></a>MENU_INFO_ABOUT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey3" doxytag="MENU_GRAFICA_FONDO" ></a>MENU_GRAFICA_FONDO</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey4" doxytag="MENU_GRAFICA_GRILLA" ></a>MENU_GRAFICA_GRILLA</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey5" doxytag="MENU_GRAFICA_LINEA" ></a>MENU_GRAFICA_LINEA</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey6" doxytag="MENU_GRAFICA_GRAFICAR" ></a>MENU_GRAFICA_GRAFICAR</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey7" doxytag="MENU_CONGELAR" ></a>MENU_CONGELAR</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGFramey9AGFramey8" doxytag="NOTEBOOK" ></a>NOTEBOOK</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="AGFramea0" doxytag="AGFrame::AGFrame" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classAGFrame.html">AGFrame</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const wxChar *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>height</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor de la clase AGFrame. 
+<p>
+En el constructor se crean todos los objetos gráficos tales como barras de menú, barra de estado y ventanas que hacen parte de la aplicación<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>title</em>&nbsp;</td><td>nombre que se mostrará en la barra de título. <br>
+ </td></tr>
+    <tr><td valign=top><em>xpos</em>&nbsp;</td><td>posición horizontal de la ventana. <br>
+ </td></tr>
+    <tr><td valign=top><em>ypos</em>&nbsp;</td><td>posición vertical de la ventana. <br>
+ </td></tr>
+    <tr><td valign=top><em>width</em>&nbsp;</td><td>ancho de la ventana. <br>
+ </td></tr>
+    <tr><td valign=top><em>height</em>&nbsp;</td><td>alto de la ventana. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramea1" doxytag="AGFrame::~AGFrame" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classAGFrame.html">AGFrame</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor de la clase AGFrame. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="AGFramea3" doxytag="AGFrame::AgregarPagina" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void AgregarPagina </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classAGVentana.html">AGVentana</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>p_pagina</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>wxString&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nombre</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que inserta una nueva página en el control <em>m_notebook</em>. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>p_pagina</em>&nbsp;</td><td>apuntador que especifica la nueva página a insertar. <br>
+ </td></tr>
+    <tr><td valign=top><em>nombre</em>&nbsp;</td><td>cadena que especifica el título de la nueva página. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramea2" doxytag="AGFrame::ObtenerPagina" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxWindow * ObtenerPagina </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ID</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que retorna la página identificada por <em>ID</em>. 
+<p>
+Realiza una búsqueda en todas las páginas contenidas en <em>m_notebook</em>, y retorna la página cuyo identificador coincida con <em>ID</em>.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>ID</em>&nbsp;</td><td>Valor entero que identifica a cada página. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed7" doxytag="AGFrame::OnClose" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnClose </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCloseEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que destruye la aplicación. 
+<p>
+Invoca el método <em>Destroy()</em> para destruir todos los objetos descendientes del frame luego de que han sido procesados con el fin de evitar problemas en la aplicación.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed8" doxytag="AGFrame::OnCongelar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnCongelar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCloseEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que detiene la presentación de la información en el control de texto sin detener la ejecución del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed5" doxytag="AGFrame::OnMenuFileQuit" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuFileQuit </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que salva una gráfica. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed4" doxytag="AGFrame::OnMenuFileSave" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuFileSave </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que guarda una gráfica. 
+<p>
+Salva la gráfica o el texto que se encuentra en la ventana actual     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed0" doxytag="AGFrame::OnMenuFondo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuFondo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que cambia el color de fondo de la gráfica. 
+<p>
+Abre un dialogo para cambiar el color guardado en <em>ColBrush</em> y vuelve a realizar la gráfica     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed3" doxytag="AGFrame::OnMenuGrafica" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuGrafica </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que crea las gráficas en cada página. 
+<p>
+Se encarga de revisar cuántas columnas y datos existen en el archivo correspondiente a <em>NomArch</em> y grafica estos datos en páginas diferentes al invocar el método <em>GrafTexto()</em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed1" doxytag="AGFrame::OnMenuGrilla" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuGrilla </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que cambia el color de los ejes de la gráfica. 
+<p>
+Abre un dialogo para cambiar el color definido en <em>ColGrilla</em> y vuelve a realizar la gráfica     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed6" doxytag="AGFrame::OnMenuInfoAbout" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuInfoAbout </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que muestra un cuadro de información de la aplicación. 
+<p>
+Se ejecuta al escoger la opción <em>Acerca de</em> del menú de ayuda, muestra información acerca de los autores de la aplicación.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed2" doxytag="AGFrame::OnMenuLinea" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMenuLinea </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Evento que cambia el color de la línea de la gráfica. 
+<p>
+Abre un dialogo para cambiar el color definido en <em>ColGraf</em> y vuelve a realizar la gráfica     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramed9" doxytag="AGFrame::SelColor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void SelColor </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxColour &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>color</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [private]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que abre el cuadro de dialogo de selección de colores. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>color</em>&nbsp;</td><td>Objeto de define el color a modificar. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramea4" doxytag="AGFrame::SetPagina" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool SetPagina </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ID</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que fija la página identificada por <em>ID</em>. 
+<p>
+Fija el foco en la página identificada con <em>ID</em> retornando <em>true</em> si se encontro la página deseada<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>ID</em>&nbsp;</td><td>valor entero que identifica a cada página. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="AGFramer3" doxytag="AGFrame::m_congelar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classAGFrame.html#AGFramer3">m_congelar</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que indica si se encuentra detenida o no la actualización de información en el control de texto. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFrameo3" doxytag="AGFrame::m_NomArch" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxString <a class="el" href="classAGFrame.html#AGFrameo3">m_NomArch</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cadena de caracteres correspondiente al nombre del archivo de donde se extraen los valores que serán graficados. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer8" doxytag="AGFrame::m_pCongelarMenu" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxMenu* <a class="el" href="classAGFrame.html#AGFramer8">m_pCongelarMenu</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al menu Congelar. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer5" doxytag="AGFrame::m_pFileMenu" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxMenu* <a class="el" href="classAGFrame.html#AGFramer5">m_pFileMenu</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al menu Archivo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer6" doxytag="AGFrame::m_pInfoMenu" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxMenu* <a class="el" href="classAGFrame.html#AGFramer6">m_pInfoMenu</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al menu Información. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer4" doxytag="AGFrame::m_pMenuBar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxMenuBar* <a class="el" href="classAGFrame.html#AGFramer4">m_pMenuBar</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador a la barra de menus que se encuentra en el borde superior de la ventana. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer7" doxytag="AGFrame::m_pMenuGrafica" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxMenu* <a class="el" href="classAGFrame.html#AGFramer7">m_pMenuGrafica</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al menu Gráfica. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFrameo1" doxytag="AGFrame::m_pNotebook" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxNotebook* <a class="el" href="classAGFrame.html#AGFrameo1">m_pNotebook</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al objeto <em>wxNoteBook</em> que contiene las páginas que muestran las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFrameo2" doxytag="AGFrame::m_pPagina" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classAGVentana.html">AGVentana</a>* <a class="el" href="classAGFrame.html#AGFrameo2">m_pPagina</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al objeto derivado de <a class="el" href="classAGVentana.html">AGVentana</a> que contiene las gráficas creadas de la ejecución del algoritmo genético. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer2" doxytag="AGFrame::m_pPanel" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxPanel* <a class="el" href="classAGFrame.html#AGFramer2">m_pPanel</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador a la ventana que contiene al objeto notebook. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer1" doxytag="AGFrame::m_pSizerFrame" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxBoxSizer* <a class="el" href="classAGFrame.html#AGFramer1">m_pSizerFrame</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Objeto que ajusta el tamaño del frame. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFramer0" doxytag="AGFrame::m_pSizerNB" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxNotebookSizer* <a class="el" href="classAGFrame.html#AGFramer0">m_pSizerNB</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Objeto que ajusta el tamaño del objeto notebook. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGFrameo0" doxytag="AGFrame::m_pTextCtrl" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxTextCtrl* <a class="el" href="classAGFrame.html#AGFrameo0">m_pTextCtrl</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al control de texto donde se muestran los datos seleccionados para cada iteración del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="ventana_8h.html">ventana.h</a><li><a class="el" href="ventana_8cpp.html">ventana.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

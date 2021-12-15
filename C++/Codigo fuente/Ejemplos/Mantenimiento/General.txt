@@ -1,0 +1,3 @@
+
+MANTENIMIENTO. N.Individuos =  200, N.Generaciones =  120, N.Maquinas = 67. 
+ Mejor F.O.: 1.980000	Generación mejor F.O: 83.	Prob.Mutacion: 0.009000	Tiempo de proceso: 4.000000

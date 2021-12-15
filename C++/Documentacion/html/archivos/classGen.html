@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: Gen class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase Gen</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<p>Diagrama de herencias de Gen
+<p><center><img src="classGen.png" usemap="#Gen_map" border="0" alt=""></center>
+<map name="Gen_map">
+<area href="classGenArreglo.html" alt="GenArreglo" shape="rect" coords="0,56,78,80">
+<area href="classGenBool.html" alt="GenBool" shape="rect" coords="88,56,166,80">
+<area href="classGenEntero.html" alt="GenEntero" shape="rect" coords="176,56,254,80">
+<area href="classGenReal.html" alt="GenReal" shape="rect" coords="264,56,342,80">
+</map>
+<a href="classGen-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase abstracta que sirve de base a clases que definen genes de distintos tipos. 
+<p>
+Las clases derivadas como <a class="el" href="classGenBool.html">GenBool</a>, <a class="el" href="classGenEntero.html">GenEntero</a>, <a class="el" href="classGenReal.html">GenReal</a>, <a class="el" href="classGenArreglo.html">GenArreglo</a> u otras que cree el usuario son las que establecen la forma en que se almacena y se maneja la información genetica. Estas deben implementar todas las funciones puramente virtuales que definen el tratamiento de la información de cada gen. Para cada tipo de gen que se cree deben definirse también operadores de mutación y cruce cuyas clases deben derivarse de las clases <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> y <a class="el" href="classOperadorCruce.html">OperadorCruce</a> respectivamente. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena0">Gen</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#Gena0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena1">~Gen</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#Gena1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena2">generarAleatorio</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Debe especificar la forma de generar de un gen aleatorio.  <a href="#Gena2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena3">operadorMutacionDefecto</a> () const=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Debe especificar el operador de mutación por defecto para el gen.  <a href="#Gena3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classOperadorCruce.html">OperadorCruce</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena4">operadorCruceDefecto</a> () const=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Debe especificar el operador de cruce por defecto para el gen.  <a href="#Gena4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual <a class="el" href="classGen.html">Gen</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena5">crearCopia</a> () const=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Debe generar una copia (creada con el operador <em>new</em>) del objeto Gen actual.  <a href="#Gena5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGen.html#Gena6">copiar</a> (const <a class="el" href="classGen.html">Gen</a> &amp;otro)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Debe especificar la asignación a partir de otro objeto Gen.  <a href="#Gena6"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="Gena0" doxytag="Gen::Gen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGen.html">Gen</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Debe sobrecargarse en las clases derivadas si se requiere inicializar algún miembro     </td>
+  </tr>
+</table>
+<a class="anchor" name="Gena1" doxytag="Gen::~Gen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual ~<a class="el" href="classGen.html">Gen</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Es virtual para poder definirse en las clases derivadas.     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="Gena6" doxytag="Gen::copiar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void copiar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>otro</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Debe especificar la asignación a partir de otro objeto Gen. 
+<p>
+Debe sobrecargarse en las clases derivadas. Esta función se podría reemplazar por el operador de asignación (=) si Gen no fuera una clase abstracta. 
+<p>
+Implementado en <a class="el" href="classGenArreglo.html#GenArregloa4">GenArreglo</a>, <a class="el" href="classGenBool.html#GenBoola4">GenBool</a>, <a class="el" href="classGenEntero.html#GenEnteroa4">GenEntero</a>, y <a class="el" href="classGenReal.html#GenReala4">GenReal</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="Gena5" doxytag="Gen::crearCopia" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classGen.html">Gen</a>* crearCopia </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Debe generar una copia (creada con el operador <em>new</em>) del objeto Gen actual. 
+<p>
+Debe sobrecargarse en las clases derivadas <dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador a un nuevo objeto de la clase derivada, con las mismas características que el actual </dd></dl>
+
+<p>
+Implementado en <a class="el" href="classGenArreglo.html#GenArregloa3">GenArreglo</a>, <a class="el" href="classGenBool.html#GenBoola3">GenBool</a>, <a class="el" href="classGenEntero.html#GenEnteroa3">GenEntero</a>, y <a class="el" href="classGenReal.html#GenReala3">GenReal</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="Gena2" doxytag="Gen::generarAleatorio" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void generarAleatorio </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Debe especificar la forma de generar de un gen aleatorio. 
+<p>
+Debe sobrecargarse en las clases derivadas 
+<p>
+Implementado en <a class="el" href="classGenArreglo.html#GenArregloa10">GenArreglo</a>, <a class="el" href="classGenBool.html#GenBoola10">GenBool</a>, <a class="el" href="classGenEntero.html#GenEnteroa12">GenEntero</a>, y <a class="el" href="classGenReal.html#GenReala12">GenReal</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="Gena4" doxytag="Gen::operadorCruceDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classOperadorCruce.html">OperadorCruce</a>* operadorCruceDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Debe especificar el operador de cruce por defecto para el gen. 
+<p>
+Debe sobrecargarse en las clases derivadas return Debe retornar un apuntador a un nuevo objeto de una clase derivada de <a class="el" href="classOperadorCruce.html">OperadorCruce</a> 
+<p>
+Implementado en <a class="el" href="classGenArreglo.html#GenArregloa12">GenArreglo</a>, <a class="el" href="classGenBool.html#GenBoola12">GenBool</a>, <a class="el" href="classGenEntero.html#GenEnteroa14">GenEntero</a>, y <a class="el" href="classGenReal.html#GenReala14">GenReal</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="Gena3" doxytag="Gen::operadorMutacionDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a>* operadorMutacionDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Debe especificar el operador de mutación por defecto para el gen. 
+<p>
+Debe sobrecargarse en las clases derivadas return Debe retornar un apuntador a un nuevo objeto de una clase derivada de <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> 
+<p>
+Implementado en <a class="el" href="classGenArreglo.html#GenArregloa11">GenArreglo</a>, <a class="el" href="classGenBool.html#GenBoola11">GenBool</a>, <a class="el" href="classGenEntero.html#GenEnteroa13">GenEntero</a>, y <a class="el" href="classGenReal.html#GenReala13">GenReal</a>.    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 > 
+</a>1.3.6 </small></address>
+</body>
+</html>

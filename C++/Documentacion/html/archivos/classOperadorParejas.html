@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorParejas class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorParejas</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorParejas
+<p><center><img src="classOperadorParejas.png" usemap="#OperadorParejas_map" border="0" alt=""></center>
+<map name="OperadorParejas_map">
+<area href="classOperadorParejasAdyacentes.html" alt="OperadorParejasAdyacentes" shape="rect" coords="0,56,177,80">
+<area href="classOperadorParejasAleatorias.html" alt="OperadorParejasAleatorias" shape="rect" coords="187,56,364,80">
+<area href="classOperadorParejasExtremos.html" alt="OperadorParejasExtremos" shape="rect" coords="374,56,551,80">
+</map>
+<a href="classOperadorParejas-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase abstracta que administra la asignación de parejas para cada individuo de la población. 
+<p>
+Para cada individuo presente en la población se asigna otro individuo que servirá de pareja para intercambiar su información genética. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejas.html#OperadorParejasa0">OperadorParejas</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#OperadorParejasa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejas.html#OperadorParejasa1">~OperadorParejas</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorParejasa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorParejas.html#OperadorParejasa2">asignarParejas</a> (<a class="el" href="classPoblacion.html">Poblacion</a> &amp;Pob)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna las parejas a los individuos de la población.  <a href="#OperadorParejasa2"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorParejasa0" doxytag="OperadorParejas::OperadorParejas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorParejas.html">OperadorParejas</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Debe sobrecargarse en las clases derivadas     </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorParejasa1" doxytag="OperadorParejas::~OperadorParejas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual ~<a class="el" href="classOperadorParejas.html">OperadorParejas</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Es virtual para poder defirnirse en las clases derivadas     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorParejasa2" doxytag="OperadorParejas::asignarParejas" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void asignarParejas </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classPoblacion.html">Poblacion</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Pob</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna las parejas a los individuos de la población. 
+<p>
+Debe sobrecargarse en las clases derivadas. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Pob</em>&nbsp;</td><td>Referencia a la población sobre la que opera. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementado en <a class="el" href="classOperadorParejasAleatorias.html#OperadorParejasAleatoriasa2">OperadorParejasAleatorias</a>, <a class="el" href="classOperadorParejasAdyacentes.html#OperadorParejasAdyacentesa2">OperadorParejasAdyacentes</a>, y <a class="el" href="classOperadorParejasExtremos.html#OperadorParejasExtremosa2">OperadorParejasExtremos</a>.    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:47 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 > 
+</a>1.3.6 </small></address>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: GenBool class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase GenBool</h1><code>#include &lt;genbool.h&gt;</code>
+<p>
+<p>Diagrama de herencias de GenBool
+<p><center>
+<img src="classGenBool.png" usemap="#GenBool_map" border="0" alt="" width="60" height="80"></center>
+<map name="GenBool_map">
+<area href="classGen.html" alt="Gen" shape="rect" coords="0,0,60,24">
+</map>
+<a href="classGenBool-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de la clase <a class="el" href="classGen.html">Gen</a> especializada en un gen de tipo booleano. 
+<p>
+Se utiliza para representar y almacenar la información genética de variables cuya codificación se realiza con booleanos (0's y 1's). 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola0">GenBool</a> (const <a class="el" href="classGenBool.html">GenBool</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por copia.  <a href="#GenBoola0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola1">GenBool</a> (bool Min=false, bool Max=true)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#GenBoola1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola2">GenBool</a> (bool Min, bool Max, bool ValorInicial)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor con valor inicial.  <a href="#GenBoola2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classGen.html">Gen</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola3">crearCopia</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una copia exacta del gen.  <a href="#GenBoola3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola4">copiar</a> (const <a class="el" href="classGen.html">Gen</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna nuevos valores al gen copiando las propiedades de otro gen.  <a href="#GenBoola4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classGenBool.html">GenBool</a> &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola5">operator=</a> (const bool &amp;nuevoValor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador de asignación a partir de un dato tipo bool.  <a href="#GenBoola5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola6">operator const bool</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Conversión implícita a bool.  <a href="#GenBoola6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola7">~GenBool</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#GenBoola7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola8">setVal</a> (bool nuevoValor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajusta el valor actual del dato almacenado por el gen. Retorna el valor asignado.  <a href="#GenBoola8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola9">getVal</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el valor actual del dato almacenado en el gen.  <a href="#GenBoola9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola10">generarAleatorio</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Genera un valor aleatorio para el dato almacenado en el gen.  <a href="#GenBoola10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola11">operadorMutacionDefecto</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un objeto correspondiente al operador de mutación establecido por defecto para genes booleanos.  <a href="#GenBoola11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top><a class="el" href="classOperadorCruce.html">OperadorCruce</a> *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoola12">operadorCruceDefecto</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna un objeto correspondiente al operador de cruce establecido por defecto para genes booleanos.  <a href="#GenBoola12"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classGenBool.html#GenBoolp0">m_Valor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Almacena la información del gen.  <a href="#GenBoolp0"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="GenBoola0" doxytag="GenBool::GenBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenBool.html">GenBool</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGenBool.html">GenBool</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por copia. 
+<p>
+Construye el nuevo objeto copiando idénticamente las propiedades de otro objeto de la clase GenBool. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola1" doxytag="GenBool::GenBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenBool.html">GenBool</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Min</em> = false, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Max</em> = true</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Inicializa el dato contenido por el gen en un valor aleatorio <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Min</em>&nbsp;</td><td>Es ignorado. Existe por compatibilidad. </td></tr>
+    <tr><td valign=top><em>Max</em>&nbsp;</td><td>Es ignorado. Existe por compatibilidad. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola2" doxytag="GenBool::GenBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGenBool.html">GenBool</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Min</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Max</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>ValorInicial</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor con valor inicial. 
+<p>
+Inicializa el valor del gen con un valor suministrado por el usuario. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Min</em>&nbsp;</td><td>Es ignorado. Existe por compatibilidad. </td></tr>
+    <tr><td valign=top><em>Max</em>&nbsp;</td><td>Es ignorado. Existe por compatibilidad. </td></tr>
+    <tr><td valign=top><em>ValorInicial</em>&nbsp;</td><td>Valor inicial del gen. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola7" doxytag="GenBool::~GenBool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classGenBool.html">GenBool</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="GenBoola4" doxytag="GenBool::copiar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void copiar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna nuevos valores al gen copiando las propiedades de otro gen. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena6">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola3" doxytag="GenBool::crearCopia" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classGen.html">Gen</a>* crearCopia </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Crea una copia exacta del gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador a un nuevo objeto GenBool idéntico al actual. </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena5">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola10" doxytag="GenBool::generarAleatorio" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void generarAleatorio </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Genera un valor aleatorio para el dato almacenado en el gen. 
+<p>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena2">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola9" doxytag="GenBool::getVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool getVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el valor actual del dato almacenado en el gen. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor actual del gen </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola12" doxytag="GenBool::operadorCruceDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorCruce.html">OperadorCruce</a> * operadorCruceDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un objeto correspondiente al operador de cruce establecido por defecto para genes booleanos. 
+<p>
+Crea un nuevo objeto de la clase <a class="el" href="classOperadorCruceBoolDiscreto.html">OperadorCruceBoolDiscreto</a>, correspondiente al operador de cruce establecido por defecto para genes de tipo bool. <dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al nuevo objeto de la clase OperadorCruceBoolPlano </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena4">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola11" doxytag="GenBool::operadorMutacionDefecto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorMutacion.html">OperadorMutacion</a> * operadorMutacionDefecto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna un objeto correspondiente al operador de mutación establecido por defecto para genes booleanos. 
+<p>
+Crea un nuevo objeto de la clase <a class="el" href="classOperadorMutacionBoolUniforme.html">OperadorMutacionBoolUniforme</a>, correspondiente al operador de mutación establecido por defecto para genes de tipo bool. <dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al nuevo objeto de la clase <a class="el" href="classOperadorMutacionBoolUniforme.html">OperadorMutacionBoolUniforme</a> </dd></dl>
+
+<p>
+Implementa <a class="el" href="classGen.html#Gena3">Gen</a>.    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola6" doxytag="GenBool::operator const bool" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> operator const bool </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Conversión implícita a bool. 
+<p>
+Convierte un objeto GenBool en un dato de tipo bool utilizando su valor actual. Permite hacer conversión explícita del estilo 
+<img class="formulaInl" alt="$(bool)gen1$" src="form_48.png" width="63" height="16"> <dl compact><dt><b>Devuelve:</b></dt><dd>Valor actual del gen. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola5" doxytag="GenBool::operator=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classGenBool.html">GenBool</a>&amp; operator= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const bool &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoValor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Operador de asignación a partir de un dato tipo bool. 
+<p>
+Asigna al gen el valor de un dato de tipo bool. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoValor</em>&nbsp;</td><td>Booleano que se asigna al gen </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al gen. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="GenBoola8" doxytag="GenBool::setVal" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool setVal </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoValor</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Ajusta el valor actual del dato almacenado por el gen. Retorna el valor asignado. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoValor</em>&nbsp;</td><td>Valor a asignar al gen. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Valor asignado. </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="GenBoolp0" doxytag="GenBool::m_Valor" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool <a class="el" href="classGenBool.html#GenBoolp0">m_Valor</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Almacena la información del gen. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="genbool_8h.html">genbool.h</a><li><a class="el" href="genbool_8cpp.html">genbool.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:37 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

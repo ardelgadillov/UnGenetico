@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorProbabilidad class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorProbabilidad</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorProbabilidad
+<p><center>
+<img src="classOperadorProbabilidad.png" usemap="#OperadorProbabilidad_map" border="0" alt="" width="653" height="80"></center>
+<map name="OperadorProbabilidad_map">
+<area href="classOperadorProbabilidadHomogenea.html" alt="OperadorProbabilidadHomogenea" shape="rect" coords="0,56,211,80">
+<area href="classOperadorProbabilidadLineal.html" alt="OperadorProbabilidadLineal" shape="rect" coords="221,56,432,80">
+<area href="classOperadorProbabilidadProporcional.html" alt="OperadorProbabilidadProporcional" shape="rect" coords="442,56,653,80">
+</map>
+<a href="classOperadorProbabilidad-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase abstracta que administra la asignación de la probabilidad de supervivencia a los individuos de la población. 
+<p>
+Generalmente, la probabilidad de superviviencia se asigna con base en la función de evaluación de cada individuo. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidad.html#OperadorProbabilidada0">OperadorProbabilidad</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#OperadorProbabilidada0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidad.html#OperadorProbabilidada1">~OperadorProbabilidad</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorProbabilidada1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorProbabilidad.html#OperadorProbabilidada2">asignarProbabilidad</a> (<a class="el" href="classPoblacion.html">Poblacion</a> &amp;Pob, bool Maximizar)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asigna una probabilidad de supervivencia a los individuos de la población.  <a href="#OperadorProbabilidada2"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorProbabilidada0" doxytag="OperadorProbabilidad::OperadorProbabilidad" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Debe sobrecargarse en las clases derivadas     </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorProbabilidada1" doxytag="OperadorProbabilidad::~OperadorProbabilidad" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual ~<a class="el" href="classOperadorProbabilidad.html">OperadorProbabilidad</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Es virtual para poder definirse en las clases derivadas     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorProbabilidada2" doxytag="OperadorProbabilidad::asignarProbabilidad" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void asignarProbabilidad </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="classPoblacion.html">Poblacion</a> &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Pob</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>Maximizar</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Asigna una probabilidad de supervivencia a los individuos de la población. 
+<p>
+Debe sobrecargarse en las clases derivadas <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>Pob</em>&nbsp;</td><td>Referencia a la población sobre la que opera. </td></tr>
+    <tr><td valign=top><em>Maximizar</em>&nbsp;</td><td>Si si valor es <em>true</em> a los individuos se les asigan probabilidades de supervivencia directamente proporcionales a su función objetivo, de lo contrario se asignan probabiliades inversamente proporcionales. </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementado en <a class="el" href="classOperadorProbabilidadProporcional.html#OperadorProbabilidadProporcionala2">OperadorProbabilidadProporcional</a>, <a class="el" href="classOperadorProbabilidadLineal.html#OperadorProbabilidadLineala4">OperadorProbabilidadLineal</a>, y <a class="el" href="classOperadorProbabilidadHomogenea.html#OperadorProbabilidadHomogeneaa2">OperadorProbabilidadHomogenea</a>.    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:47 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

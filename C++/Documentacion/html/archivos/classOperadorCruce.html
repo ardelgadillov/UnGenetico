@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: OperadorCruce class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase OperadorCruce</h1><code>#include &lt;genetico.h&gt;</code>
+<p>
+<p>Diagrama de herencias de OperadorCruce
+<p><center>
+<img src="classOperadorCruce.png" usemap="#OperadorCruce_map" border="0" alt="" width="514" height="1032"></center>
+<map name="OperadorCruce_map">
+<area href="classOperadorCruceArreglo.html" alt="OperadorCruceArreglo" shape="rect" coords="262,56,514,80">
+<area href="classOperadorCruceBoolDiscreto.html" alt="OperadorCruceBoolDiscreto" shape="rect" coords="262,112,514,136">
+<area href="classOperadorCruceEnteroAritmetico.html" alt="OperadorCruceEnteroAritmetico" shape="rect" coords="262,168,514,192">
+<area href="classOperadorCruceEnteroBLX.html" alt="OperadorCruceEnteroBLX" shape="rect" coords="262,224,514,248">
+<area href="classOperadorCruceEnteroDiscreto.html" alt="OperadorCruceEnteroDiscreto" shape="rect" coords="262,280,514,304">
+<area href="classOperadorCruceEnteroHeuristico.html" alt="OperadorCruceEnteroHeuristico" shape="rect" coords="262,336,514,360">
+<area href="classOperadorCruceEnteroIntermedioExtendido.html" alt="OperadorCruceEnteroIntermedioExtendido" shape="rect" coords="262,392,514,416">
+<area href="classOperadorCruceEnteroLineal.html" alt="OperadorCruceEnteroLineal" shape="rect" coords="262,448,514,472">
+<area href="classOperadorCruceEnteroLinealBGA.html" alt="OperadorCruceEnteroLinealBGA" shape="rect" coords="262,504,514,528">
+<area href="classOperadorCruceEnteroPlano.html" alt="OperadorCruceEnteroPlano" shape="rect" coords="262,560,514,584">
+<area href="classOperadorCruceRealAritmetico.html" alt="OperadorCruceRealAritmetico" shape="rect" coords="262,616,514,640">
+<area href="classOperadorCruceRealBLX.html" alt="OperadorCruceRealBLX" shape="rect" coords="262,672,514,696">
+<area href="classOperadorCruceRealDiscreto.html" alt="OperadorCruceRealDiscreto" shape="rect" coords="262,728,514,752">
+<area href="classOperadorCruceRealHeuristico.html" alt="OperadorCruceRealHeuristico" shape="rect" coords="262,784,514,808">
+<area href="classOperadorCruceRealIntermedioExtendido.html" alt="OperadorCruceRealIntermedioExtendido" shape="rect" coords="262,840,514,864">
+<area href="classOperadorCruceRealLineal.html" alt="OperadorCruceRealLineal" shape="rect" coords="262,896,514,920">
+<area href="classOperadorCruceRealLinealBGA.html" alt="OperadorCruceRealLinealBGA" shape="rect" coords="262,952,514,976">
+<area href="classOperadorCruceRealPlano.html" alt="OperadorCruceRealPlano" shape="rect" coords="262,1008,514,1032">
+</map>
+<a href="classOperadorCruce-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase abstracta que administra el proceso de cruce entre los individuos del algoritmo genético. 
+<p>
+El proceso de cruce consiste en intercambiar la información genética de dos individuos para generar nuevos individuos. Un objeto de una clase derivada de OperadorCruce opera sobre objetos de clases derivadas de <a class="el" href="classGen.html">Gen</a>, por lo tanto, estos objetos deben manejar el mismo tipo de dato. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruce.html#OperadorCrucea0">OperadorCruce</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#OperadorCrucea0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruce.html#OperadorCrucea1">~OperadorCruce</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#OperadorCrucea1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classOperadorCruce.html#OperadorCrucea2">cruzarGenes</a> (const <a class="el" href="classGen.html">Gen</a> *pMejor, const <a class="el" href="classGen.html">Gen</a> *pPeor, <a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classGen.html">Gen</a> &gt; *pHijos, int numHijos, int indice)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método virtual que ejecuta el procedimiento de cruce entre dos indivduos.  <a href="#OperadorCrucea2"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="OperadorCrucea0" doxytag="OperadorCruce::OperadorCruce" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classOperadorCruce.html">OperadorCruce</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Debe sobrecargarse en las clases derivadas     </td>
+  </tr>
+</table>
+<a class="anchor" name="OperadorCrucea1" doxytag="OperadorCruce::~OperadorCruce" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual ~<a class="el" href="classOperadorCruce.html">OperadorCruce</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Es virtual para definirse en las clases derivadas     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="OperadorCrucea2" doxytag="OperadorCruce::cruzarGenes" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual void cruzarGenes </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pMejor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const <a class="el" href="classGen.html">Gen</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pPeor</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap><a class="el" href="classArreglo.html">Arreglo</a>&lt; <a class="el" href="classGen.html">Gen</a> &gt; *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pHijos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>numHijos</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>indice</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [pure virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método virtual que ejecuta el procedimiento de cruce entre dos indivduos. 
+<p>
+Debe sobrecargarse en las clases derivadas. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pMejor</em>&nbsp;</td><td>Apuntador al gen padre con la mejor función de evaluación. </td></tr>
+    <tr><td valign=top><em>pPeor</em>&nbsp;</td><td>Apuntador al gen padre con la peor función de evaluación. </td></tr>
+    <tr><td valign=top><em>pHijos</em>&nbsp;</td><td><a class="el" href="classArreglo.html">Arreglo</a> de genes al cual se adicionan los genes hijos. </td></tr>
+    <tr><td valign=top><em>numHijos</em>&nbsp;</td><td>Numero de genes hijos a crear en el cruce. </td></tr>
+    <tr><td valign=top><em>indice</em>&nbsp;</td><td>Valor que identifica al individuo de cuyos genes se realiza el cruce. No es utilizado en todas las clases derivadas </td></tr>
+  </table>
+</dl>
+
+<p>
+Implementado en <a class="el" href="classOperadorCruceArreglo.html#OperadorCruceArregloa2">OperadorCruceArreglo</a>, <a class="el" href="classOperadorCruceBoolDiscreto.html#OperadorCruceBoolDiscretoa2">OperadorCruceBoolDiscreto</a>, <a class="el" href="classOperadorCruceEnteroPlano.html#OperadorCruceEnteroPlanoa2">OperadorCruceEnteroPlano</a>, <a class="el" href="classOperadorCruceEnteroAritmetico.html#OperadorCruceEnteroAritmeticoa4">OperadorCruceEnteroAritmetico</a>, <a class="el" href="classOperadorCruceEnteroBLX.html#OperadorCruceEnteroBLXa4">OperadorCruceEnteroBLX</a>, <a class="el" href="classOperadorCruceEnteroLineal.html#OperadorCruceEnteroLineala2">OperadorCruceEnteroLineal</a>, <a class="el" href="classOperadorCruceEnteroDiscreto.html#OperadorCruceEnteroDiscretoa2">OperadorCruceEnteroDiscreto</a>, <a class="el" href="classOperadorCruceEnteroIntermedioExtendido.html#OperadorCruceEnteroIntermedioExtendidoa2">OperadorCruceEnteroIntermedioExtendido</a>, <a class="el" href="classOperadorCruceEnteroHeuristico.html#OperadorCruceEnteroHeuristicoa2">OperadorCruceEnteroHeuristico</a>, <a class="el" href="classOperadorCruceEnteroLinealBGA.html#OperadorCruceEnteroLinealBGAa2">OperadorCruceEnteroLinealBGA</a>, <a class="el" href="classOperadorCruceRealPlano.html#OperadorCruceRealPlanoa2">OperadorCruceRealPlano</a>, <a class="el" href="classOperadorCruceRealAritmetico.html#OperadorCruceRealAritmeticoa4">OperadorCruceRealAritmetico</a>, <a class="el" href="classOperadorCruceRealBLX.html#OperadorCruceRealBLXa4">OperadorCruceRealBLX</a>, <a class="el" href="classOperadorCruceRealLineal.html#OperadorCruceRealLineala2">OperadorCruceRealLineal</a>, <a class="el" href="classOperadorCruceRealDiscreto.html#OperadorCruceRealDiscretoa2">OperadorCruceRealDiscreto</a>, <a class="el" href="classOperadorCruceRealIntermedioExtendido.html#OperadorCruceRealIntermedioExtendidoa2">OperadorCruceRealIntermedioExtendido</a>, <a class="el" href="classOperadorCruceRealHeuristico.html#OperadorCruceRealHeuristicoa2">OperadorCruceRealHeuristico</a>, y <a class="el" href="classOperadorCruceRealLinealBGA.html#OperadorCruceRealLinealBGAa2">OperadorCruceRealLinealBGA</a>.    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="genetico_8h.html">genetico.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:39 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

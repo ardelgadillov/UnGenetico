@@ -1,0 +1,1040 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: AGVentana class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase AGVentana</h1><code>#include &lt;ventana.h&gt;</code>
+<p>
+<a href="classAGVentana-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+Clase derivada de <em>wxScrolledWindow</em> de la librería <em>wxWindows</em> que contiene objetos visibles por el usuario. 
+<p>
+Al establecer la utilización del ambiente gráfico se crean dos tipos de ventana, una que contiene un control de texto en el que aparece la ejecución del algoritmo, y otras que contienen las gráficas de desempeño del algoritmo genético. Sin embargo, el usuario puede crear una clase derivada de AGVentana y adicionarle cualquier control que pertenezca a la librería <em>wxWindows</em>. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanaa0">AGVentana</a> (wxWindow *parent, wxWindowID id=-1, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor de la clase AGVentana.  <a href="#AGVentanaa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanaa1">~AGVentana</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor de la clase AGVentana.  <a href="#AGVentanaa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxWindow *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanaa2">ObtenerFrame</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que retorna el objeto de la clase <em>wxFrame</em> en el que está contenido.  <a href="#AGVentanaa2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanaa3">GrafTexto</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que realiza gráficas descriptivas de datos almacenados en un archivo de texto.  <a href="#AGVentanaa3"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxTextCtrl *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao0">m_pTxtConsola</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al control de texto donde se almacena la información seleccionada para cada iteración del algoritmo.  <a href="#AGVentanao0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxBitmap *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao1">m_pBitmap</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al objeto donde se almacenan las gráficas creadas.  <a href="#AGVentanao1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxColour&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao2">m_ColBrush</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Objeto que define el color de la línea de las gráficas creadas.  <a href="#AGVentanao2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxColour&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao3">m_ColGrilla</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Objeto que define el color de los ejes de las gráficas creadas.  <a href="#AGVentanao3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxColour&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao4">m_ColGraf</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Objeto que define el color del fondo de las gráficas creadas.  <a href="#AGVentanao4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxString&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao5">m_NameArch</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cadena de caracteres donde se almacena el nombre del archivo de texto del que se obtienen los datos para crear las gráficas.  <a href="#AGVentanao5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxString&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao6">m_Titulo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cadena de caracteres donde se almacena el nombre de la columna de datos que serán graficados.  <a href="#AGVentanao6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao7">m_Ini</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que indica la línea del archivo <em>NameArch</em> donde inician los datos que se van a graficar.  <a href="#AGVentanao7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanao8">m_Columna</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que indica la columna del archivo <em>NameArch</em> correspondiente a los datos que se van a graficar.  <a href="#AGVentanao8"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Métodos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab0">OnPaint</a> (wxPaintEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que actualiza las ventanas que contienen las gráficas creadas.  <a href="#AGVentanab0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab1">OnMaxLen</a> (wxCommandEvent &amp;event)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que elimina la información presente en <em>m_TxtConsola</em> cuando su capacidad de almacenamiento llega al límite.  <a href="#AGVentanab1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab2">GrafGrilla</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que crea los ejes para las gráficas creadas.  <a href="#AGVentanab2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab3">Extremo</a> (long valor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que halla el límite superior del eje horizontal de las gráficas creadas.  <a href="#AGVentanab3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab4">ObtenerY</a> (int n, int col)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que valida los valores del archivo de texto para ser graficados.  <a href="#AGVentanab4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab5">ObtenerValoresGrafica</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que obtiene los valores del archivo de texto para ser graficados.  <a href="#AGVentanab5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanab6">ObtenerExtremos</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que obtiene y valida los extremos inferior y superior del eje vertical de cada gráfica creada.  <a href="#AGVentanab6"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxMemoryDC&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap0">m_dib</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dispositivo propio de <em>wxWindows</em> que provee un medio para realizar una gráfica en un mapa de bits.  <a href="#AGVentanap0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxClientDC&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap1">m_dibCopia</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dispositivo propio de <em>wxWindows</em> que permite mostrar la gráfica creada en una ventana.  <a href="#AGVentanap1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap2">m_ancho</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que indica el ancho de la gráfica.  <a href="#AGVentanap2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap3">m_alto</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que indica el alto de la gráfica.  <a href="#AGVentanap3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap4">m_pValores</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador a un arreglo de números reales donde se almacenan los valores que serán graficados.  <a href="#AGVentanap4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxTextFile *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap5">m_pTextarch</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al archivo de texto de donde se extraen los valores que serán graficados.  <a href="#AGVentanap5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>wxSizer *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanap6">m_pSizer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apuntador al objeto que ajusta el tamaño de los controles contenidos en una ventana.  <a href="#AGVentanap6"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Tipos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>enum &nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanay2">Controles</a> { <a class="el" href="classAGVentana.html#AGVentanay2AGVentanay0">TEXT_CONSOLA</a> = 3000, 
+<a class="el" href="classAGVentana.html#AGVentanay2AGVentanay1">OTRO</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enumeración a los controles de la ventana.  <a href="#AGVentanay2">Más...</a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanar0">m_tam</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que almacena el número de final de generaciones de la ejecución del algoritmo genético.  <a href="#AGVentanar0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>long&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanar1">m_NumGen</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que almacena el limite superior del eje horizontal de las gráficas creadas.  <a href="#AGVentanar1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanar2">m_max</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que almacena el máximo valor presente en el arreglo <em>p_valores</em>.  <a href="#AGVentanar2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>double&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classAGVentana.html#AGVentanar3">m_min</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Variable que almacena el mínimo valor presente en el arreglo <em>p_valores</em>.  <a href="#AGVentanar3"></a><br><br></td></tr>
+</table>
+<hr><h2>Documentación de las enumeraciones miembro de la clase</h2>
+<a class="anchor" name="AGVentanay2" doxytag="AGVentana::Controles" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> enum <a class="el" href="classAGVentana.html#AGVentanay2">Controles</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Enumeración a los controles de la ventana. 
+<p>
+<dl compact><dt><b>Valores de la enumeración: </b></dt><dd>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td valign=top><em><a class="anchor" name="AGVentanay2AGVentanay0" doxytag="TEXT_CONSOLA" ></a>TEXT_CONSOLA</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign=top><em><a class="anchor" name="AGVentanay2AGVentanay1" doxytag="OTRO" ></a>OTRO</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="AGVentanaa0" doxytag="AGVentana::AGVentana" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classAGVentana.html">AGVentana</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxWindow *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>wxWindowID&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>id</em> = -1, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const wxPoint &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em> = wxDefaultPosition, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>const wxSize &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>size</em> = wxDefaultSize, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>long&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>style</em> = 0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor de la clase AGVentana. 
+<p>
+En el constructor se coordinan las propiedades principales de la ventana tales como posición y tamaño.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>parent</em>&nbsp;</td><td>Apuntador a la ventana principal en el que esta contenida. </td></tr>
+    <tr><td valign=top><em>id</em>&nbsp;</td><td>Valor entero que identifica a la ventana. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Coordenadas que definen la posición de la ventana. </td></tr>
+    <tr><td valign=top><em>size</em>&nbsp;</td><td>Conjunto de valores que definen el tamaño de la ventana. </td></tr>
+    <tr><td valign=top><em>style</em>&nbsp;</td><td>Valor entero que define el estilo de la ventana. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanaa1" doxytag="AGVentana::~AGVentana" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> ~<a class="el" href="classAGVentana.html">AGVentana</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor de la clase AGVentana. 
+<p>
+Destruye las gráficas creadas por la aplicación al cerrarla.     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="AGVentanab3" doxytag="AGVentana::Extremo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long Extremo </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">long&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>y</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que halla el límite superior del eje horizontal de las gráficas creadas. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>y</em>&nbsp;</td><td>número de datos que contiene el archivo de texto en cada columna. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanab2" doxytag="AGVentana::GrafGrilla" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void GrafGrilla </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que crea los ejes para las gráficas creadas. 
+<p>
+Crea los ejes principales y auxiliares tanto verticales como horizontales que se mostrarán junto con las líneas creadas por <em><a class="el" href="classAGVentana.html#AGVentanaa3">GrafTexto()</a></em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanaa3" doxytag="AGVentana::GrafTexto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void GrafTexto </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que realiza gráficas descriptivas de datos almacenados en un archivo de texto. 
+<p>
+Los datos son extraídos y validados a través del método <em><a class="el" href="classAGVentana.html#AGVentanab5">ObtenerValoresGrafica()</a></em>. Para cada columna de datos del archivo se crea un objeto de la clase <em>wxBitmap</em> que contiene una línea que indica la variación de los valores de la columna correspondiente.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanab6" doxytag="AGVentana::ObtenerExtremos" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void ObtenerExtremos </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que obtiene y valida los extremos inferior y superior del eje vertical de cada gráfica creada. 
+<p>
+Cada uno de los datos límite se obtiene del arreglo <em>p_valores</em>.     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanaa2" doxytag="AGVentana::ObtenerFrame" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxWindow* ObtenerFrame </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que retorna el objeto de la clase <em>wxFrame</em> en el que está contenido. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanab5" doxytag="AGVentana::ObtenerValoresGrafica" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void ObtenerValoresGrafica </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que obtiene los valores del archivo de texto para ser graficados. 
+<p>
+Los datos se extraen del archivo cuyo nombre está almacenado en la cadena <em>NameArch</em> y se almacenan en el arreglo llamado <em>p_valores</em>     </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanab4" doxytag="AGVentana::ObtenerY" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double ObtenerY </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>col</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que valida los valores del archivo de texto para ser graficados. 
+<p>
+Convierte una cadena de caracteres presente en un archivo de texto a un número real.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>n</em>&nbsp;</td><td>línea del archivo donde se encuentra el dato. </td></tr>
+    <tr><td valign=top><em>col</em>&nbsp;</td><td>columna del archivo donde se encuentra el dato. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanab1" doxytag="AGVentana::OnMaxLen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnMaxLen </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxCommandEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que elimina la información presente en <em>m_TxtConsola</em> cuando su capacidad de almacenamiento llega al límite. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanab0" doxytag="AGVentana::OnPaint" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void OnPaint </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">wxPaintEvent &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>event</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [protected]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Método que actualiza las ventanas que contienen las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="AGVentanap3" doxytag="AGVentana::m_alto" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classAGVentana.html#AGVentanap3">m_alto</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que indica el alto de la gráfica. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanap2" doxytag="AGVentana::m_ancho" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classAGVentana.html#AGVentanap2">m_ancho</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que indica el ancho de la gráfica. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao2" doxytag="AGVentana::m_ColBrush" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxColour <a class="el" href="classAGVentana.html#AGVentanao2">m_ColBrush</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Objeto que define el color de la línea de las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao4" doxytag="AGVentana::m_ColGraf" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxColour <a class="el" href="classAGVentana.html#AGVentanao4">m_ColGraf</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Objeto que define el color del fondo de las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao3" doxytag="AGVentana::m_ColGrilla" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxColour <a class="el" href="classAGVentana.html#AGVentanao3">m_ColGrilla</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Objeto que define el color de los ejes de las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao8" doxytag="AGVentana::m_Columna" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classAGVentana.html#AGVentanao8">m_Columna</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que indica la columna del archivo <em>NameArch</em> correspondiente a los datos que se van a graficar. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanap0" doxytag="AGVentana::m_dib" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxMemoryDC <a class="el" href="classAGVentana.html#AGVentanap0">m_dib</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Dispositivo propio de <em>wxWindows</em> que provee un medio para realizar una gráfica en un mapa de bits. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanap1" doxytag="AGVentana::m_dibCopia" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxClientDC <a class="el" href="classAGVentana.html#AGVentanap1">m_dibCopia</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Dispositivo propio de <em>wxWindows</em> que permite mostrar la gráfica creada en una ventana. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao7" doxytag="AGVentana::m_Ini" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classAGVentana.html#AGVentanao7">m_Ini</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que indica la línea del archivo <em>NameArch</em> donde inician los datos que se van a graficar. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanar2" doxytag="AGVentana::m_max" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAGVentana.html#AGVentanar2">m_max</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que almacena el máximo valor presente en el arreglo <em>p_valores</em>. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanar3" doxytag="AGVentana::m_min" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double <a class="el" href="classAGVentana.html#AGVentanar3">m_min</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que almacena el mínimo valor presente en el arreglo <em>p_valores</em>. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao5" doxytag="AGVentana::m_NameArch" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxString <a class="el" href="classAGVentana.html#AGVentanao5">m_NameArch</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cadena de caracteres donde se almacena el nombre del archivo de texto del que se obtienen los datos para crear las gráficas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanar1" doxytag="AGVentana::m_NumGen" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long <a class="el" href="classAGVentana.html#AGVentanar1">m_NumGen</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que almacena el limite superior del eje horizontal de las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao1" doxytag="AGVentana::m_pBitmap" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxBitmap* <a class="el" href="classAGVentana.html#AGVentanao1">m_pBitmap</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al objeto donde se almacenan las gráficas creadas. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanap6" doxytag="AGVentana::m_pSizer" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxSizer* <a class="el" href="classAGVentana.html#AGVentanap6">m_pSizer</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al objeto que ajusta el tamaño de los controles contenidos en una ventana. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanap5" doxytag="AGVentana::m_pTextarch" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxTextFile* <a class="el" href="classAGVentana.html#AGVentanap5">m_pTextarch</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al archivo de texto de donde se extraen los valores que serán graficados. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao0" doxytag="AGVentana::m_pTxtConsola" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxTextCtrl* <a class="el" href="classAGVentana.html#AGVentanao0">m_pTxtConsola</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador al control de texto donde se almacena la información seleccionada para cada iteración del algoritmo. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanap4" doxytag="AGVentana::m_pValores" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> double* <a class="el" href="classAGVentana.html#AGVentanap4">m_pValores</a><code> [protected]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Apuntador a un arreglo de números reales donde se almacenan los valores que serán graficados. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanar0" doxytag="AGVentana::m_tam" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> long <a class="el" href="classAGVentana.html#AGVentanar0">m_tam</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Variable que almacena el número de final de generaciones de la ejecución del algoritmo genético. 
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="AGVentanao6" doxytag="AGVentana::m_Titulo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> wxString <a class="el" href="classAGVentana.html#AGVentanao6">m_Titulo</a>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Cadena de caracteres donde se almacena el nombre de la columna de datos que serán graficados. 
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir de los siguientes archivos:<ul>
+<li><a class="el" href="ventana_8h.html">ventana.h</a><li><a class="el" href="ventana_8cpp.html">ventana.cpp</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

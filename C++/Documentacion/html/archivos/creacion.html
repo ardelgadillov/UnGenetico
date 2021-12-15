@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: Creación básica</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1><a class="anchor" name="creacion">Creación básica</a></h1><div align="justify"></div><p>
+<div align="justify">En esta sección se tratarán los puntos básicos para la construcción de un proyecto de optimización utilizando <em>UNGenético 2.0</em>. Es importante aclarar que estos proyectos pueden ser construidos para ser visualizados en dos formas distintas: la primera y más sencilla corresponde a la aplicación estándar de los compiladores de lenguaje C++ conocida como <em>consola</em>, la segunda corresponde al entorno gráfico ofrecido por la librería <em>wxWindows</em> donde se pueden crear aplicaciones en diferentes plataformas siempre y cuando se implementen un conjunto de instrucciones propias de esta librería. En las siguientes secciones se explicará el método de construcción para los dos tipos de aplicaciones, cuando así se requiera.</div><p>
+<div align="justify">Con el fin de ilustrar el proceso plenamente, se planteado una <a href="creacion.html#eje">función prototipo</a> para la cual se buscará el valor de su óptimo global. Mientras que en las demás secciones de esté tutorial se explica cada etapa de la construcción del proyecto utilizando <em>UNGenético 2.0</em>.</div><p>
+<div align="justify"><a class="anchor" name="arriba"></a><br>
+<ul>
+<li><a class="el" href="creacion.html#crec">Creación del proyecto</a></li><li><a class="el" href="creacion.html#alg">Definición de las propiedades del algoritmo genético</a> <ul>
+<li>
+<a class="el" href="creacion.html#pro">Modificación de las propiedades de la clase AlgoritmoGenetico</a> </li>
+<li>
+<a class="el" href="creacion.html#op">Modificación de los operadores del algoritmo genético</a> </li>
+<li>
+<a class="el" href="creacion.html#ind">Definición de las propiedades de los individuos</a> </li>
+<li>
+<a class="el" href="creacion.html#obj">Definición de la función objetivo</a> </li>
+</ul>
+</li><li><a class="el" href="creacion.html#pri">Definición del procedimiento principal</a></li></ul>
+</div><p>
+<div align="justify"><hr>
+ </div><h2><a class="anchor" name="eje">
+Función propuesta</a></h2>
+<div align="justify">Como ejemplo se propone la maximización de la función <p class="formulaDsp">
+<img class="formulaDsp" alt="\[f(x,y,z)=\sum_{i=1}^{k}x+4y+\sin(15z)e^{-z}\]" src="form_44.png" width="215" height="42">
+<p>
+</div><p>
+<div align="justify">Donde, <p class="formulaDsp">
+<img class="formulaDsp" alt="\[x \in \left\{0, 1\right\},\ con\ k=1,\ldots 10;\]" src="form_45.png" width="170" height="16">
+<p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[y \in Z[-10, 40]\ tal\ que\ y\ es\ impar;\]" src="form_46.png" width="204" height="16">
+<p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[z \in R[0, 6]\]" src="form_47.png" width="63" height="16">
+<p>
+</div><p>
+<div align="justify">La optimización de esta función sugiere la utilización de codficación híbrida ya que cada una de sus variables es de distinto tipo; además la función cuenta con una restricción para una de ellas, por lo tanto se justifica el uso de <em>UNGenético 2.0</em> como herramienta de optimización para esta función.</div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h2><a class="anchor" name="crec">
+Creación del proyecto</a></h2>
+<div align="justify"> <table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#000000" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%" style="border-style: none; border-width: medium"><div align="left"> <a href="creacion.html#crec"><small>Creación del proyecto en consola</small></a> </div>  </td><td width="50%" style="border-style: none; border-width: medium"><div align="right"> <a href="grafica.html#cregraf"><small>Creación del proyecto usando entorno gráfico</small></a> </div>  </td></tr>
+</table>
+</div><p>
+<div align="justify">Las optimizaciones implementadas en <em>UNGenético 2.0</em> se ejecutan dentro de un proyecto propio de un compilador de lenguaje C++ de libre escogencia. Para incluir <em>UNGenético 2.0</em>, en la carpeta del proyecto deben copiarse todos los <a href="files.html">archivos</a> de la librería, tanto los encabezados como los fuente (extensiones <em></em>.h y <em></em>.cpp); en caso contrario, debe especificarse en el proyecto la ruta donde se encuentran dichos archivos. El proyecto solamente debe contener un archivo fuente de C++ (extensión <em></em>.cpp) donde se especificarán todas las características del sistema a optimizar, su nombre es de libre escogencia.</div><p>
+<div align="justify">En la mayoría de compiladores de C++ es posible crear proyectos especiales para aplicaciones en consola. Por lo tanto, dependiendo del compilador utilizado se debe crear un proyecto que construya este tipo de aplicación.</div><p>
+<div align="justify">En el archivo principal del proyecto, es necesario emplear una instrucción que incluya el archivo <a class="el" href="UNGenetico_8h.html">UNGenetico.h</a>, encargado de vincular a los demás archivos de la librería. El siguiente fragmento muestra cómo debe iniciarse el archivo mencionado para el <a href="creacion.html#eje">sistema propuesto</a>.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+#include "UNGenetico.h"
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h2><a class="anchor" name="alg">
+Definición de las propiedades del algoritmo genético</a></h2>
+<div align="justify"> Para todo proyecto de optimización es necesario definir una clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> en la que se establecen las propiedades particulares del sistema a optimizar tales como los operadores genéticos, las características de los individuos de la población, la función objetivo, entre otras.</div><p>
+<div align="justify">La macros DECLARAR_ALGORITMO(<em>NombreAlgoritmo</em>) y FIN_DECLARAR_ALGORTIMO son útiles para definir una clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> cuyo nombre se puede asignar libremente. Al utilizarlas, implícitamente se está declarando la clase y su constructor por defecto. Dentro de esta definición es posible <em>si se requiere</em> sobrecargar los métodos que cambian las propiedades por defecto de la clase, estos son:</div><p>
+<div align="justify"><ul>
+<li>
+Método <em>inicializarParametros()</em>: modifica los valores establecidos por defecto de los miembros de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. </li>
+<li>
+Método <em>definirOperadores()</em>: define los operadores genéticos que se usarán en el proyecto. </li>
+</ul>
+</div><p>
+<div align="justify">Dentro de la definición de esta clase se deben declarar las variables del sistema que coincidirán con los genes que conformarán a los individuos de la población; opcionalmente para este ejemplo se declara también el método <em>mostrarIndividuo(Individuo&amp; Ind)</em> que servirá para visualizar la información genética presente en un objeto de la clase <a class="el" href="classIndividuo.html">Individuo</a>.</div><p>
+<div align="justify">En el siguiente fragmento se muestra el uso de las macros mencionadas para definir una clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> llamada <em>MiAlgoritmoGenetico</em>, también se declaran las variables <em>x</em>, <em>y</em>, y <em>z</em> del tipo adecuado para cumplir con las condiciones establecidas en el <a href="creacion.html#eje">sistema propuesto</a>.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+<a class="el" href="genetico_8h.html#a1">DECLARAR_ALGORITMO(MiAlgoritmoGenetico)</a>
+	void inicializarParametros();
+	void definirOperadores();<br>
+
+	ArregloBool x;
+	long y;
+	double z;<br>
+
+	void mostrarIndividuo(Individuo&amp; Ind);
+<a class="el" href="genetico_8h.html#a2">FIN_DECLARAR_ALGORITMO</a>
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h3><a class="anchor" name="pro">
+Modificación de las propiedades de la clase AlgoritmoGenetico</a></h3>
+<div align="justify"> La clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> posee por defecto un conjunto de propiedades típicas para procesos de optimización. Estas propiedades pueden ser observadas en la tabla <a class="el" href="tablas.html#tabalg">Valores por defecto de la clase AlgoritmoGenetico</a>. Al implementar el método <em>inicializarParametros()</em> declarado anteriormente es posible redefinir todos los parámetros de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> de los cuales se desee cambiar su valor por defecto.</div><p>
+<div align="justify">Para el ejemplo actual se desea: <ul>
+<li>
+Maximizar la función objetivo. </li>
+<li>
+Ampliar la cantidad de individuos por generación en el algoritmo genético a 200. </li>
+<li>
+Asignar valores iniciales no aleatorios a los genes de la primera generación del algoritmo. </li>
+</ul>
+</div><p>
+<div align="justify">El siguiente fragmento muestra cómo se realizan los cambios mencionados:</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+void MiAlgoritmoGenetico::inicializarParametros()
+{
+	m_IndicadorMaximizar=true;
+	m_TamanoPoblacion=200;
+	m_IndicadorInicializarPoblacionAleatoria=false;
+}
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h3><a class="anchor" name="op">
+Modificación de los operadores del algoritmo genético</a></h3>
+<div align="justify"> <em>UNGenético 2.0</em> posee un conjunto de operadores de probabilidad, selección, asignación de parejas, reproducción, cruce, mutación, adaptación y finalización para ejecutar el algortimo genético. La tabla <a class="el" href="tablas.html#oprdef">Operadores por defecto de UNGenético</a> señala cuáles son los operadores establecidos por defecto. Para definir otro conjunto de operadores debe implementarse el método <em>definirOperadores()</em> de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. En la implementación de este método es recomendable utilizar las macros que definen los operadores que utilizará el algoritmo, Los dos tipos de macros diseñados para esta función son:</div><p>
+<div align="justify"><ul>
+<li>
+Macros con el prefijo DEFINIR_: hacen referencia a operadores de los que sólo debe definirse uno para operar en el algoritmo genético, es decir, los operadores de probabilidad, selección, asignación de parejas y reproducción. Estas son:<br>
+ DEFINIR_OPERADOR_PROBABILIDAD(<em>tipoOperador</em>)<br>
+ DEFINIR_OPERADOR_SELECCION(<em>tipoOperador</em>)<br>
+ DEFINIR_OPERADOR_PAREJAS(<em>tipoOperador</em>)<br>
+ DEFINIR_OPERADOR_REPRODUCCION(<em>tipoOperador</em>)<br>
+<p>
+</li>
+<li>
+Macros con el prefijo ADICIONAR_: hacen referencia a operadores que pueden actuar en conjunto en el algoritmo, como los operadores de adaptación y finalización, o los correspondientes a cada gen del modelo como los operadores de cruce y mutación. Estas son:<br>
+ ADICIONAR_OPERADOR_ADAPTACION(<em>tipoOperador</em>)<br>
+ ADICIONAR_OPERADOR_FINALIZACION(<em>tipoOperador</em>)<br>
+ ADICIONAR_OPERADOR_MUTACION(<em>tipoOperador</em>)<br>
+ ADICIONAR_OPERADOR_CRUCE(<em>tipoOperador</em>)<br>
+ </li>
+</ul>
+En todas ellas, el parámetro <em>tipoOperador</em> especifica el tipo de operador a utilizar en cada caso junto con sus parámetros iniciales.</div><p>
+<div align="justify">El siguiente fragmento muestra cómo definir un nuevo conjunto de operadores para el algoritmo, mientras que en la tabla <a class="el" href="tablas.html#oprgen">Operadores de UNGenético</a> se puede observar una lista general de los operadores que hacen parte de la librería y que pueden reemplazar a los operadores asignados por defecto.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+void MiAlgoritmoGenetico::definirOperadores()
+{
+	<a class="el" href="genetico_8h.html#a3">DEFINIR_OPERADOR_PROBABILIDAD(OperadorProbabilidadProporcional)</a>
+	<a class="el" href="genetico_8h.html#a4">DEFINIR_OPERADOR_SELECCION( OperadorSeleccionEstocasticaRemplazo)</a>	
+	<a class="el" href="genetico_8h.html#a5">DEFINIR_OPERADOR_PAREJAS(OperadorParejasAdyacentes)</a>
+	<a class="el" href="genetico_8h.html#a6">DEFINIR_OPERADOR_REPRODUCCION(OperadorReproduccionMejorPadreMejorHijo)</a><br>
+
+	<a class="el" href="genetico_8h.html#a7">ADICIONAR_OPERADOR_ADAPTACION(OperadorAdaptacionProbMutacion(this,ADAPTACION_PROBMUTACION_OFFLINE))</a><br>
+
+	<a class="el" href="genetico_8h.html#a8">ADICIONAR_OPERADOR_FINALIZACION(OperadorTerminacionOffline)</a><br>
+
+	<a class="el" href="genetico_8h.html#a9">ADICIONAR_OPERADOR_MUTACION(OperadorMutacionArregloBool)</a>
+	<a class="el" href="genetico_8h.html#a10">ADICIONAR_OPERADOR_CRUCE(OperadorCruceArregloBool)</a>
+	<a class="el" href="genetico_8h.html#a9">ADICIONAR_OPERADOR_MUTACION(OperadorMutacionEnteroNoUniforme(this))</a>
+	<a class="el" href="genetico_8h.html#a10">ADICIONAR_OPERADOR_CRUCE(OperadorCruceEnteroHeuristico)</a>
+	<a class="el" href="genetico_8h.html#a9">ADICIONAR_OPERADOR_MUTACION(OperadorMutacionRealMuhlenbein)</a>
+	<a class="el" href="genetico_8h.html#a10">ADICIONAR_OPERADOR_CRUCE(OperadorCruceRealBLX)</a>
+}
+</pre></div></div></div><p>
+<div align="justify">En algunas de las definiciones se especifica la palabra clave <em>this</em> como parámetro del operador. Esto es necesario en operadores que requieren una referencia al objeto <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> sobre el que operan.</div><p>
+<div align="justify">Cuando se requiera cambiar algún operador de cruce y/o mutación por defecto para algún gen, es indispensable adicionar operadores de cruce y/o mutación para todos los genes que conforman al individuo teniendo en cuenta que el orden en que se adicionen estos operadores debe coincidir con el orden y tipo de los genes del individuo.</div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h3><a class="anchor" name="ind">
+Definición de las propiedades de los individuos</a></h3>
+<div align="justify"> Los individuos del algoritmo deben ser definidos de acuerdo con las variables del sistema a optimizar. Con este fin se implementa el método <a href="creacion.html#cod">codificacion(Individuo * Ind, int estado)</a>. Adicionalmente, para este ejemplo en particular se ha definido el método <a href="creacion.html#mos">mostrarIndividuo(Individuo &amp; Ind)</a> que se utilizará para visualizar la información genética de los individuos durante la ejecución del algoritmo.</div><p>
+<div align="justify"><ul>
+<li>
+<em><a class="anchor" name="cod"></a>Método codificacion(Individuo *Ind, int estado)</em><br>
+ La codificación consiste en transferir el dato presente en cada variable del modelo hacia su gen respectivo dentro del individuo. La implementación de este método utiliza las macros especilizadas en insertar genes del tipo adecuado dentro del individuo que simultáneamente se relacionarán con una variable del sistema. Una descripción detallada de estas macros pueden verse en la sección <a href="globals_defs.html">Definiciones</a>.<p>
+<div class="fragment"> void MiAlgoritmoGenetico::codificacion(Individuo * Ind , int estado)<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="genarreglo_8h.html#a0">ADICIONAR_GENARREGLO_BOOL(Ind, 0, x, 1, 10 )</a><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="genentero_8h.html#a0">ADICIONAR_GENENTERO(Ind, 1, y, -10, 40, 20)</a><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="genreal_8h.html#a0">ADICIONAR_GENREAL(Ind, 2, z, 0.00, 6.00, 1.0)</a><br>
+ } </div><p>
+</li>
+<li>
+<em><a class="anchor" name="mos"></a>Método mostrarIndividuo(Individuo &amp; Ind)</em><br>
+<p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#000000" width="95%" id="AutoNumber1">
+<tr>
+<td width="50%" style="border-style: none; border-width: medium"><div align="left"> <a href="creacion.html#mos"><small>Método mostrarIndividuo(Individuo &amp; Ind) en consola</small></a> </div>  </td><td width="50%" style="border-style: none; border-width: medium"><div align="right"> <a href="grafica.html#mosgraf"><small>Método mostrarIndividuo(Individuo &amp; Ind) usando entorno gráfico</small></a> </div>  </td></tr>
+</table>
+<p>
+Este método se emplea para visualizar el valor de cada gen presente en el individuo apuntado por <em>Ind</em> junto con su función objetivo. El siguiente fragmento muestra el procedimiento realizado para el <a href="creacion.html#eje">sistema planteado</a>.<p>
+<div class="fragment"><pre><div>
+void MiAlgoritmoGenetico::mostrarIndividuo(Individuo &amp; Ind)
+{
+	cout &lt;&lt;"\nFunción Objetivo:\t" &lt;&lt; Ind.objetivo(true);
+	cout &lt;&lt; "\nx: ";
+	int tam = x.getSize();
+	for(int i=0; i&lt;tam; i++)
+	{
+		cout &lt;&lt; x[i];
+	}
+	cout &lt;&lt; "\ny: " &lt;&lt; y;
+	Cout &lt;&lt; "\nz: " &lt;&lt; z;
+}
+</pre></div></div><p>
+En la primera línea de esta función, en la instrucción <em>Ind.objetivo(true)</em>, el parámetro <em>true</em> indica que deben actualizarse las variables del sistema, puesto que se van a imprimir. Si no se utilizara esta instrucción, o no se quisiera acceder a la función objetivo, sería necesario extraer los valores presentes dentro de cada gen con ayuda del método <em>codificacion(&amp;Ind, ESTADO_DECODIFICAR)</em> quien ejecuta la decodifcación, es decir, transfiere la información presente en los genes del individuo a las variables del sistema. </li>
+</ul>
+</div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h3><a class="anchor" name="obj">
+Definición de la función objetivo</a></h3>
+<div align="justify"> En el método <em>objetivo()</em> de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> se define la función a optimizar. Este método retorna un valor real (de tipo <em>double</em>) que debe estar relacionado por medio de la función objetivo con las variables del sistema previamente declaradas. Cuando existan restricciones para esta función, debe penalizarse a los individuos que las incumplan. Las penalizaciones deben reflejarse en su función objetivo.</div><p>
+<div align="justify">Para el sistema planteado en este caso, el método <em>objetivo()</em> retorna la variable <em>FO</em> correspondiente al valor de la función objetivo para un individuo. En este caso, se requiere maximizar la función objetivo, por lo tanto, los individuos que incumplan la restricción de valores pares para la variable <em>y</em>, serán penalizados disminuyendo su función objetivo en 100. Lo anterior puede resumirse en el siguiente fragmento:</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+double MiAlgoritmoGenetico::objetivo()
+{
+	double FO=0.0;
+	int tam = x.getSize();
+	for(int i=0; i&lt;tam; i++)
+	{
+		FO = FO + x[i];
+	}
+	FO = FO + 4*y + sin(15*z)*exp(-z);
+	if(y%2==0)
+		FO = FO - 100;<br>
+
+	return (FO);
+}
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"><hr>
+ </div><h2><a class="anchor" name="pri">
+Definición del procedimiento principal</a></h2>
+<div align="justify"> <table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#000000" width="100%" id="AutoNumber1">
+<tr>
+<td width="50%" style="border-style: none; border-width: medium"><div align="left"> <a href="creacion.html#pri"><small>Definición del procedimiento principal en consola</small></a> </div>  </td><td width="50%" style="border-style: none; border-width: medium"><div align="right"> <a href="grafica.html#prigraf"><small>Definición del procedimiento principal usando entorno gráfico</small></a> </div>  </td></tr>
+</table>
+</div><p>
+<div align="justify">El procedimiento principal que enmarca al algoritmo genético se establece en la función <em>main()</em> propia del lenguaje clase C++. Dentro de este procedimiento es necesario realizar varias actividades, entre ellas:</div><p>
+<div align="justify"><ul>
+<li>
+Se debe crear una instancia de la clase derivada de <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a> que ha sido definida. Para este ejemplo se ha creado un objeto de la clase <em>MiAlgoritmoGenetico</em> llamado <em>MiAg</em>. </li>
+<li>
+El algoritmo genético puede ejecutarse en un sólo paso o mediante un ciclo que recorra cada una de sus generaciones. La primera opción es la más sencilla y se implementa al invocar el método <em>optimizar()</em> de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. La optimización paso a paso debe iniciar invocando al método <em>iniciarOptimizacion()</em> y continúa con un ciclo que repite la ejecución del método <em>iterarOptimizacion()</em> hasta que la función <em>finalizar()</em> retorne <em>true</em>. </li>
+<li>
+Cuando el algoritmo es ejecutado paso a paso, es posible visualizar la información genética del mejor individuo presente en cada generación. Para esto se utiliza el método <em>mostrarIndividuo(Individuo &amp; Ind)</em> creado para este ejemplo. En este caso el método recibirá como parámetro una referencia al mejor individuo de cada generación del algoritmo. </li>
+<li>
+Si se requiere, se puede invocar la función <em>mostrarMedidas()</em> para obtener los valores de las medidas propias del algoritmo cuando éste termine su ejecución. </li>
+</ul>
+</div><p>
+<div align="justify">El siguiente fragmento muestra la implementación del procedimiento principal para el <a href="creacion.html#eje">sistema tratado</a>.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+void main()
+{
+	MiAlgoritmoGenetico MiAg;<br>
+
+	int i=0;
+	MiAg.iniciarOptimizacion();
+	do
+	{
+		MiAg.iterarOptimizacion();
+		cout &lt;&lt; "\n\nGENERACION "&lt;&lt; i;
+		MiAg.mostrarIndividuo(*MiAg.m_pMejorEnEstaGeneracion);
+		i++;
+	}while(!MiAg.finalizar());<br>
+
+	MiAg.mostrarMedidas();
+}
+</pre></div></div></div><p>
+<div align="justify"><br>
+<a href="creacion.html#arriba"><small>Volver arriba</small></a></div><p>
+<div align="justify"></div> <hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:50 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético: Ejemplo sencillo</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1><a class="anchor" name="sencillo">Ejemplo sencillo</a></h1><div align="justify"></div><p>
+<div align="justify">Esta sección tiene el propósito de mostrar al usuario las etapas mínimas necesarias para elaborar un proyecto de optimización en <em>UNGenético 2.0</em>, para este fin se ha planteado una función matemática que servirá de modelo para la creación del proyecto.</div><p>
+<div align="justify"></div><h2><a class="anchor" name="funcion">
+Función propuesta</a></h2>
+<div align="justify"> Se requiere encontrar el valor mínimo de la función:</div><p>
+<div align="justify"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[f(x) = \sin(x) + \sin(4x)\]" src="form_42.png" width="138" height="16">
+<p>
+</div><p>
+<div align="justify">Donde, 
+  <img class="formulaInl" alt="$x \in [0, 10]$" src="form_43.png" width="59" height="16">.</div><p>
+<div align="justify">Como se observa en la siguiente gráfica, esta función presenta varios mínimos locales en el intervalo indicado. Sin embargo el mínimo global de <em>f(x)</em> se encuentra en el punto <em>(4.342334, -1.928208)</em>.</div><p>
+<div align="justify"><div align="center">
+<img src="sencillo.gif" alt="sencillo.gif" width="445" height="320">
+</div>
+<hr>
+ </div><h2><a class="anchor" name="construc">
+Construcción del proyecto</a></h2>
+<div align="justify">Las optimizaciones implementadas en <em>UNGenético 2.0</em> se ejecutan dentro de un proyecto propio de un compilador de lenguaje C++ de libre escogencia. Para incluir <em>UNGenético 2.0</em>, en la carpeta del proyecto deben copiarse todos los <a href="files.html">archivos</a> de la librería, tanto los encabezados como los fuente (extensiones <em></em>.h y <em></em>.cpp); en caso contrario, debe especificarse en el proyecto la ruta donde se encuentran dichos archivos. El proyecto solamente debe contener un archivo fuente de C++ (extensión <em></em>.cpp) donde se especificarán todas las características del sistema a optimizar, su nombre es de libre escogencia.</div><p>
+<div align="justify">En este archivo se fijarán las características propias del modelo a optimizar, para este caso se deben definir:</div><p>
+<div align="justify"><ol>
+<li>
+El individuo modelo, en este caso estará conformado por un sólo gen de tipo real quien almacenará el valor de la variable <em>x</em>. </li>
+<li>
+La función objetivo, que representa fielmente la función a minimizar. </li>
+</ol>
+</div><p>
+<div align="justify">A continuación se presentan las instrucciones mínimas que debe contener el archivo principal del proyecto:</div><p>
+<div align="justify"><ul>
+<li>
+Al iniciar, es necesario incluir el archivo <em><a class="el" href="UNGenetico_8h.html">UNGenetico.h</a></em> encargado de vincular a los demás archivos de la librería.<p>
+</li>
+<li>
+Se debe declarar una clase derivada de AlgortimoGenetico que contendrá todas las variables y métodos que requiere la optimización en particular. La macros <a class="el" href="genetico_8h.html#a1">DECLARAR_ALGORITMO(NombreAlgoritmo)</a> y <a class="el" href="genetico_8h.html#a2">FIN_DECLARAR_ALGORITMO</a> son útiles para este propósito, en medio de ellas se declara la variable <em>x</em> de tipo <em>double</em>.<p>
+</li>
+<li>
+La construcción del individuo modelo debe realizarse dentro del método <em>codificacion(Individuo* modelo, int estado)</em> quien transfiere el dato presente en cada variable del modelo el gen respectivo dentro del individuo. La implementación de este método utiliza la macro <a class="el" href="genreal_8h.html#a0">ADICIONAR_GENREAL(individuo, pos, var, valormin, valormax, valorinicial)</a> especializada en insertar dentro del individuo un gen de tipo real que simultáneamente se relaciona con la respectiva variable del sistema.<p>
+</li>
+<li>
+Para definir la función a maximizar se debe sobrecargar el método <em>objetivo()</em> de la clase <a class="el" href="classAlgoritmoGenetico.html">AlgoritmoGenetico</a>. Este método debe retornar un número real de tipo <em>double</em> resultado de la relación entre la variable <em>x</em> del sistema y la función objetivo.<p>
+</li>
+<li>
+El procedimiento de optimización se realiza dentro de la función principal del archivo. Dentro de ella, obligatoriamente debe crearse un objeto de la clase derivada de AlgoritmoGenético que se declaró; para este objeto debe invocarse el método <em>optimizar()</em> el cual realizará el proceso de optimización utilizando todos los valores establecidos por defecto en la librería. </li>
+</ul>
+</div><p>
+<div align="justify">El siguiente fragmento muestra la implementación de todas las instrucciones mencionadas, las instrucciones de visualización son complementarias para el ejemplo y permiten detallar la respuesta del algoritmo genético.</div><p>
+<div align="justify"><div class="fragment"><pre><div>
+#include "UNGenetico.h"<br>
+
+<a class="el" href="genetico_8h.html#a1">DECLARAR_ALGORITMO(MiAG)</a>
+	double x;
+FIN_DECLARAR_ALGORITMO<br>
+
+void MiAG::codificacion(Individuo* modelo, int estado)
+{
+	<a class="el" href="genreal_8h.html#a0">ADICIONAR_GENREAL(modelo, 0, x, 0, 10, 0)</a>;
+}<br>
+
+double MiAG::objetivo()
+{
+	return sin(x) + sin(4*x);	
+}<br>
+
+int main()
+{
+	cout &lt;&lt; "EJEMPLO \"MINIMO\" DE APLICACION DE UNGenético 2.0\n\n";
+	cout &lt;&lt; "Encuentra el mínimo de la función  f(x)=sin(x)+sin(4x) en el intervalo [0, 10]";<br>
+
+	cout &lt;&lt; "\n\nOptimizando...\n\n\n\n";
+	cout.flush();<br>
+
+	MiAG AG;
+	AG.optimizar();
+	cout &lt;&lt; "Solución:";
+	cout &lt;&lt; "\n\nF(Xmin)= " &lt;&lt; AG.m_pMejorEnLaHistoria-&gt;objetivo(true);	
+	cout &lt;&lt; " Xmin= "&lt;&lt; AG.x &lt;&lt; endl;
+	return 0;
+}
+</pre></div></div></div><p>
+<div align="justify"></div> <hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:50 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

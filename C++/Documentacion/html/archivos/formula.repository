@@ -1,0 +1,52 @@
+\form#0:$c_i$
+\form#1:$[a_i, b_i]$
+\form#2:$g_{max}$
+\form#3:\[c'_i = \left\{ \begin{array}{ll} c_i + \Delta(t,b_i-c_i) & \textrm{si $\tau > 0$}\\ c_i - \Delta(t,b_i-c_i) & \textrm{si $\tau \le 0$} \end{array} \right. \]
+\form#4:\[ \Delta(t,y) = y \left( 1 - r ^ {\left(1 - \frac{t}{g_{max}} \right) ^ b } \right) \]
+\form#5:$[0, 1]$
+\form#6:$\tau$
+\form#7:\[c'_i=c_i \pm \gamma rango \]
+\form#8:\[\gamma = \sum_{i=0}^{15} \alpha_i 2^{-i} \]
+\form#9:$Factor(b_i-a_i)$
+\form#10:$\alpha _i$
+\form#11:$P(\alpha _i =1)= \frac{1}{16}$
+\form#12:$[pMejor, pPeor]$
+\form#13:\[h_1=\lambda pMejor+(1-\lambda)pPeor\]
+\form#14:\[h_2=\lambda pPeor+(1-\lambda)pMejor\]
+\form#15:$\alpha$
+\form#16:$[c_{min} - I \alpha , c_{max} + I \alpha]$
+\form#17:$c_{min}=min[pMejor,pPeor]$
+\form#18:$c_{max}=max[pMejor,pPeor]$
+\form#19:$I=c_{max}-c_{min}$
+\form#20:\[ h_1= \frac{1}{2} pMejor + \frac{1}{2} pPeor \]
+\form#21:\[ h_2= \frac{3}{2} pMejor - \frac{1}{2} pPeor \]
+\form#22:\[ h_3= - \frac{1}{2} pMejor + \frac{3}{2} pPeor \]
+\form#23:\[ h= pMejor + \alpha _i(pPeor - pMejor)\]
+\form#24:$[-0.25,1.25]$
+\form#25:\[ h = r (pMejor - pPeor) + pMejor \]
+\form#26:\[ h_1= pMejor + rango_i \gamma \Delta \]
+\form#27:\[ \Delta= frac{pPeor - pMejor}{\left|Fevaluacion_{pMejor}-Fevaluacion_{pPeor}\right|} \]
+\form#28:\[ \Gamma= \sum_{k=0}^{15} \alpha_k 2^{-k} \]
+\form#29:\[rango_i = 0.5 (Máximo - Mínimo)\]
+\form#30:$\alpha_k$
+\form#31:$Pm(t)=P_{max} e^{\frac{-t}{T}}$
+\form#32:\[P(i)=\frac{\frac{1}{FObjProp(i)}} {\Sigma_{i=1}^N \frac{1}{FObj(i)}} \]
+\form#33:\[P(i)=\frac{FObjProp(i)} {\Sigma_{i=1}^N FObj(i)}\]
+\form#34:\[FObjProp(i)=FObj(i)+(1-FObjmin)\]
+\form#35:\[FObjmin = min\left\{1,FObj(i)\right\},\ \ \ i=1, \ldots, N.\]
+\form#36:\[P(i)=\frac{\eta_{max}-\frac{(\eta_{max}-\eta_{min})i}{N+1}}{N}\]
+\form#37:\[\eta_{max}=2-\eta_{min}\]
+\form#38:$\eta_{min}$
+\form#39:\[P(i)=\frac{1}{N}\]
+\form#40:$[pMejor,pPeor]$
+\form#41:\[ h_1= pMejor + \alpha _i(pPeor - pMejor)\]
+\form#42:\[f(x) = \sin(x) + \sin(4x)\]
+\form#43:$x \in [0, 10]$
+\form#44:\[f(x,y,z)=\sum_{i=1}^{k}x+4y+\sin(15z)e^{-z}\]
+\form#45:\[x \in \left\{0, 1\right\},\ con\ k=1,\ldots 10;\]
+\form#46:\[y \in Z[-10, 40]\ tal\ que\ y\ es\ impar;\]
+\form#47:\[z \in R[0, 6]\]
+\form#48:$(bool)gen1$
+\form#49:$(long)gen1+(long)gen2$
+\form#50:$(double)gen1+(double)gen2$
+\form#51:\[ \Delta= \frac{pPeor - pMejor}{\left|Fevaluacion_{pMejor}-Fevaluacion_{pPeor}\right|} \]

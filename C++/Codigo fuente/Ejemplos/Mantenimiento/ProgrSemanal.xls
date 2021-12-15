@@ -1,0 +1,68 @@
+	 1	 2	 3	 4	 5	 6	 7	 8	 9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	33	34	35	36	37	38	39	40	41	42	43	44	45	46	47	48
+E010301	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W
+E010501	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+E020301	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W
+E020501	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+E030301	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W
+E040301	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W
+E050301	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M
+E060301	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W
+E070401	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+E080501	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+I010101	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A
+I020101	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W
+I030101	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M
+I040101	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W
+I050101	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W
+I060101	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M
+I070101	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W
+I080101	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W
+I090101	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W
+I100101	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W
+M021901	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+M032001	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+M042101	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M
+M051402	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W
+M062101	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W
+M072101	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W
+S010202	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W
+S020202	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W
+S030202	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W
+S040202	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W
+S050202	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M
+S060201	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W
+S070202	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W
+S080202	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W
+S090202	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W
+T021702	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+T031702	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+T041702	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+T051702	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+T061702	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+T071702	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V030601	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W
+V040601	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W
+V050701	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W
+V060701	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T
+V070702	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M
+V080702	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W
+V090901	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V101001	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V111002	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V121101	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V131201	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M
+V141201	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W
+V151301	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V160801	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W
+V170801	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W
+V180801	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W
+V191401	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W
+V201401	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W
+V211402	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W
+V221501	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W
+V231601	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M
+V241102	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+V301601	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W
+V311501	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W
+V321201	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W
+V332201	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	S	W	W	W	M	W	W	W	M	W	W	W	T	W	W	W	M	W	W	W	M	W	W	W	A	W	W	W	M	W	W	W	M

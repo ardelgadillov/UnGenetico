@@ -1,0 +1,872 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>UNGenético:  TemplateArreglo class Reference</title>
+<link href="Personalizado.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.3.6 -->
+<div class="qindex"><a class="qindexHL" href="main.html">
+Página&nbsp;principal</a> | <a class="qindex" href="hierarchy.html">Jerarquía&nbsp;de&nbsp;la&nbsp;clase</a> | <a class="qindex" href="annotated.html">Lista&nbsp;de&nbsp;componentes</a> | <a class="qindex" href="files.html">Lista&nbsp;de&nbsp;archivos</a> | <a class="qindex" href="functions.html">Miembros&nbsp;de&nbsp;las&nbsp;clases</a> | <a class="qindex" href="globals.html">Miembros&nbsp;de&nbsp;los&nbsp;archivos</a> | <a class="qindex" href="manual.html">Manual&nbsp;del&nbsp;usuario</a></div>
+<body background="fondo.gif">
+<h1>Referencia de la Clase Arreglo</h1><code>#include &lt;arreglos.h&gt;</code>
+<p>
+<a href="classArreglo-members.html">Lista de todos los miembros.</a><hr><a name="_details"></a><h2>Descripción detallada</h2>
+<h3>template&lt;class T&gt;<br>
+ class Arreglo&lt; T &gt;</h3>
+
+Clase genérica que almacena un arreglo de apuntadores a la clase T. 
+<p>
+El acceso a los objetos del arreglo es al estilo de los arreglos de C y no al estilo de listas encadenadas, lo que le da mayor rapidez. No debe confundirse la capacidad del arreglo con la cantidad de ítems almacenados. En lo posible, para evitar reasignación innecesaria de memoria, antes de adicionar ítems al arreglo debe asignarse la capacidad necesaria para el número de ítems que se prevee se van a adicionar al arreglo. Esto puede hacerse mediante la función <em>asignarMemoria</em>. 
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td></td></tr>
+<tr><td colspan=2><br><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa0">Arreglo</a> (const <a class="el" href="classArreglo.html">Arreglo</a> &amp;origen)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por copia de otro arreglo. No se puede usar con arreglos de clases abstractas.  <a href="#Arregloa0"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa1">Arreglo</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor por defecto.  <a href="#Arregloa1"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa2">operator=</a> (const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;otro)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador de asignación a partir de otro arreglo. No se puede usar con arreglos de clases abstractas.  <a href="#Arregloa2"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>virtual&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa3">~Arreglo</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#Arregloa3"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa4">Adicionar</a> (T *pNuevo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona un apuntador al final del arreglo y retorna la posición en la que fue adicionado.  <a href="#Arregloa4"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa5">Insertar</a> (T *pNuevo, int pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inserta un apuntador en una posición determinada del arreglo.  <a href="#Arregloa5"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa6">remplazar</a> (T *pNuevo, int pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remplaza el apuntador ubicado en una posición determinada del arreglo por otro apuntador.  <a href="#Arregloa6"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa7">IntercambiarPos</a> (int pos1, int pos2)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Intercambia los apuntadores de dos posiciones determinadas.  <a href="#Arregloa7"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa8">Truncar</a> (int nuevoTam, bool eliminarObjetos=true, bool liberar_memoria=true)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reduce el tamaño del arreglo.  <a href="#Arregloa8"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa9">getSize</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el número de ítems presentes en el arreglo.  <a href="#Arregloa9"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa10">getPtr</a> (int pos) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna el apuntador ubicado en una posición determinada del arreglo.  <a href="#Arregloa10"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa11">getObj</a> (int pos) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna una referencia al objeto ubicado en una posición determinada del arreglo.  <a href="#Arregloa11"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T &amp;&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa12">operator[]</a> (int pos) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna una referencia al objeto ubicado en una posición determinada del arreglo.  <a href="#Arregloa12"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>bool&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa13">asignarMemoria</a> (int n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aumenta la capacidad del arreglo para albergar un número determinado de ítems.  <a href="#Arregloa13"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa14">liberarMemoria</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reduce la capacidad del arreglo al número de ítems actual.  <a href="#Arregloa14"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>T *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa15">Detach</a> (int pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Excluye del arreglo el apuntador ubicado en una posición determinada, sin destruir el objeto al que apunta.  <a href="#Arregloa15"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa16">Destroy</a> (int pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Excluye del arreglo el apuntador ubicado en una posición determinada, destruyendo el objeto al que apunta.  <a href="#Arregloa16"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa17">FlushDetach</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Excluye del arreglo todos sus miembros sin destruir los objetos.  <a href="#Arregloa17"></a><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arregloa18">FlushDestroy</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Excluye del arreglo todos sus miembros y destruye todos los objetos.  <a href="#Arregloa18"></a><br><br></td></tr>
+<tr><td colspan=2><br><h2>Atributos privados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arreglor0">m_capacidad</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>int&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arreglor1">m_items</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align=right valign=top>T **&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="classArreglo.html#Arreglor2">m_pData</a></td></tr>
+
+</table>
+<hr><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" name="Arregloa0" doxytag="Arreglo::Arreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por copia de otro arreglo. No se puede usar con arreglos de clases abstractas. 
+<p>
+Copia idénticamente el arreglo origen, creando copias de los objetos a los que hacen referencia los apuntadores contenidos en él. No se debe usar para arreglos de clases abstractas ya que no se pueden crear instancias de estas clases. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa1" doxytag="Arreglo::Arreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> <a class="el" href="classArreglo.html">Arreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Constructor por defecto. 
+<p>
+Crea un arreglo vacio. No se asigna memoria al arreglo     </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa3" doxytag="Arreglo::~Arreglo" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> virtual ~<a class="el" href="classArreglo.html">Arreglo</a> </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline, virtual]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Destructor. 
+<p>
+Elimina todos los apuntadores y destruye los objetos pertenecientes al arreglo     </td>
+  </tr>
+</table>
+<hr><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" name="Arregloa4" doxytag="Arreglo::Adicionar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int Adicionar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">T *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pNuevo</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Adiciona un apuntador al final del arreglo y retorna la posición en la que fue adicionado. 
+<p>
+Asigna memoria al arreglo si es necesario. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pNuevo</em>&nbsp;</td><td>Apuntador al nuevo miembro del arreglo. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Posición en la que se adicionó el nuevo miembro. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa13" doxytag="Arreglo::asignarMemoria" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool asignarMemoria </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>n</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Aumenta la capacidad del arreglo para albergar un número determinado de ítems. 
+<p>
+Es conveniente invocar esta función antes de adicionar nuevos miembros al arreglo cuando es conocido previamente el número de ítems a adicionar ya que evita reasignación de memoria en cada adición de miembros al arreglo. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>n</em>&nbsp;</td><td>Nueva capacidad total del arreglo. Si el arreglo ya tiene suficiente memoria para albergar el <em>n</em> items, nada ocurre. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>true si la memoria fue asignada correctamente. false en caso contrario </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa16" doxytag="Arreglo::Destroy" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void Destroy </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Excluye del arreglo el apuntador ubicado en una posición determinada, destruyendo el objeto al que apunta. 
+<p>
+Todos los miembros del arreglo que se encuentran en posiciones mayores que <em>pos</em>, disminuyen una posición. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del apuntador a excluir del arreglo. </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa15" doxytag="Arreglo::Detach" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T * Detach </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Excluye del arreglo el apuntador ubicado en una posición determinada, sin destruir el objeto al que apunta. 
+<p>
+Todos los miembros del arreglo que se encuentran en posiciones mayores que <em>pos</em>, disminuyen una posición. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del apuntador a excluir del arreglo. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador al objeto excluido del arreglo. Si <em>pos</em> no es una posición válida retorna NULL </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa18" doxytag="Arreglo::FlushDestroy" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FlushDestroy </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Excluye del arreglo todos sus miembros y destruye todos los objetos. 
+<p>
+Libera la memoria ocupada por el arreglo de apuntadores y por cada uno de los objetos apuntados por estos.     </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa17" doxytag="Arreglo::FlushDetach" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void FlushDetach </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Excluye del arreglo todos sus miembros sin destruir los objetos. 
+<p>
+Libera la memoria ocupada por el arreglo de apuntadores.     </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa11" doxytag="Arreglo::getObj" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T&amp; getObj </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna una referencia al objeto ubicado en una posición determinada del arreglo. 
+<p>
+Equivalente al operador []. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del objeto requerido. Si es menor que cero se retorna el objeto en la primera posición. Si es mayor que el número de ítems del arreglo, se retorna el objeto en la última posición. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al objeto apuntado por el apuntador ubicado en la posición <em>pos</em> del arreglo </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa10" doxytag="Arreglo::getPtr" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T* getPtr </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el apuntador ubicado en una posición determinada del arreglo. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del apuntador requerido. Si es menor que cero se retorna el apuntador en la primera posición. Si es mayor que el número de ítems del arreglo, se retorna el apuntador en la última posición. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador ubicado en la posición <em>pos</em>. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa9" doxytag="Arreglo::getSize" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int getSize </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna el número de ítems presentes en el arreglo. 
+<p>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Tamaño del arreglo </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa5" doxytag="Arreglo::Insertar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int Insertar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">T *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pNuevo</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Inserta un apuntador en una posición determinada del arreglo. 
+<p>
+Todos los miembros a partir de la posición de inserción aumentan una posición. En caso de estar lleno el arreglo, realiza asignación de espacio para 20 items más. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pNuevo</em>&nbsp;</td><td>Apuntador al nuevo miembro del arreglo. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición en la que se ubicará el nuevo miembro. Si es menor que cero, es ubicado en la posición cero. Si es mayor que el número de items, se adiciona al final del arreglo. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Posición en la que fué ubicado el nuevo miembro. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa7" doxytag="Arreglo::IntercambiarPos" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> bool IntercambiarPos </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos2</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Intercambia los apuntadores de dos posiciones determinadas. 
+<p>
+El intercambio solo es realizado si ambas posiciones son válidas en el arreglo. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos1</em>&nbsp;</td><td>Posición en la que será ubicado el apuntador que se encuentra en la posición <em>pos2</em>. </td></tr>
+    <tr><td valign=top><em>pos2</em>&nbsp;</td><td>Posición en la que será ubicado el apuntador que se encuentra en la posición <em>pos1</em>. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>true si el intercambio es exitoso. false si no se realizó el intercambio. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa14" doxytag="Arreglo::liberarMemoria" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> void liberarMemoria </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Reduce la capacidad del arreglo al número de ítems actual. 
+<p>
+Se utiliza para liberar la memoria no utilizada por el arreglo     </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa2" doxytag="Arreglo::operator=" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp; operator= </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">const <a class="el" href="classArreglo.html">Arreglo</a>&lt; T &gt; &amp;&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>origen</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Operador de asignación a partir de otro arreglo. No se puede usar con arreglos de clases abstractas. 
+<p>
+Copia idénticamente el arreglo origen, creando copias de los objetos a los que hacen referencia los apuntadores contenidos en él. No se debe usar para arreglos de clases abstractas ya que no se pueden crear instancias de estas clases. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>origen</em>&nbsp;</td><td>Objeto del que se hace copia. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al arreglo </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa12" doxytag="Arreglo::operator[]" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T&amp; operator[] </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap> const<code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Retorna una referencia al objeto ubicado en una posición determinada del arreglo. 
+<p>
+Es equivalente a getObj(pos). Permite acceder a los miembros del arreglo al estilo del lenguaje C. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del objeto requerido. Si es menor que cero se retorna el objeto en la primera posición. Si es mayor que el número de ítems del arreglo, se retorna el objeto en la última posición. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Referencia al objeto apuntado por el apuntador ubicado en la posición <em>pos</em> del arreglo </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa6" doxytag="Arreglo::remplazar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T* remplazar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">T *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pNuevo</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>pos</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"><code> [inline]</code></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Remplaza el apuntador ubicado en una posición determinada del arreglo por otro apuntador. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>pNuevo</em>&nbsp;</td><td>Apuntador que hará parte del arreglo, remplazando al apuntador ubicado en la posición especificada. </td></tr>
+    <tr><td valign=top><em>pos</em>&nbsp;</td><td>Posición del apuntador a remplazar. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Apuntador reemplazado. NULL si la posicion es inválida </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arregloa8" doxytag="Arreglo::Truncar" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int Truncar </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>nuevoTam</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>eliminarObjetos</em> = true, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td></td>
+          <td class="md" nowrap>bool&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>liberar_memoria</em> = true</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Reduce el tamaño del arreglo. 
+<p>
+Utilice liberar_memoria=false si sabe que va a volver a usar la capacidad actual del arreglo para evitar reasignación posterior de memoria. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>nuevoTam</em>&nbsp;</td><td>Nuevo tamaño del arreglo. Si es mayor que el actual, nada ocurre. Si es menor que cero, el nuevo tamaño es cero. </td></tr>
+    <tr><td valign=top><em>eliminarObjetos</em>&nbsp;</td><td>Si es <em>true</em> se eliminan los objetos sobrantes. En caso contrario, los objetos dejan de ser parte del arreglo pero no son eliminados. </td></tr>
+    <tr><td valign=top><em>liberar_memoria</em>&nbsp;</td><td>Si es <em>true</em> se libera la memoria no necesaria. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Nuevo tamaño del arreglo. </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Documentación de los datos miembro</h2>
+<a class="anchor" name="Arreglor0" doxytag="Arreglo::m_capacidad" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classArreglo.html#Arreglor0">m_capacidad</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arreglor1" doxytag="Arreglo::m_items" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int <a class="el" href="classArreglo.html#Arreglor1">m_items</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="Arreglor2" doxytag="Arreglo::m_pData" ></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> T* * <a class="el" href="classArreglo.html#Arreglor2">m_pData</a><code> [private]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<hr>La documentación para esta clase fué generada a partir del siguiente archivo:<ul>
+<li><a class="el" href="arreglos_8h.html">arreglos.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Generado el Fri Apr 9 18:35:36 2004 para UNGenético por
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border=0 width="100" height="45" > 
+</a>1.3.6 </small></address>
+</body>
+</html>

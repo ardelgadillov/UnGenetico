@@ -1,0 +1,7 @@
+ungenetico module
+=================
+
+.. automodule:: ungenetico
+   :members:
+   :undoc-members:
+   :show-inheritance:
