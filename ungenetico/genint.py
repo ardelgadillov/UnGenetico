@@ -1,10 +1,10 @@
-import ungenetico as ung
+from ungenetico import *
 import random
 from dataclasses import dataclass, field
 
 
-class MutationOperatorIntUniform(ung.MutationOperator):
-    def mutate(self, gen: ung.Gene, ag: ung.GeneticAlgorithm):
+class MutationIntUniform(Mutation):
+    def mutate(self, gen: Gene, ag: GeneticAlgorithm):
         """
 
         :param gen:
@@ -15,10 +15,10 @@ class MutationOperatorIntUniform(ung.MutationOperator):
 
 
 @dataclass
-class MutationOperatorIntNoUniform(ung.MutationOperator):
+class MutationIntNotUniform(Mutation):
     b: float = 0.5
 
-    def mutate(self, gen: ung.Gene, ag: ung.GeneticAlgorithm):
+    def mutate(self, gen: Gene, ag: GeneticAlgorithm):
         """
 
         Parameters
@@ -45,7 +45,7 @@ class MutationOperatorIntNoUniform(ung.MutationOperator):
 
 
 @dataclass
-class GeneInt(ung.Gene):
+class GeneInt(Gene):
     """
     Abstract Class Gen
 
@@ -65,13 +65,13 @@ class GeneInt(ung.Gene):
     min_val: int
     max_val: int
     value: int
-    mutation_operator: ung.MutationOperator
+    mutation_operator: Mutation
 
     _name: str = field(init=False, repr=False)
     _min: int = field(init=False, repr=False)
     _max: int = field(init=False, repr=False)
     _val: int = field(init=False, repr=False)
-    _mutation_operator:  ung.MutationOperator = field(init=False, repr=False)
+    _mutation_operator:  Mutation = field(init=False, repr=False)
 
     # def __post_init__(self):
     #     if hasattr(self, 'name'):
@@ -134,9 +134,9 @@ class GeneInt(ung.Gene):
         return self._mutation_operator
 
     @mutation_operator.setter
-    def mutation_operator(self, mo: ung.MutationOperator):
+    def mutation_operator(self, mo: Mutation):
         if isinstance(mo, property):
-            self.mutation_operator = MutationOperatorIntUniform()
+            self.mutation_operator = MutationIntUniform()
         else:
             self._mutation_operator = mo
 
@@ -151,40 +151,4 @@ class GeneInt(ung.Gene):
     #     self._crossover_operator = value
 
 
-a = GeneInt('x', min_val=1, max_val=11, mutation_operator=MutationOperatorIntNoUniform())
-print(a)
-a.name = 'y'
-print(a)
-a2 = GeneInt('y', min_val=1.1, max_val=10.9, mutation_operator=MutationOperatorIntNoUniform())
-a3 = GeneInt('z', min_val=1.1, max_val=10.9, mutation_operator=MutationOperatorIntNoUniform())
-a4 = GeneInt('m', min_val=1.1, max_val=10.9, mutation_operator=MutationOperatorIntNoUniform())
-print(a2)
-print(a3)
-print(a4)
-
-
-def obj_expression(z, x, y, m):
-    return x * y * z + m
-
-
-ga = ung.GeneticAlgorithm(
-    objective_function=obj_expression)
-
-print(ga)
-ga.add_gen(a)
-ga.add_gen(a2)
-ga.add_gen(a3)
-ga.add_gen(a4)
-ga.create_population(3)
-for ind in ga.actual_generation.generation:
-    print(ind)
-    for gen in ind.genome:
-        print(gen.value)
-
-ga.mutate()
-ga.calculate_objective_function()
-for ind in ga.actual_generation.generation:
-    for gen in ind.genome:
-        print(gen.value)
-    print(f'objective: {ind.objective_value}')
 
