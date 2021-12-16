@@ -8,38 +8,38 @@ class Population:
     """
     Class Population stores a set of Individuals
     """
-    generation: List[Individual]
+    population: List[Individual]
 
-    _generation: List[Individual] = field(init=False, repr=False)
+    _population: List[Individual] = field(init=False, repr=False)
 
     @property
-    def generation(self):
-        return self._generation
+    def population(self):
+        return self._population
 
-    @generation.setter
-    def generation(self, generation):
+    @population.setter
+    def population(self, generation):
         if isinstance(generation, property):
-            self._generation = []
+            self._population = []
         else:
-            self._generation = generation
+            self._population = generation
 
     def get_individual(self, pos):
-        return self.generation[pos]
+        return self.population[pos]
 
     def append_individual(self, ind: Individual):
-        self.generation.append(ind)
+        self.population.append(ind)
 
     def replace_individual(self, new_ind: Individual, pos):
-        self.generation[pos] = new_ind
+        self.population[pos] = new_ind
 
     # def new_generation(self, size):
     #     self.generation = [Individual() for _ in range(size)]
 
     def calculate_objective_function(self, objective_function):
         # For each individual
-        for ind in self.generation:
+        for ind in self.population:
             ind.calculate_objective_function(objective_function)
 
     def mutate(self, ag):
-        for ind in self.generation:
+        for ind in self.population:
             ind.mutate(ag)

@@ -3,49 +3,8 @@ import random
 from dataclasses import dataclass, field
 
 
-class MutationIntUniform(Mutation):
-    def mutate(self, gen: Gene, ag: GeneticAlgorithm):
-        """
-
-        :param gen:
-        :param ag:
-        :return:
-        """
-        gen.value = random.randint(gen.min_val, gen.max_val)
-
-
 @dataclass
-class MutationIntNotUniform(Mutation):
-    b: float = 0.5
-
-    def mutate(self, gen: Gene, ag: GeneticAlgorithm):
-        """
-
-        Parameters
-        ----------
-        gen
-        ag
-
-        Returns
-        -------
-
-        """
-        t = ag.generation
-        tmax = ag.generation_max
-        beta = random.randint(0, 1)
-        r = random.uniform(0, 1)
-        delta = (gen.max_val-gen.value) * (1 - r**(1-t/tmax)**self.b)
-        if beta == 0:
-            value = gen.value + delta
-        else:
-            value = gen.value - delta
-        print(f'min: {gen.min_val}  max: {gen.max_val}   val: {gen.value}')
-        gen.value = value
-        print(f'new: {gen.value}')
-
-
-@dataclass
-class GeneInt(Gene):
+class GeneFloat(Gene):
     """
     Abstract Class Gen
 
@@ -62,15 +21,15 @@ class GeneInt(Gene):
     """
 
     name: str
-    min_val: int
-    max_val: int
-    value: int
+    min_val: float
+    max_val: float
+    value: float
     mutation_operator: Mutation
 
     _name: str = field(init=False, repr=False)
-    _min: int = field(init=False, repr=False)
-    _max: int = field(init=False, repr=False)
-    _val: int = field(init=False, repr=False)
+    _min: float = field(init=False, repr=False)
+    _max: float = field(init=False, repr=False)
+    _val: float = field(init=False, repr=False)
     _mutation_operator:  Mutation = field(init=False, repr=False)
 
     # def __post_init__(self):
@@ -92,13 +51,13 @@ class GeneInt(Gene):
     @value.setter
     def value(self, val):
         if isinstance(val, property):
-            self._val = random.randint(self.min_val, self.max_val)
+            self._val = random.uniform(self.min_val, self.max_val)
         else:
             if val < self.min_val:
                 val = self.min_val
             elif val > self.max_val:
                 val = self.max_val
-            self._val = int(val)
+            self._val = float(val)
 
     @property
     def min_val(self):
@@ -106,7 +65,7 @@ class GeneInt(Gene):
 
     @min_val.setter
     def min_val(self, min_val):
-        self._min = int(min_val)
+        self._min = float(min_val)
 
     @property
     def max_val(self):
@@ -114,7 +73,7 @@ class GeneInt(Gene):
 
     @max_val.setter
     def max_val(self, max_val):
-        self._max = int(max_val)
+        self._max = float(max_val)
 
     @property
     def name(self):
@@ -136,7 +95,7 @@ class GeneInt(Gene):
     @mutation_operator.setter
     def mutation_operator(self, mo: Mutation):
         if isinstance(mo, property):
-            self.mutation_operator = MutationIntUniform()
+            self.mutation_operator = MutationUniform()
         else:
             self._mutation_operator = mo
 

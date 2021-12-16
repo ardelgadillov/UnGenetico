@@ -3,4 +3,5 @@ from ungenetico.individual import *
 from ungenetico.population import *
 from ungenetico.ga import *
 from ungenetico.operators import *
-from ungenetico.genint import *
+from ungenetico.geneint import *
+from ungenetico.genefloat import *

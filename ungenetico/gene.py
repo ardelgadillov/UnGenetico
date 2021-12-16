@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-#from ungenetico.ga import GeneticAlgorithm
+from ungenetico import *
 
 
 class Gene(ABC):
