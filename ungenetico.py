@@ -4,6 +4,8 @@ import copy
 import inspect
 import types
 
+from typing import List
+
 
 class Gene(ABC):
     """Abstract class that stores the genetic information"""
@@ -55,11 +57,11 @@ class Gene(ABC):
 @dataclass
 class Individual:
     """Class that represents an individual of the Genetic Algorithm"""
-    genome: list[Gene]
+    genome: List[Gene]
     survival_probability: float
     objective_value: float
 
-    _genome: list[Gene] = field(init=False, repr=False)
+    _genome: List[Gene] = field(init=False, repr=False)
     _survival_probability: float = field(init=False, repr=False)
     _objective_value: float = field(init=False, repr=False)
 
@@ -125,9 +127,9 @@ class Population:
     """
     Class Population stores a set of Individuals
     """
-    generation: list[Individual]
+    generation: List[Individual]
 
-    _generation: list[Individual] = field(init=False, repr=False)
+    _generation: List[Individual] = field(init=False, repr=False)
 
     @property
     def generation(self):
@@ -177,7 +179,7 @@ class GeneticAlgorithm:
     objective_online: float
     objective_offline: float
 
-    _genome_base: list[Gene] = field(init=False, repr=False)
+    _genome_base: List[Gene] = field(init=False, repr=False)
 
     def __post_init__(self):
         self._genome_base = []

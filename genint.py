@@ -14,15 +14,34 @@ class MutationOperatorIntUniform(ung.MutationOperator):
         gen.value = random.randint(gen.min_val, gen.max_val)
 
 
+@dataclass
 class MutationOperatorIntNoUniform(ung.MutationOperator):
+    b: float = 0.5
+
     def mutate(self, gen: ung.Gene, ag: ung.GeneticAlgorithm):
         """
 
-        :param gen:
-        :param ag:
-        :return:
+        Parameters
+        ----------
+        gen
+        ag
+
+        Returns
+        -------
+
         """
-        gen.value = random.randint(gen.min_val, gen.max_val)
+        t = ag.generation
+        tmax = ag.generation_max
+        beta = random.randint(0, 1)
+        r = random.uniform(0, 1)
+        delta = (gen.max_val-gen.value) * (1 - r**(1-t/tmax)**self.b)
+        if beta == 0:
+            value = gen.value + delta
+        else:
+            value = gen.value - delta
+        print(f'min: {gen.min_val}  max: {gen.max_val}   val: {gen.value}')
+        gen.value = value
+        print(f'new: {gen.value}')
 
 
 @dataclass
@@ -132,13 +151,13 @@ class GeneInt(ung.Gene):
     #     self._crossover_operator = value
 
 
-a = GeneInt('x', min_val=1, max_val=11)#, mutation_operator=12)
+a = GeneInt('x', min_val=1, max_val=11, mutation_operator=MutationOperatorIntNoUniform())
 print(a)
 a.name = 'y'
 print(a)
-a2 = GeneInt('y', min_val=1.1, max_val=10.9)
-a3 = GeneInt('z', min_val=1.1, max_val=10.9)
-a4 = GeneInt('m', min_val=1.1, max_val=10.9)
+a2 = GeneInt('y', min_val=1.1, max_val=10.9, mutation_operator=MutationOperatorIntNoUniform())
+a3 = GeneInt('z', min_val=1.1, max_val=10.9, mutation_operator=MutationOperatorIntNoUniform())
+a4 = GeneInt('m', min_val=1.1, max_val=10.9, mutation_operator=MutationOperatorIntNoUniform())
 print(a2)
 print(a3)
 print(a4)
