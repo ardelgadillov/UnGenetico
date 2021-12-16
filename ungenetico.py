@@ -47,9 +47,9 @@ class Gene(ABC):
     # def crossover_operator(self):
     #     pass
 
-    def mutate(self):
+    def mutate(self, ag):
         """Mutate gen using the mutation operator"""
-        self.mutation_operator.mutate(self)
+        self.mutation_operator.mutate(self, ag)
 
 
 @dataclass
@@ -100,10 +100,10 @@ class Individual:
                 value = 1
             self._survival_probability = value
 
-    def mutate(self):
+    def mutate(self, ag):
         """Mutate the genes in genome"""
         for gen in self.genome:
-            gen.mutate()
+            gen.mutate(ag)
 
     def calculate_objective_function(self, objective_function):
         # get name of the genes
@@ -157,9 +157,9 @@ class Population:
         for ind in self.generation:
             ind.calculate_objective_function(objective_function)
 
-    def mutate(self):
+    def mutate(self, ag):
         for ind in self.generation:
-            ind.mutate()
+            ind.mutate(ag)
 
 
 @dataclass
@@ -167,6 +167,7 @@ class GeneticAlgorithm:
     objective_function: types.FunctionType
     optimization: str
     actual_generation: Population
+    generation: int
     generation_size: int
     generation_max: int
     generation_best: int
@@ -184,14 +185,15 @@ class GeneticAlgorithm:
     _objective_function: types.FunctionType = field(init=False, repr=False)
     _optimization: str = field(init=False, repr=False)
     _actual_generation: Population = field(init=False, repr=False)
+    _generation: int = field(init=False, repr=False)
     _generation_size: int = field(init=False, repr=False)
     _generation_max: int = field(init=False, repr=False)
     _generation_best: int = field(init=False, repr=False)
     _objective_mean: float = field(init=False, repr=False)
     _objective_median: float = field(init=False, repr=False)
-    # _objective_std: float = field(init=False, repr=False)
-    # _objective_online: float = field(init=False, repr=False)
-    # _objective_offline: float = field(init=False, repr=False)
+    _objective_std: float = field(init=False, repr=False)
+    _objective_online: float = field(init=False, repr=False)
+    _objective_offline: float = field(init=False, repr=False)
 
     @property
     def objective_function(self):
@@ -229,6 +231,18 @@ class GeneticAlgorithm:
             self._actual_generation = Population()
         else:
             self._actual_generation = actual_generation
+
+    @property
+    def generation(self):
+        """Value of the objective function for the individual"""
+        return self._generation
+
+    @generation.setter
+    def generation(self, generation):
+        if isinstance(generation, property):
+            self._generation = 1
+        else:
+            self._generation = generation
 
     @property
     def generation_size(self):
@@ -337,7 +351,7 @@ class GeneticAlgorithm:
             self.actual_generation.append_individual(copy.deepcopy(ind))
 
     def mutate(self):
-        self.actual_generation.mutate()
+        self.actual_generation.mutate(self)
 
     def calculate_objective_function(self):
         self.actual_generation.calculate_objective_function(self.objective_function)
@@ -346,5 +360,5 @@ class GeneticAlgorithm:
 class MutationOperator(ABC):
     """Abstract class"""
     @abstractmethod
-    def mutate(self, gen: Gene):
+    def mutate(self, gen: Gene, ag: GeneticAlgorithm):
         pass

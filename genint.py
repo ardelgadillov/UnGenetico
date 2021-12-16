@@ -1,13 +1,27 @@
 import ungenetico as ung
 import random
-import copy
-import inspect
-
 from dataclasses import dataclass, field
 
 
 class MutationOperatorIntUniform(ung.MutationOperator):
-    def mutate(self, gen: ung.Gene):
+    def mutate(self, gen: ung.Gene, ag: ung.GeneticAlgorithm):
+        """
+
+        :param gen:
+        :param ag:
+        :return:
+        """
+        gen.value = random.randint(gen.min_val, gen.max_val)
+
+
+class MutationOperatorIntNoUniform(ung.MutationOperator):
+    def mutate(self, gen: ung.Gene, ag: ung.GeneticAlgorithm):
+        """
+
+        :param gen:
+        :param ag:
+        :return:
+        """
         gen.value = random.randint(gen.min_val, gen.max_val)
 
 
@@ -107,15 +121,6 @@ class GeneInt(ung.Gene):
         else:
             self._mutation_operator = mo
 
-    # @property
-    # def mutation_operator(self):
-    #     print('get mutation')
-    #     return self._mutation_operator
-    #
-    # @mutation_operator.setter
-    # def mutation_operator(self, value):
-    #     print(f'set mutation {value}')
-    #     self._mutation_operator = value
     #
     # @property
     # def crossover_operator(self):
@@ -143,55 +148,6 @@ def obj_expression(z, x, y, m):
     return x * y * z + m
 
 
-# b = ung.Individual(of=obj_expression)
-# # print(f'----------q{b.of(*[2,3,4])}')
-#
-# b.append_gen(a)
-# b.append_gen(a2)
-# b.append_gen(a3)
-# b.append_gen(a4)
-#
-# for gen in b.genome:
-#     gen.mutate()
-# for gen in b.genome:
-#     print(gen.value)
-#     print(f' mo: {gen.mutation_operator}')
-#
-# c = []
-# for i in range(3):
-#     c.append(copy.deepcopy(b))
-#
-# for i in c:
-#     for gen in i.genome:
-#         gen.mutate()
-#
-# for i in c:
-#     for gen in i.genome:
-#         print(gen.value)
-#
-# bn = [gen.name for gen in b.genome]
-# valu = [gen.value for gen in b.genome]
-# vari = inspect.getfullargspec(b.of).args
-# print(bn)
-# print(valu)
-# print(vari)
-# pos = [bn.index(i) for i in vari]
-# valus = [valu[i] for i in pos]
-#
-# # print(bn.index('x'))
-# # print(bn.index('y'))
-# # print(bn.index('z'))
-# print(b.of(*valus))
-#
-# print(b)
-# print(b.genome)
-# print(b.genome[1])
-#
-# b.genome[1] = GenInt('y2', min_val=1.1, max_val=10.9)
-# print(b)
-# print(b.genome)
-# print(b.genome[1])
-##################
 ga = ung.GeneticAlgorithm(
     objective_function=obj_expression)
 
@@ -212,6 +168,4 @@ for ind in ga.actual_generation.generation:
     for gen in ind.genome:
         print(gen.value)
     print(f'objective: {ind.objective_value}')
-
-# print(a.__doc__)
 
