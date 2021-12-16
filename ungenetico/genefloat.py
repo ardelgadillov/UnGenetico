@@ -95,7 +95,7 @@ class GeneFloat(Gene):
     @mutation_operator.setter
     def mutation_operator(self, mo: Mutation):
         if isinstance(mo, property):
-            self.mutation_operator = MutationUniform()
+            self._mutation_operator = MutationUniform()
         else:
             self._mutation_operator = mo
 

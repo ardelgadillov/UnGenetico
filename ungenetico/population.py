@@ -43,3 +43,12 @@ class Population:
     def mutate(self, ag):
         for ind in self.population:
             ind.mutate(ag)
+
+    @staticmethod
+    def survival_probability(ind: Individual):
+        return ind.survival_probability
+
+    def sort_population(self):
+        self.population.sort(reverse=True, key=self.survival_probability)
+
+

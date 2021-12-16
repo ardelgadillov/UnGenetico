@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 
 @dataclass
-class GeneInt(Gene):
+class GeneBool(Gene):
     """
     Abstract Class Gen
 
@@ -21,28 +21,16 @@ class GeneInt(Gene):
     """
 
     name: str
-    min_val: int
-    max_val: int
+    min_val: int = field(init=False, repr=False, default=0)
+    max_val: int = field(init=False, repr=False, default=1)
     value: int
     mutation_operator: Mutation
 
     _name: str = field(init=False, repr=False)
-    _min: int = field(init=False, repr=False)
-    _max: int = field(init=False, repr=False)
+    _min: int = field(init=False, repr=False, default=0)
+    _max: int = field(init=False, repr=False, default=1)
     _val: int = field(init=False, repr=False)
     _mutation_operator:  Mutation = field(init=False, repr=False)
-
-    # def __post_init__(self):
-    #     if hasattr(self, 'name'):
-    #         print(self.name)
-    #     print(self)
-    #     # no value was passed
-    #     if isinstance(self.mutation_operator, property):
-    #         self.mutation_operator = MutationOperatorIntUniform()
-
-        # # no value was passed
-        # if isinstance(self.value, property):
-        #     self.value = -99
 
     @property
     def value(self):
@@ -58,22 +46,6 @@ class GeneInt(Gene):
             elif val > self.max_val:
                 val = self.max_val
             self._val = int(round(val))
-
-    @property
-    def min_val(self):
-        return self._min
-
-    @min_val.setter
-    def min_val(self, min_val):
-        self._min = int(round(min_val))
-
-    @property
-    def max_val(self):
-        return self._max
-
-    @max_val.setter
-    def max_val(self, max_val):
-        self._max = int(round(max_val))
 
     @property
     def name(self):
