@@ -4,6 +4,8 @@ from ungenetico.gene import Gene
 from ungenetico.population import Population
 import random
 from dataclasses import dataclass
+from itertools import accumulate
+import copy
 
 
 class Mutation(ABC):
@@ -34,7 +36,7 @@ class Selection(ABC):
         pass
 
 
-class Pairs(ABC):
+class Pairing(ABC):
     """Abstract class"""
     @abstractmethod
     def match(self, pop: Population, ag):
@@ -89,8 +91,28 @@ class MutationNotUniform(Mutation):
 
 class ProbabilityUniform(Probability):
     def assign_probability(self, pop: Population, ag):
-        prob = 1/len(pop.population)
+        prob = 1/pop.size
         for ind in pop.population:
             ind.survival_probability = prob
 
 
+class SelectionStochastic(Selection):
+    def select(self, pop: Population, ag):
+        prob = [ind.survival_probability for ind in pop.population]
+        angle = list(accumulate(prob))
+        new_population = Population()
+        for i in range(pop.size):
+            roulette = random.uniform(0, 1)
+            pos = len([1 for jind in angle if roulette >= jind])
+            print(f'rou: {roulette}')
+            print(pos)
+            new_population.append_individual(copy.deepcopy(pop.population[pos]))
+        print(pop.population)
+        print(new_population.population)
+        pop.population = new_population.population
+
+
+class PairingRandom(Pairing):
+    def match(self, pop: Population, ag):
+        pop.partners = random.sample(range(pop.size), pop.size)
+        print(pop.partners)

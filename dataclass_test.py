@@ -43,8 +43,12 @@ for _ in range(10):
     a3.mutate(ga)
     print(a3)
 
+print(ga.actual_generation.size)
 ga.assign_probability()
 ga.actual_generation.sort_population()
 for ind in ga.actual_generation.population:
     print(ind.survival_probability)
+
+ga.select()
+ga.match()
 #print(ga.actual_generation)

@@ -9,6 +9,8 @@ class Population:
     Class Population stores a set of Individuals
     """
     population: List[Individual]
+    size: int
+    partners: List[int] = field(init=False, repr=False)
 
     _population: List[Individual] = field(init=False, repr=False)
 
@@ -17,11 +19,19 @@ class Population:
         return self._population
 
     @population.setter
-    def population(self, generation):
-        if isinstance(generation, property):
+    def population(self, population):
+        if isinstance(population, property):
             self._population = []
         else:
-            self._population = generation
+            self._population = population
+
+    @property
+    def size(self):
+        return len(self.population)
+
+    @size.setter
+    def size(self, size):
+        pass
 
     def get_individual(self, pos):
         return self.population[pos]
