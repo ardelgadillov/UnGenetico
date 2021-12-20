@@ -1,5 +1,5 @@
 docs/* linguist-documentation
 C++/Documentacion/* linguist-documentation
 C++/Presentacion/* linguist-documentation
-*.html linguist-detectable=true
 *.html linguist-vendored
+*.css linguist-vendored
