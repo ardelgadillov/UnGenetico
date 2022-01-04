@@ -10,10 +10,12 @@ class Individual:
     genome: List[Gene]
     survival_probability: float
     objective_value: float
+    paired: bool
 
     _genome: List[Gene] = field(init=False, repr=False)
     _survival_probability: float = field(init=False, repr=False)
     _objective_value: float = field(init=False, repr=False)
+    _paired: bool = field(init=False, repr=False)
 
     @property
     def genome(self):
@@ -51,6 +53,18 @@ class Individual:
             elif value > 1:
                 value = 1
             self._survival_probability = value
+
+    @property
+    def paired(self):
+        """Value of the objective function for the individual"""
+        return self._paired
+
+    @paired.setter
+    def paired(self, paired):
+        if isinstance(paired, property):
+            self._paired = False
+        else:
+            self._paired = paired
 
     def mutate(self, ag):
         """Mutate the genes in genome"""

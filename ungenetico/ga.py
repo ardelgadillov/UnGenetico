@@ -27,6 +27,7 @@ class GeneticAlgorithm:
     probability_operator: Probability
     selection_operator: Selection
     pairing_operator: Pairing
+    reproduction_operator: Reproduction
 
     _genome_base: List[Gene] = field(init=False, repr=False)
 
@@ -49,6 +50,7 @@ class GeneticAlgorithm:
     _probability_operator: Probability = field(init=False, repr=False)
     _selection_operator: Selection = field(init=False, repr=False)
     _pairing_operator: Pairing = field(init=False, repr=False)
+    _reproduction_operator: Reproduction = field(init=False, repr=False)
 
     @property
     def objective_function(self):
@@ -228,6 +230,17 @@ class GeneticAlgorithm:
         else:
             self._pairing_operator = po
 
+    @property
+    def reproduction_operator(self):
+        return self._reproduction_operator
+
+    @reproduction_operator.setter
+    def reproduction_operator(self, ro: Reproduction):
+        if isinstance(ro, property):
+            self._reproduction_operator = ReproductionSimple()
+        else:
+            self._reproduction_operator = ro
+
     def add_gen(self, gen: Gene):
         self._genome_base.append(gen)
 
@@ -249,6 +262,9 @@ class GeneticAlgorithm:
 
     def match(self):
         self.pairing_operator.match(self.actual_generation, self)
+
+    def reproduce(self):
+        self.reproduction_operator.reproduce(self.actual_generation, self)
 
     def calculate_objective_function(self):
         self.actual_generation.calculate_objective_function(self.objective_function)

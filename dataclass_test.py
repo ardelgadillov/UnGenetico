@@ -51,4 +51,7 @@ for ind in ga.actual_generation.population:
 
 ga.select()
 ga.match()
+print(ga.actual_generation)
+ga.reproduce()
+print(ga.actual_generation)
 #print(ga.actual_generation)

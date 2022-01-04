@@ -18,7 +18,7 @@ class Mutation(ABC):
 class Crossover(ABC):
     """Abstract class"""
     @abstractmethod
-    def exchange(self, gen: Gene, ag):
+    def exchange(self, gen1: Gene, gen2: Gene, ag):
         pass
 
 
@@ -89,6 +89,11 @@ class MutationNotUniform(Mutation):
         gen.value = value
 
 
+class CrossoverSimple(Crossover):
+    def exchange(self, gen1: Gene, gen2: Gene, ag):
+        gen1.value, gen2.value = gen2.value, gen1.value
+
+
 class ProbabilityUniform(Probability):
     def assign_probability(self, pop: Population, ag):
         prob = 1/pop.size
@@ -116,3 +121,17 @@ class PairingRandom(Pairing):
     def match(self, pop: Population, ag):
         pop.partners = random.sample(range(pop.size), pop.size)
         print(pop.partners)
+
+
+class ReproductionSimple(Reproduction):
+    def reproduce(self, pop: Population, ag):
+        for index in range(pop.size):
+            partner1 = pop.population[index]
+            partner2 = pop.population[pop.partners[index]]
+            if not partner1.paired:
+                exchange_point = random.randint(0, pop.size)
+                print(exchange_point)
+                partner1.paired = True
+                partner2.paired = True
+                for i in range(exchange_point, len(partner1.genome)):
+                    partner1.genome[i], partner2.genome[i] = partner2.genome[i], partner1.genome[i]
