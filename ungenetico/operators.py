@@ -109,18 +109,18 @@ class SelectionStochastic(Selection):
         for i in range(pop.size):
             roulette = random.uniform(0, 1)
             pos = len([1 for jind in angle if roulette >= jind])
-            print(f'rou: {roulette}')
-            print(pos)
+            #print(f'rou: {roulette}')
+            #print(pos)
             new_population.append_individual(copy.deepcopy(pop.population[pos]))
-        print(pop.population)
-        print(new_population.population)
+        #print(pop.population)
+        #print(new_population.population)
         pop.population = new_population.population
 
 
 class PairingRandom(Pairing):
     def match(self, pop: Population, ag):
         pop.partners = random.sample(range(pop.size), pop.size)
-        print(pop.partners)
+        #print(pop.partners)
 
 
 class ReproductionSimple(Reproduction):
@@ -128,9 +128,9 @@ class ReproductionSimple(Reproduction):
         for index in range(pop.size):
             partner1 = pop.population[index]
             partner2 = pop.population[pop.partners[index]]
-            if not partner1.paired:
+            if not partner1.paired and not partner2.paired:
                 exchange_point = random.randint(0, pop.size)
-                print(exchange_point)
+                #print(exchange_point)
                 partner1.paired = True
                 partner2.paired = True
                 for i in range(exchange_point, len(partner1.genome)):
