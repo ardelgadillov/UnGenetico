@@ -6,6 +6,7 @@ from ungenetico.gene import Gene
 from ungenetico.individual import Individual
 from ungenetico.population import Population
 from ungenetico.operators import *
+import statistics as sta
 
 
 @dataclass
@@ -17,6 +18,8 @@ class GeneticAlgorithm:
     generation_size: int
     generation_max: int
     generation_best: int
+    objective_min: float
+    objective_max: float
     objective_mean: float
     objective_median: float
     objective_std: float
@@ -41,9 +44,6 @@ class GeneticAlgorithm:
     _generation_size: int = field(init=False, repr=False)
     _generation_max: int = field(init=False, repr=False)
     _generation_best: int = field(init=False, repr=False)
-    _objective_mean: float = field(init=False, repr=False)
-    _objective_median: float = field(init=False, repr=False)
-    _objective_std: float = field(init=False, repr=False)
     _objective_online: float = field(init=False, repr=False)
     _objective_offline: float = field(init=False, repr=False)
 
@@ -72,7 +72,7 @@ class GeneticAlgorithm:
         if isinstance(optimization, property):
             self._optimization = 'maximization'
         else:
-            if optimization != 'maximization' or optimization != 'minimization':
+            if optimization != 'maximization' and optimization != 'minimization':
                 self._optimization = 'maximization'
             else:
                 self._optimization = optimization
@@ -138,40 +138,50 @@ class GeneticAlgorithm:
             self._generation_best = generation_best
 
     @property
+    def objective_min(self):
+        """Value of the objective function for the individual"""
+        return min([ind.objective_value for ind in self.actual_generation.population])
+
+    @objective_min.setter
+    def objective_min(self, objective_min):
+        pass
+
+    @property
+    def objective_max(self):
+        """Value of the objective function for the individual"""
+        return max([ind.objective_value for ind in self.actual_generation.population])
+
+    @objective_max.setter
+    def objective_max(self, objective_max):
+        pass
+
+
+    @property
     def objective_mean(self):
         """Value of the objective function for the individual"""
-        return self._objective_mean
+        return sta.mean([ind.objective_value for ind in self.actual_generation.population])
 
     @objective_mean.setter
     def objective_mean(self, objective_mean):
-        if isinstance(objective_mean, property):
-            self._objective_mean = 0
-        else:
-            self._objective_mean = objective_mean
+        pass
 
     @property
     def objective_median(self):
         """Value of the objective function for the individual"""
-        return self._objective_median
+        return sta.median([ind.objective_value for ind in self.actual_generation.population])
 
     @objective_median.setter
     def objective_median(self, objective_median):
-        if isinstance(objective_median, property):
-            self._objective_median = 0
-        else:
-            self._objective_median = objective_median
+        pass
 
     @property
     def objective_std(self):
         """Value of the objective function for the individual"""
-        return self._objective_std
+        return sta.stdev([ind.objective_value for ind in self.actual_generation.population])
 
     @objective_std.setter
     def objective_std(self, objective_std):
-        if isinstance(objective_std, property):
-            self._objective_std = 0
-        else:
-            self._objective_std = objective_std
+        pass
 
     @property
     def objective_online(self):
@@ -204,7 +214,7 @@ class GeneticAlgorithm:
     @probability_operator.setter
     def probability_operator(self, po: Probability):
         if isinstance(po, property):
-            self._probability_operator = ProbabilityUniform()
+            self._probability_operator = ProbabilityProportional()
         else:
             self._probability_operator = po
 
@@ -250,6 +260,9 @@ class GeneticAlgorithm:
         ind.genome = copy.deepcopy(self._genome_base)
         for _ in range(self.generation_size):
             self.actual_generation.append_individual(copy.deepcopy(ind))
+
+    def sort_population(self, direction, key_var):
+        self.actual_generation.sort_population(direction, key_var)
 
     def mutate(self):
         self.actual_generation.mutate(self)

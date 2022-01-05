@@ -3,25 +3,25 @@ import math
 from statistics import mean
 
 
-# def obj_expression(z, x, y, m):
-#     return x * y * z + m
-#
-#
-# a = ung.GeneInt('x', min_val=1, max_val=11)
-# print(a)
-# a.name = 'y'
-# print(a)
-# a2 = ung.GeneInt('y', min_val=1.1, max_val=10.9, mutation_operator=ung.MutationUniform())
-# a3 = ung.GeneBool('z')
-# a4 = ung.GeneFloat('m', min_val=1.1, max_val=10.9, mutation_operator=ung.MutationNotUniform())
-# print(a2)
-# print(a3)
-# print(a3.min_val)
-# print(a3.max_val)
-# print(a4)
-#
-#
-#
+def obj_expression(z, x, y, m):
+    return x * y * z + m
+
+
+a = ung.GeneInt('x', min_val=1, max_val=11, length=10)
+print(a)
+a.name = 'y'
+print(a)
+a2 = ung.GeneInt('y', min_val=1.1, max_val=10.9, mutation_operator=ung.MutationUniform())
+a3 = ung.GeneBool('z')
+a4 = ung.GeneFloat('m', min_val=1.1, max_val=10.9, mutation_operator=ung.MutationNotUniform())
+print(a2)
+print(a3)
+print(a3.min_val)
+print(a3.max_val)
+print(a4)
+
+
+
 #
 #
 # ga = ung.GeneticAlgorithm(
@@ -62,29 +62,45 @@ from statistics import mean
 # print(ga.actual_generation)
 # #print(ga.actual_generation)
 
-def obj_expression(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, y, z):
-    of = x0 + x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + 4*y + math.sin(15*z)*math.exp(-z)
-    if y % 2 == 0:
-        of -= 100
-    return of
-
-
-ga = ung.GeneticAlgorithm(objective_function=obj_expression)
-for i in range(10):
-    ga.add_gen(ung.GeneBool(f'x{i}'))
-ga.add_gen(ung.GeneInt('y', -10, 40))
-ga.add_gen(ung.GeneFloat('z', 0, 6))
-
-ga.create_population(100)
-for _ in range(10):
-    #print(f'----------{_}')
-    ga.calculate_objective_function()
-    ga.assign_probability()
-    ga.actual_generation.sort_population()
-    ga.select()
-    ga.match()
-    ga.reproduce()
-    ga.mutate()
-    of = [ind.objective_value for ind in ga.actual_generation.population]
-    #print(of)
-    print(max(of))
+# -------------------
+# def obj_expression(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9,
+#                    x10, x11, x12, x13, x14, x15, x16, x17, x18, x19,
+#                    x20, x21, x22, x23, x24):
+#     of = 0
+#     x = [x0, x1, x2, x3, x4, x5, x6, x7, x8, x9,
+#          x10, x11, x12, x13, x14, x15, x16, x17, x18, x19,
+#          x20, x21, x22, x23, x24]
+#     for xi in x:
+#         of += xi
+#     return of
+#
+#
+# ga = ung.GeneticAlgorithm(objective_function=obj_expression, optimization='minimization')
+# for i in range(25):
+#     ga.add_gen(ung.GeneFloat(f'x{i}', -10, 10))
+#
+# ga.create_population(10)
+# ga.mutate()
+# # print(ga)
+# for _ in range(3):
+#     print(f'----------{_}')
+#     ga.calculate_objective_function()
+#     #print(ga.objective_mean)
+#     ga.assign_probability()
+#     print(ga)
+#     # of = [ind.objective_value for ind in ga.actual_generation.population]
+#     # print(of)
+#     # of = [ind.survival_probability for ind in ga.actual_generation.population]
+#     # print(of)
+#     ga.sort_population('descending', 'survival_probability')
+#     ga.select()
+#     ga.match()
+#     ga.reproduce()
+#     ga.calculate_objective_function()
+#     print(ga.objective_mean)
+#     # ga.mutate()
+#     # ga.calculate_objective_function()
+#     # #of = [ind.objective_value for ind in ga.actual_generation.population]
+#     # #print(of)
+#     # print(ga.objective_mean)
+# #print(ga)

@@ -58,7 +58,18 @@ class Population:
     def survival_probability(ind: Individual):
         return ind.survival_probability
 
-    def sort_population(self):
-        self.population.sort(reverse=True, key=self.survival_probability)
+    @staticmethod
+    def objective_value(ind: Individual):
+        return ind.objective_value
 
+    def sort_population(self, direction, key_var):
+        if direction == 'ascending':
+            reverse = False
+        else:
+            reverse = True
+
+        if key_var == 'survival_probability':
+            self.population.sort(reverse=reverse, key=self.survival_probability)
+        elif key_var == 'objective_value':
+            self.population.sort(reverse=reverse, key=self.objective_value)
 

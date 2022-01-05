@@ -1,14 +1,38 @@
 from abc import ABC, abstractmethod
-from ungenetico import *
+from dataclasses import dataclass, field
+# from typing import List, Any
+# from ungenetico import *
 
 
+@dataclass
 class Gene(ABC):
+    _name: str = field(init=False, repr=False)
+    _length: int = field(init=False, repr=False)
+
     """Abstract class that stores the genetic information"""
     @property
-    @abstractmethod
     def name(self):
-        """Variable name associated with the gen"""
-        pass
+        """
+        name
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        # it only set the name the first time
+        if not hasattr(self, 'name'):
+            self._name = name
+
+    @property
+    def length(self):
+        return self._length
+
+    @length.setter
+    def length(self, length):
+        if isinstance(length, property):
+            self._length = 1
+        else:
+            self._length = int(length)
 
     @property
     @abstractmethod
@@ -47,4 +71,3 @@ class Gene(ABC):
     def mutate(self, genetic_algorithm):
         """Mutate gen using the mutation operator"""
         self.mutation_operator.mutate(self, genetic_algorithm)
-
