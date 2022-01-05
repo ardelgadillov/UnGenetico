@@ -58,7 +58,7 @@ class MutationUniform(Mutation):
         :param ag:
         :return:
         """
-        gen.value = random.uniform(gen.min_val, gen.max_val)
+        gen.value = [random.uniform(gen.min_val, gen.max_val) for _ in range(gen.length)]
 
 
 @dataclass
@@ -79,14 +79,17 @@ class MutationNotUniform(Mutation):
         """
         t = ag.generation
         tmax = ag.generation_max
-        beta = random.randint(0, 1)
-        r = random.uniform(0, 1)
-        delta = (gen.max_val-gen.value) * (1 - r**(1-t/tmax)**self.b)
-        if beta == 0:
-            value = gen.value + delta
-        else:
-            value = gen.value - delta
-        gen.value = value
+        values = [None]*gen.length
+        for i in range(gen.length):
+            beta = random.randint(0, 1)
+            r = random.uniform(0, 1)
+            delta = (gen.max_val-gen.value[i]) * (1 - r**(1-t/tmax)**self.b)
+            if beta == 0:
+                value = gen.value[i] + delta
+            else:
+                value = gen.value[i] - delta
+            values[i] = value
+        gen.value = values
 
 
 class CrossoverSimple(Crossover):

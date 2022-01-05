@@ -140,7 +140,7 @@ class GeneticAlgorithm:
     @property
     def objective_min(self):
         """Value of the objective function for the individual"""
-        return min([ind.objective_value for ind in self.actual_generation.population])
+        return min([ind.objective_value for ind in self.actual_generation.population], default=None)
 
     @objective_min.setter
     def objective_min(self, objective_min):
@@ -149,17 +149,19 @@ class GeneticAlgorithm:
     @property
     def objective_max(self):
         """Value of the objective function for the individual"""
-        return max([ind.objective_value for ind in self.actual_generation.population])
+        return max([ind.objective_value for ind in self.actual_generation.population], default=None)
 
     @objective_max.setter
     def objective_max(self, objective_max):
         pass
 
-
     @property
     def objective_mean(self):
         """Value of the objective function for the individual"""
-        return sta.mean([ind.objective_value for ind in self.actual_generation.population])
+        try:
+            return sta.mean([ind.objective_value for ind in self.actual_generation.population])
+        except sta.StatisticsError:
+            return 0
 
     @objective_mean.setter
     def objective_mean(self, objective_mean):
@@ -168,7 +170,10 @@ class GeneticAlgorithm:
     @property
     def objective_median(self):
         """Value of the objective function for the individual"""
-        return sta.median([ind.objective_value for ind in self.actual_generation.population])
+        try:
+            return sta.median([ind.objective_value for ind in self.actual_generation.population])
+        except sta.StatisticsError:
+            return 0
 
     @objective_median.setter
     def objective_median(self, objective_median):
@@ -177,7 +182,10 @@ class GeneticAlgorithm:
     @property
     def objective_std(self):
         """Value of the objective function for the individual"""
-        return sta.stdev([ind.objective_value for ind in self.actual_generation.population])
+        try:
+            return sta.stdev([ind.objective_value for ind in self.actual_generation.population])
+        except sta.StatisticsError:
+            return 0
 
     @objective_std.setter
     def objective_std(self, objective_std):
