@@ -289,3 +289,19 @@ class GeneticAlgorithm:
 
     def calculate_objective_function(self):
         self.actual_generation.calculate_objective_function(self.objective_function)
+
+    def iterate(self):
+        self.calculate_objective_function()
+        print(f'{self.objective_min} - {self.objective_mean} - {self.objective_max}')
+        self.assign_probability()
+        self.select()
+        self.match()
+        self.reproduce()
+        #self.mutate()
+
+    def optimize(self):
+        self.create_population(self.generation_size)
+        self.mutate()
+        for _ in range(self.generation_max):
+            self.generation += 1
+            self.iterate()

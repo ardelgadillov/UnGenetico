@@ -97,6 +97,19 @@ class CrossoverSimple(Crossover):
         gen1.value, gen2.value = gen2.value, gen1.value
 
 
+@dataclass
+class CrossoverArithmetic(Crossover):
+    alpha: float = 0.7
+
+    def exchange(self, gen1: Gene, gen2: Gene, ag):
+        child1 = [None]*gen1.length
+        child2 = [None]*gen1.length
+        for i in range(gen1.length):
+            child1[i] = self.alpha*gen1.value[i] + (1-self.alpha)*gen2.value[i]
+            child2[i] = self.alpha*gen2.value[i] + (1-self.alpha)*gen1.value[i]
+        return child1, child2
+
+
 class ProbabilityUniform(Probability):
     def assign_probability(self, pop: Population, ag):
         prob = 1/pop.size
@@ -117,8 +130,20 @@ class ProbabilityProportional(Probability):
                 ind.survival_probability = (1/(ind.objective_value + (1-ga_min))) / sov_min
 
 
+class ProbabilityLineal(Probability):
+    def assign_probability(self, pop: Population, ag):
+        n = pop.size
+        if ag.optimization == 'maximization':
+            pop.sort_population('descending', 'objective_value')
+        else:
+            pop.sort_population('ascending', 'objective_value')
+        for i in range(n):
+            pop.population[i].survival_probability = 2*(n-i) / (n*(n+1))
+
+
 class SelectionStochastic(Selection):
     def select(self, pop: Population, ag):
+        pop.sort_population('descending', 'survival_probability')
         prob = [ind.survival_probability for ind in pop.population]
         angle = list(accumulate(prob))
         new_population = Population()
@@ -131,7 +156,19 @@ class SelectionStochastic(Selection):
 
 class PairingRandom(Pairing):
     def match(self, pop: Population, ag):
-        pop.partners = random.sample(range(pop.size), pop.size)
+        pop.parents = random.sample(range(pop.size), pop.size)
+
+
+class PairingAdjacent(Pairing):
+    def match(self, pop: Population, ag):
+        n = list(range(1, pop.size))
+        n.append(pop.size-1)
+        pop.partners = n
+
+
+class PairingExtremes(Pairing):
+    def match(self, pop: Population, ag):
+        pop.partners = list(range(pop.size-1, -1, -1))
 
 
 class ReproductionSimple(Reproduction):
@@ -140,11 +177,32 @@ class ReproductionSimple(Reproduction):
             ind.paired = False
 
         for index in range(pop.size):
-            partner1 = pop.population[index]
-            partner2 = pop.population[pop.partners[index]]
-            if not partner1.paired and not partner2.paired:
+            parent1 = pop.population[index]
+            parent2 = pop.population[pop.partners[index]]
+            if not parent1.paired and not parent2.paired:
                 exchange_point = random.randint(0, pop.size)
-                partner1.paired = True
-                partner2.paired = True
-                for i in range(exchange_point, len(partner1.genome)):
-                    partner1.genome[i], partner2.genome[i] = partner2.genome[i], partner1.genome[i]
+                parent1.paired = True
+                parent2.paired = True
+                for i in range(exchange_point, len(parent1.genome)):
+                    parent1.genome[i], parent2.genome[i] = parent2.genome[i], parent1.genome[i]
+
+
+class ReproductionTwoParentsTwoChildren(Reproduction):
+    def reproduce(self, pop: Population, ag):
+        for ind in pop.population:
+            ind.paired = False
+
+        for index in range(pop.size):
+            parent1 = pop.population[index]
+            parent2 = pop.population[pop.partners[index]]
+            if not parent1.paired and not parent2.paired:
+                parent1.paired = True
+                parent2.paired = True
+                for i in range(len(parent1.genome)):
+                    # print(f'Parents: {parent1.genome[i].value} - {parent2.genome[i].value}')
+                    parent1.genome[i].value, parent2.genome[i].value = parent1.genome[i].exchange(parent2.genome[i], ag)
+                    # print(f'Children: {parent1.genome[i].value} - {parent2.genome[i].value}')
+
+
+
+

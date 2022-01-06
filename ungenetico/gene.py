@@ -62,12 +62,16 @@ class Gene(ABC):
         """Mutation operator"""
         pass
 
-    #
-    # @property
-    # @abstractmethod
-    # def crossover_operator(self):
-    #     pass
+    @property
+    @abstractmethod
+    def crossover_operator(self):
+        pass
 
     def mutate(self, genetic_algorithm):
         """Mutate gen using the mutation operator"""
         self.mutation_operator.mutate(self, genetic_algorithm)
+
+    def exchange(self, gene2, genetic_algorithm):
+        """Exchange genes"""
+        children = self.crossover_operator.exchange(self, gene2, genetic_algorithm)
+        return children
