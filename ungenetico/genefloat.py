@@ -1,4 +1,4 @@
-from ungenetico import Gene, Mutation, MutationUniform, Crossover
+from ungenetico import Gene, Mutation, MutationUniform, Crossover, CrossoverSimple
 import random
 from dataclasses import dataclass, field
 from typing import List
@@ -85,7 +85,7 @@ class GeneFloat(Gene):
     @crossover_operator.setter
     def crossover_operator(self, co: Crossover):
         if isinstance(co, property):
-            self._crossover_operator = Crossover()
+            self._crossover_operator = CrossoverSimple()
         else:
             self._crossover_operator = co
 

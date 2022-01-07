@@ -1,4 +1,4 @@
-from ungenetico import Gene, Mutation, MutationUniform
+from ungenetico import Gene, Mutation, MutationUniform, Crossover, CrossoverSimple
 import random
 from dataclasses import dataclass, field
 from typing import List
@@ -27,11 +27,13 @@ class GeneBool(Gene):
     length: int
     value: List[int]
     mutation_operator: Mutation
+    crossover_operator: Crossover
 
     _min: int = field(init=False, repr=False, default=0)
     _max: int = field(init=False, repr=False, default=1)
     _val: List[int] = field(init=False, repr=False)
     _mutation_operator:  Mutation = field(init=False, repr=False)
+    _crossover_operator: Crossover = field(init=False, repr=False)
 
     @property
     def value(self):
@@ -60,15 +62,16 @@ class GeneBool(Gene):
         else:
             self._mutation_operator = mo
 
-    #
-    # @property
-    # def crossover_operator(self):
-    #     print('crossover')
-    #     return self._crossover_operator
-    #
-    # @crossover_operator.setter
-    # def crossover_operator(self, value):
-    #     self._crossover_operator = value
+    @property
+    def crossover_operator(self):
+        return self._crossover_operator
+
+    @crossover_operator.setter
+    def crossover_operator(self, co: Crossover):
+        if isinstance(co, property):
+            self._crossover_operator = CrossoverSimple()
+        else:
+            self._crossover_operator = co
 
 
 

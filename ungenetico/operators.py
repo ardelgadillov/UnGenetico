@@ -94,7 +94,7 @@ class MutationNotUniform(Mutation):
 
 class CrossoverSimple(Crossover):
     def exchange(self, gen1: Gene, gen2: Gene, ag):
-        gen1.value, gen2.value = gen2.value, gen1.value
+        return gen2.value, gen1.value
 
 
 @dataclass
@@ -180,11 +180,11 @@ class ReproductionSimple(Reproduction):
             parent1 = pop.population[index]
             parent2 = pop.population[pop.partners[index]]
             if not parent1.paired and not parent2.paired:
-                exchange_point = random.randint(0, pop.size)
                 parent1.paired = True
                 parent2.paired = True
+                exchange_point = random.randint(0, len(parent1.genome))
                 for i in range(exchange_point, len(parent1.genome)):
-                    parent1.genome[i], parent2.genome[i] = parent2.genome[i], parent1.genome[i]
+                    parent1.genome[i].value, parent2.genome[i].value = parent1.genome[i].exchange(parent2.genome[i], ag)
 
 
 class ReproductionTwoParentsTwoChildren(Reproduction):
@@ -199,9 +199,7 @@ class ReproductionTwoParentsTwoChildren(Reproduction):
                 parent1.paired = True
                 parent2.paired = True
                 for i in range(len(parent1.genome)):
-                    # print(f'Parents: {parent1.genome[i].value} - {parent2.genome[i].value}')
                     parent1.genome[i].value, parent2.genome[i].value = parent1.genome[i].exchange(parent2.genome[i], ag)
-                    # print(f'Children: {parent1.genome[i].value} - {parent2.genome[i].value}')
 
 
 
