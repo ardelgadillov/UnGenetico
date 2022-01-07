@@ -72,7 +72,7 @@ ga = ung.GeneticAlgorithm(objective_function=obj_expression,
                           generation_size=10,
                           probability_operator=ung.ProbabilityLineal(),
                           pairing_operator=ung.PairingExtremes(),
-                          reproduction_operator=ung.ReproductionTwoParentsTwoChildren())
+                          reproduction_operator=ung.ReproductionBestBetweenParentsChildren())
 ga.add_gen(ung.GeneFloat('x', -10, 10, length=25, crossover_operator=ung.CrossoverArithmetic(0.7)))
 ga.optimize()
 

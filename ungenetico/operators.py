@@ -6,6 +6,7 @@ import random
 from dataclasses import dataclass
 from itertools import accumulate
 import copy
+import numpy as np
 
 
 class Mutation(ABC):
@@ -202,5 +203,79 @@ class ReproductionTwoParentsTwoChildren(Reproduction):
                     parent1.genome[i].value, parent2.genome[i].value = parent1.genome[i].exchange(parent2.genome[i], ag)
 
 
+class ReproductionBestParentBestChild(Reproduction):
+    def reproduce(self, pop: Population, ag):
+        for ind in pop.population:
+            ind.paired = False
+
+        for index in range(pop.size):
+            parent1 = pop.population[index]
+            parent2 = pop.population[pop.partners[index]]
+            if not parent1.paired and not parent2.paired:
+                parent1.paired = True
+                parent2.paired = True
+
+                child1 = copy.deepcopy(parent1)
+                child2 = copy.deepcopy(parent2)
+
+                for i in range(len(parent1.genome)):
+                    child1.genome[i].value, child2.genome[i].value = parent1.genome[i].exchange(parent2.genome[i], ag)
+
+                parent1.calculate_objective_function(ag.objective_function)
+                parent2.calculate_objective_function(ag.objective_function)
+                child1.calculate_objective_function(ag.objective_function)
+                child2.calculate_objective_function(ag.objective_function)
+
+                if ag.optimization == 'maximization':
+                    if parent2.objective_value > parent1.objective_value:
+                        #pop.population[index] = copy.deepcopy(parent2)
+                        pop.population[index] = parent2
+
+                    if child1.objective_value > child2.objective_value:
+                        pop.population[pop.partners[index]] = child1
+                    else:
+                        pop.population[pop.partners[index]] = child2
+                else:
+                    if parent2.objective_value < parent1.objective_value:
+                        # pop.population[index] = copy.deepcopy(parent2)
+                        pop.population[index] = parent2
+
+                    if child1.objective_value < child2.objective_value:
+                        pop.population[pop.partners[index]] = child1
+                    else:
+                        pop.population[pop.partners[index]] = child2
 
 
+class ReproductionBestBetweenParentsChildren(Reproduction):
+    def reproduce(self, pop: Population, ag):
+        for ind in pop.population:
+            ind.paired = False
+
+        for index in range(pop.size):
+            parent1 = pop.population[index]
+            parent2 = pop.population[pop.partners[index]]
+            if not parent1.paired and not parent2.paired:
+                parent1.paired = True
+                parent2.paired = True
+
+                child1 = copy.deepcopy(parent1)
+                child2 = copy.deepcopy(parent2)
+
+                for i in range(len(parent1.genome)):
+                    child1.genome[i].value, child2.genome[i].value = parent1.genome[i].exchange(parent2.genome[i], ag)
+
+                parent1.calculate_objective_function(ag.objective_function)
+                parent2.calculate_objective_function(ag.objective_function)
+                child1.calculate_objective_function(ag.objective_function)
+                child2.calculate_objective_function(ag.objective_function)
+
+                group = [parent1, parent2, child1, child2]
+
+                obj_vals = np.array([parent1.objective_value, parent2.objective_value, child1.objective_value, child2.objective_value])
+                arg_obj_vals = np.argsort(obj_vals)
+                if ag.optimization == 'maximization':
+                    pop.population[index] = group[arg_obj_vals[-1]]
+                    pop.population[pop.partners[index]] = group[arg_obj_vals[-2]]
+                else:
+                    pop.population[index] = group[arg_obj_vals[0]]
+                    pop.population[pop.partners[index]] = group[arg_obj_vals[1]]
