@@ -98,6 +98,16 @@ class CrossoverSimple(Crossover):
         return gen2.value, gen1.value
 
 
+class CrossoverRandom(Crossover):
+    def exchange(self, gen1: Gene, gen2: Gene, ag):
+        child1 = [None]*gen1.length
+        child2 = [None]*gen1.length
+        for i in range(gen1.length):
+            child1[i] = random.uniform(gen1.value[i], gen2.value[i])
+            child2[i] = random.uniform(gen1.value[i], gen2.value[i])
+        return child1, child2
+
+
 @dataclass
 class CrossoverArithmetic(Crossover):
     alpha: float = 0.7
@@ -108,6 +118,22 @@ class CrossoverArithmetic(Crossover):
         for i in range(gen1.length):
             child1[i] = self.alpha*gen1.value[i] + (1-self.alpha)*gen2.value[i]
             child2[i] = self.alpha*gen2.value[i] + (1-self.alpha)*gen1.value[i]
+        return child1, child2
+
+
+@dataclass
+class CrossoverBLX(Crossover):
+    alpha: float = 0.7
+
+    def exchange(self, gen1: Gene, gen2: Gene, ag):
+        child1 = [None]*gen1.length
+        child2 = [None]*gen1.length
+        for i in range(gen1.length):
+            cmin = min(gen1.value[i], gen2.value[i])
+            cmax = max(gen1.value[i], gen2.value[i])
+            d = cmax-cmin
+            child1[i] = random.uniform(cmin - d*self.alpha, cmax + d*self.alpha)
+            child2[i] = random.uniform(cmin - d*self.alpha, cmax + d*self.alpha)
         return child1, child2
 
 

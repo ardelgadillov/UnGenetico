@@ -292,7 +292,7 @@ class GeneticAlgorithm:
 
     def iterate(self):
         self.calculate_objective_function()
-        print(f'{self.objective_min} - {self.objective_mean} - {self.objective_max}')
+        print(f'iter:{self.generation} {self.objective_min} - {self.objective_mean} - {self.objective_max}')
         self.assign_probability()
         self.select()
         self.match()
